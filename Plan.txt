@@ -6,7 +6,16 @@ We have a field as a matrix of 6x9 initially
 		-function for restrictions 
 
 Base:
-	-Cost
-	-HP
-	-Position {x,y}
+	-position {x,y}
+	-hp
+	-isAlive()
 
+Plant: Base
+	-cost
+	-shoot()
+
+Zombie:
+	-speed
+	-damage
+	-move/attack()
+	
