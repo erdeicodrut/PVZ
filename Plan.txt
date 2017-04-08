@@ -1,0 +1,12 @@
+We have a field as a matrix of 6x9 initially  
+	- every cell of that matrix is an object of type cell which has:    
+		-terrain  enum {ground, water, snow}    
+		-contains   {plant}
+		-X initial and Y initial, X final and Y final    
+		-function for restrictions 
+
+Base:
+	-Cost
+	-HP
+	-Position {x,y}
+
