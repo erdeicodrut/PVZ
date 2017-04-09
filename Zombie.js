@@ -4,15 +4,15 @@ class Zombie extends Movable {
         this.damage = damage;
     }
 
-    this.attack(plant) {
+    attack(plant) {
         if (plant.hp > 0) {
             plant.hp -= this.damage;
         }
     }
 
-    this.move() {
+    move() {
         this.x -= this.speed;
     }
 
-    
+
 }

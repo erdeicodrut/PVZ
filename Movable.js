@@ -9,13 +9,13 @@ class Movable
 		this.hp = hp;
 	}
 
-	this.setPosition(x, y)
+	setPosition(x, y)
 	{
 		this.x = x;
 		this.y = y;
 	}
 
-	this.collidesWith(other)
+	collidesWith(other)
 	{
 		if (x < other.x + other.width &&
    			x + width > other.x &&
@@ -25,7 +25,7 @@ class Movable
 		return false;
 	}
 
-	this.isAlive() {
+	isAlive() {
         if (this.hp <= 0) {
             return false;
         } else {

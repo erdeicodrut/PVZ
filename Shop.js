@@ -1,15 +1,15 @@
 class Shop {
-    this.loadout = [];
 
     constructor(balance) {
+        this.loadout = [];
         this.balance = balance;
     }
 
-    this.addItem(item) {
+    addItem(item) {
         this.loadout.push(item);
     }
 
-    this.addBalance(balance) {
+    addBalance(balance) {
         this.balance += balance;
     }
 }

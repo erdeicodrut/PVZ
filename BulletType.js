@@ -1,12 +1,6 @@
-enum BulletType {
-    REGULAR,
-    ICE,
-    FIRE
-}
-
-enum Effect {
-    NONE,
-    ICE,
-    FIRE,
-    MELLON
-}
+var Effect = {
+    NONE: 0,
+    ICE: 1,
+    FIRE: 2,
+    MELLON: 3
+};

@@ -1,15 +1,15 @@
 class Cell {
 
-    this.plant = undefined;
 
     constructor(xa, ya, xb, yb) {
+        this.plant = undefined;
         this.xA = xa;
         this.xB = xb;
         this.yA = ya;
         this.yB = yb;
     }
 
-    this.isOccupied() {
+    isOccupied() {
         if (this.plant) {
             return true;
         } else {
@@ -17,7 +17,7 @@ class Cell {
         }
     }
 
-    this.place(plant) {
+    place(plant) {
         this.plant = plant;
     }
 }

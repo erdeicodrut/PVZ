@@ -3,7 +3,7 @@ class Field {
         this.matrix = [long][lat];
     }
 
-    this.clear() {
+    clear() {
         for (line in this.matrix) {
             for (elem in line) {
                 elem.plant = undefined;

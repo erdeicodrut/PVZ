@@ -7,11 +7,11 @@ class Bullet extends Movable {
         this.damage = damage;
     }
 
-    this.move() {
+    move() {
         this.x += this.speed;
     }
 
-    this.hit(oponent) {
+    hit(oponent) {
         oponent.receive(this.damage, this.effect);
         this.hp = 0;
     }
