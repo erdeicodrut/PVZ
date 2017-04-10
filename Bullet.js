@@ -5,6 +5,7 @@ class Bullet extends Movable {
         this.y = y;
         this.speed = speed;
         this.damage = damage;
+        this.effect = effect;
     }
 
     move() {

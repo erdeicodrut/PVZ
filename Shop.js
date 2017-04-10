@@ -12,4 +12,12 @@ class Shop {
     addBalance(balance) {
         this.balance += balance;
     }
+
+    extract(value) {
+        if (value <= this.balance) {
+            this.balance -= value;
+            return true;
+        }
+        return false;
+    }
 }
