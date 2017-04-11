@@ -5,18 +5,14 @@ import java.util.ArrayList;
 
 public class pvz extends PApplet
 {
-<<<<<<< HEAD
-	Field field = new Field(this, 40/2, 200/2,6, 9);
-=======
 	// The main grid of the game
 	Field field = new Field(this, Globals.fieldPos, Globals.fieldDim);
 
-	ArrayList<Living> livings = new ArrayList<>();
+    public ArrayList<Living> livings = new ArrayList<>();
 
-	ArrayList<Plant> plants = new ArrayList<>();
-	ArrayList<Zombie> zombies = new ArrayList<>();
-	ArrayList<Bullet> bullets = new ArrayList<>();
->>>>>>> processing
+//	ArrayList<Plant> plants = new ArrayList<>();
+//	ArrayList<Zombie> zombies = new ArrayList<>();
+	static ArrayList<Bullet> bullets = new ArrayList<>();
 
 	public void settings()
 	{
@@ -27,9 +23,6 @@ public class pvz extends PApplet
 	{
 		frameRate(30);
 		background(200);
-<<<<<<< HEAD
-		field.clear();
-=======
 
 		// Initializing the grid
 		field.clear();
@@ -45,17 +38,14 @@ public class pvz extends PApplet
 		livings.add(new Zombie(this, zombiePos, Globals.zombieSize, 100, 3, 5));
 
 //		System.out.println(field.at(3, 0).plant);
->>>>>>> processing
 	}
 
 	public void draw()
 	{
+
 		background(255);
 
 		fill(0);
-<<<<<<< HEAD
-        field.show();
-=======
 		field.show();
 
 //		for (Plant plant : plants)
@@ -90,34 +80,54 @@ public class pvz extends PApplet
 //			bullet.show();
 //		}
 
-		for (Living l1 : Globals.livings)
-			for (Living l2 : Globals.livings)
-			{
-				if (l1.collidesWith(l2))
-				{
-					if (l1.getClass() == Zombie.class && l2.getClass() == Plant.class)
-					{
-						Zombie z = (Zombie) l1;
-						Plant p = (Plant) l2;
 
-						z.attack(p);
-						p.shoot();
-					}
 
-					else if (l1.getClass() == Zombie.class && l2.getClass() == Bullet.class)
-					{
+        for (Living l1 : livings) {
+        }
 
-					}
-				}
-			}
+        for (int i = 0; i < livings.size(); i++) {
+            for (int j = 0; j < livings.size(); j++) {
 
-		for (Living l : livings)
+                if (livings.get(i).collidesWith(livings.get(j))) {
+
+
+                    if ( livings.get(i).getClass() == Zombie.class && livings.get(j).getClass() == Plant.class ) {
+
+                        Zombie z = (Zombie) livings.get(i);
+                        Plant p = (Plant) livings.get(j);
+
+                        System.out.println(p.hp);
+
+                        z.attack(p);
+
+
+                    } else if (livings.get(i).getClass() == Zombie.class && livings.get(j).getClass() == Bullet.class) {
+
+
+
+                        ((Bullet) livings.get(j)).hit((Zombie) livings.get(i));
+                    }
+                } else { // if it doesnt collide then move else dont, look up
+                    if (livings.get(i).getClass() == Zombie.class)
+                        ((Zombie) livings.get(i)).move();
+                }
+            }
+        }
+
+        for (int i = 0; i < bullets.size(); i++) {
+            System.out.println("da fasz" + i);
+            bullets.get(i).move();
+            bullets.get(i).show();
+        }
+
+        for (Living l : livings)
 		{
-			if (l.getClass() == Zombie)
+            System.out.println(l.getClass());
+            l.show();
 
-			l.show();
-		}
+        }
 
->>>>>>> processing
-	}
+    }
+
+
 }
