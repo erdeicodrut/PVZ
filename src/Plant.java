@@ -1,16 +1,22 @@
+import processing.core.PApplet;
+
 class Plant extends Movable {
 	private PApplet p;
 	private Effect effect;
 	private float speed;
+	private float damage;
 
-	public Plant(PAplet p, float x, float y, float width, float height, float hp, float speed, Effect effect) {
-		this.p = p;
-		super(x, y, width, height, hp);
+	public Plant(PApplet p, float x, float y, float width, float height, float hp, float speed, Effect effect) {
+		super(p, x, y, width, height, hp);
 		this.effect = effect;
 		this.speed = speed;
 	}
 
-	public void shoot() {
-		return new Bullet(x, y, speed, damage, effect);
+	public Bullet shoot() {
+		return new Bullet(p, x, y, 15, 15, 1, speed, damage, effect);
 	}
+
+	public void show() {
+	    
+    }
 }
