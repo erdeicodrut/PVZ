@@ -1,5 +1,4 @@
-class Shop {
-
+class Shop {	
 	private int ballance;
 	private Item[] loadout;
 

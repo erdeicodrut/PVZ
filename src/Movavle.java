@@ -1,11 +1,13 @@
 class Movable {
+	private PApplet p;
 	private float x;
 	private float y;
 	private float width;
 	private float height;
 	private float hp;
 
-	public Movable(float x, float y, float width, float height, float hp) {
+	public Movable(PApplet p, float x, float y, float width, float height, float hp) {
+		this.p = p;
 		this.x = x;
 		this.y = y;
 		this.width = width;

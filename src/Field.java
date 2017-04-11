@@ -1,7 +1,11 @@
 class Field {
+	private PApplet p;
+
+	
 	public  Cell[][] matrix;
 	public int width, height;
-	public Field(int width, int height) {
+	public Field(PAplet p, int width, int height) {
+		this.p = p;
 		matrix = new Cell[width][height];
 		this.width = width;
 		this.height = height;

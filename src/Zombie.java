@@ -1,8 +1,10 @@
 class Zombie extends Movable {
+	private PApplet p;
 	private float speed;
 	private float damage;
 
-	public Zombie(float x, float y, float width, float height, float hp, float speed, float damage) {
+	public Zombie(PApplet p, float x, float y, float width, float height, float hp, float speed, float damage) {
+		this.p = p;
 		super(x, y, width, height, hp);
 		this.speed = speed;
 		this.damage = damage;
