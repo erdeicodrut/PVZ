@@ -1,13 +1,18 @@
 import processing.core.PApplet;
-import processing.core.PConstants;
+import processing.core.PVector;
 
 import java.util.ArrayList;
 
 public class pvz extends PApplet
 {
-	Field field = new Field(this, 40/2, 200/2,5, 8);
+	// The main grid of the game
+	Field field = new Field(this, Globals.fieldPos, Globals.fieldDim);
+
+	ArrayList<Living> livings = new ArrayList<>();
 
 	ArrayList<Plant> plants = new ArrayList<>();
+	ArrayList<Zombie> zombies = new ArrayList<>();
+	ArrayList<Bullet> bullets = new ArrayList<>();
 
 	public void settings()
 	{
@@ -16,14 +21,23 @@ public class pvz extends PApplet
 
 	public void setup()
 	{
+		frameRate(30);
 		background(200);
+
+		// Initializing the grid
 		field.clear();
 
-		Plant temp = field.matrix[3][0].place(new Plant(this, field.matrix[3][0].x , field.matrix[3][0].y,10, Effect.FIRE));
+		//
+		Plant temp = field.at(3, 0).plantHere(new Plant(this,10, Effect.FIRE));
 		if (temp != null)
-			plants.add(temp);
+			livings.add(temp);
 
-		System.out.println(field.matrix[0][0].plant);
+		PVector zombiePos = PVector.add(Globals.fieldPos,
+				new PVector((Globals.fieldDim.x-1) * Globals.cellSize.x,
+						3 * Globals.cellSize.y));
+		livings.add(new Zombie(this, zombiePos, Globals.zombieSize, 100, 3, 5));
+
+//		System.out.println(field.at(3, 0).plant);
 	}
 
 	public void draw()
@@ -33,7 +47,65 @@ public class pvz extends PApplet
 		fill(0);
 		field.show();
 
-		for (Plant plant : plants)
-        	plant.show();
+//		for (Plant plant : plants)
+//        	plant.show();
+//
+//		for (int i = 0; i < zombies.size(); i++)
+//		{
+//			zombies.get(i).move();
+//
+//			boolean removed = false;
+//			for (int j = 0; j < plants.size(); j++)
+//				if (zombies.get(i).collidesWith(plants.get(j)))
+//				{
+//					// zombie.hp = 0;
+//					//plants.get(j).hp = 0;
+//					bullets.add(plants.get(j).shoot());
+//					// zombies.remove(zombies.get(i));
+//					plants.remove(plants.get(j));
+//
+//					removed = true;
+//				}
+//
+////			if (removed)
+////				continue;
+//
+//			zombies.get(i).show();
+//		}
+//
+//		for (Bullet bullet : bullets)
+//		{
+//			bullet.move();
+//			bullet.show();
+//		}
+
+		for (Living l1 : Globals.livings)
+			for (Living l2 : Globals.livings)
+			{
+				if (l1.collidesWith(l2))
+				{
+					if (l1.getClass() == Zombie.class && l2.getClass() == Plant.class)
+					{
+						Zombie z = (Zombie) l1;
+						Plant p = (Plant) l2;
+
+						z.attack(p);
+						p.shoot();
+					}
+
+					else if (l1.getClass() == Zombie.class && l2.getClass() == Bullet.class)
+					{
+
+					}
+				}
+			}
+
+		for (Living l : livings)
+		{
+			if (l.getClass() == Zombie)
+
+			l.show();
+		}
+
 	}
 }
