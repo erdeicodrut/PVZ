@@ -1,8 +1,12 @@
-class Shop {	
+import processing.core.PApplet;
+import processing.core.PVector;
+
+class Shop extends Drawable {
 	private int ballance;
 	private Item[] loadout;
 
-	public Shop() {
+	public Shop(PApplet p, PVector pos, PVector size) {
+		super(p, pos, size);
 		ballance = 0;
 		loadout = new Item[6];
 	}
@@ -14,5 +18,11 @@ class Shop {
 		} else {
 			return false;
 		}
+	}
+
+	@Override
+	public void show()
+	{
+		// TODO
 	}
 }
