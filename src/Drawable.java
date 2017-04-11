@@ -2,7 +2,6 @@ import processing.core.PApplet;
 import processing.core.PVector;
 
 public abstract class Drawable {
-	// Using PVectors instead of separate vars
 	public PApplet p;
 	public PVector pos;
 	public PVector size;
@@ -17,6 +16,7 @@ public abstract class Drawable {
 		this.size = new PVector(size.x, size.y);
 	}
 
+	// Box collision check between 2 Drawable objects
 	public boolean collidesWith(Drawable other) {
 		return !(pos.x + size.x < other.pos.x || pos.x > other.pos.x + other.size.x || pos.y + size.y < other.pos.y || pos.y > other.pos.y + other.size.y);
 	}

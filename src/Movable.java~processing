@@ -1,12 +1,16 @@
 import processing.core.PApplet;
 
 class Movable {
-	private PApplet p;
+	protected PApplet p;
 	protected float x;
 	protected float y;
 	protected float width;
 	protected float height;
 	protected float hp;
+
+	public Movable(PApplet p) {
+		this.p = p;
+	}
 
 	public Movable(PApplet p, float x, float y, float width, float height, float hp) {
 		this.p = p;
@@ -40,3 +44,6 @@ class Movable {
 		}
 	}
 }
+
+
+

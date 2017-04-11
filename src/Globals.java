@@ -1,9 +1,6 @@
 import processing.core.PVector;
 
-import java.util.ArrayList;
-
-public class Globals
-{
+public class Globals {
 	public static PVector fieldPos = new PVector(40/2, 200/2);
 	public static PVector fieldDim = new PVector(10, 6);
 	public static PVector cellSize = new PVector(50f, 50f);

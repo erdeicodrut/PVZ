@@ -1,8 +1,7 @@
 import processing.core.PApplet;
 import processing.core.PVector;
 
-class Plant extends Living
-{
+class Plant extends Living {
 	private Effect effect;
 	private float damage;
 
@@ -12,20 +11,18 @@ class Plant extends Living
 		super(p, new PVector(0, 0), Globals.flowerSize, hp);
 
 		this.effect = effect;
-
-
 	}
 
+	// Shoots a bullet based on a timer
 	public void shoot() {
-		if (timer-- < 0)
-		{
-			timer = 30;
-			Globals.livings.add(new Bullet(p, pos, 15, 15, effect));
-		}
+	    if (timer-- < 0) {
+            pvz.bullets.add(new Bullet(p, pos, 15, 15, effect));
+            timer = 30;
+        }
 	}
 
+	@Override
 	public void show() {
-//		p.rectMode(PConstants.CENTER);
 		p.fill(0, 255, 0);
 		p.rect(pos.x, pos.y, size.x, size.y);
     }

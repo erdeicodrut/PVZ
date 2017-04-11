@@ -1,16 +1,12 @@
 import processing.core.PApplet;
 import processing.core.PVector;
 
-import static processing.core.PConstants.CORNER;
-
 class Field {
 	private PApplet p;
 	private PVector pos;
 
 	private Cell[][] matrix;
 	private PVector dim;
-
-
 
 	public Field(PApplet p, PVector pos, PVector dim) {
 		this.p = p;
@@ -22,6 +18,7 @@ class Field {
 		matrix = new Cell[(int) dim.y][(int) dim.x];
 	}
 
+	// Reset every cell of the matrix
 	public void clear() {
 		for (int i = 0; i < dim.y; i++) {
 			for (int j = 0; j < dim.x; j++) {
@@ -35,8 +32,8 @@ class Field {
 		return this.matrix[x][y];
 	}
 
+	// Iterate through each cell and show it
 	public void show() {
-		p.rectMode(CORNER);
 		for (Cell[] line : matrix) {
 			for (Cell cell : line)
 				cell.show();

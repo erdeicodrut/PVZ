@@ -12,6 +12,7 @@ class Cell extends Drawable {
 		return plant != null;
 	}
 
+	// Retain and set the position of the plant passed in
 	public Plant plantHere(Plant toPlant) {
 		//TODO shop stuff
 

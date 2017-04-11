@@ -20,6 +20,7 @@ class Bullet extends Living
 		pos.x += speed;
 	}
 
+	// This method is called when it collides with a zombie
 	public void hit(Zombie other) {
 		hp = 0;
 		other.receive(damage, effect);
@@ -28,7 +29,7 @@ class Bullet extends Living
 	@Override
 	public void show()
 	{
-		// Temporary
+		// Temp
 		p.fill(255, 255, 0);
 		p.ellipse(pos.x, pos.y, size.x, size.y);
 	}
