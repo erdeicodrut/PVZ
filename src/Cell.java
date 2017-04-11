@@ -1,28 +1,44 @@
+import processing.core.PApplet;
+
 class Cell {
-	public float xA, yA, xB, yB;
+	private PApplet p;
+	public float x;
+	public float y;
+	private float width;
+	private float height;
 	public Plant plant;
 
-	public Cell(float xA, float yA, float xB, float yB) {
-		this.xA = xA;
-		this.yA = yA;
-		this.xB = xB;
-		this.yB = yB;
+	public Cell(PApplet p, float x, float y, float width, float height) {
+	    this.p = p;
+		this.x = x;
+		this.y = y;
+		this.width = width;
+		this.height = height;
 	}
 
 	public boolean isOccupied() {
-		if (plant != null) {
+		if (plant == null) {
 			return false;
 		} else {
 			return true;
 		}
 	}
 
-	public place(Plant to) {
+	public Plant place(Plant toPlant) {
 
 		//TODO shop stuff
 
-		if (this.isOccupied == false) {
-			this.plant = to;
+		if (this.isOccupied() == false) {
+			this.plant = toPlant;
+			return toPlant;
 		}
+		else return null;
+	}
+
+	public void show() {
+	    p.noFill();
+	    p.stroke(51);
+	    p.strokeWeight(3);
+		p.rect(x, y, width, height);
 	}
 }

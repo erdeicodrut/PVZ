@@ -1,16 +1,33 @@
+import processing.core.PApplet;
+import processing.core.PConstants;
+import processing.core.PVector;
+
 class Plant extends Movable {
-	private PApplet p;
 	private Effect effect;
 	private float speed;
+	private float damage;
 
-	public Plant(PAplet p, float x, float y, float width, float height, float hp, float speed, Effect effect) {
-		this.p = p;
-		super(x, y, width, height, hp);
+
+
+	public Plant(PApplet p, float x, float y, float hp, Effect effect) {
+		super(p);
+		this.x = x;
+		this.y = y;
+
+		this.width = 142/2;
+		this.height = 103/2;
+
+		this.hp = hp;
 		this.effect = effect;
-		this.speed = speed;
 	}
 
-	public void shoot() {
-		return new Bullet(x, y, speed, damage, effect);
+	public Bullet shoot() {
+		return new Bullet(p, x, y, 15, 15, 1, speed, damage, effect);
 	}
+
+	public void show() {
+		p.rectMode(PConstants.CENTER);
+		p.fill(0, 255, 0);
+		p.rect(x+width/2, y+height/2, width, height);
+    }
 }

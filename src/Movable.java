@@ -1,10 +1,16 @@
+import processing.core.PApplet;
+
 class Movable {
-	private PApplet p;
-	private float x;
-	private float y;
-	private float width;
-	private float height;
-	private float hp;
+	protected PApplet p;
+	protected float x;
+	protected float y;
+	protected float width;
+	protected float height;
+	protected float hp;
+
+	public Movable(PApplet p) {
+		this.p = p;
+	}
 
 	public Movable(PApplet p, float x, float y, float width, float height, float hp) {
 		this.p = p;
@@ -20,8 +26,8 @@ class Movable {
 		this.y = y;
 	}
 
-	public void collidesWith(Movable other) {
-		if (x + width  other.x &&
+	public boolean collidesWith(Movable other) {
+		if (x + width  < other.x &&
 			y < other.y + other.height &&
 			height + y > other.y) {
 			return true;
@@ -30,7 +36,7 @@ class Movable {
 		}
 	}
 
-	public void isAlive() {
+	public boolean isAlive() {
 		if (hp <= 0) {
 			return true;
 		} else {
@@ -38,3 +44,6 @@ class Movable {
 		}
 	}
 }
+
+
+
