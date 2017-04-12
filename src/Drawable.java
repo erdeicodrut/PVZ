@@ -21,5 +21,9 @@ public abstract class Drawable {
 		return !(pos.x + size.x < other.pos.x || pos.x > other.pos.x + other.size.x || pos.y + size.y < other.pos.y || pos.y > other.pos.y + other.size.y);
 	}
 
+	public void setPosition(PVector pos) {
+		this.pos = pos;
+	}
+
 	public abstract void show();
 }
