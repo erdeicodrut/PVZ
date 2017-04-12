@@ -1,26 +1,36 @@
 import processing.core.PApplet;
+import processing.core.PVector;
 
-class Bullet extends Movable {
-	private PApplet p;
+class Bullet extends Living
+{
 	private float speed;
 	private float damage;
 	private Effect effect;
-	private float hp; // this has hp because any time it hits something the hp goes to 0 and it will be automatically collected by the manual garbage collecter we will implement
-					  // TODO implement hp to everything REFACTORING JOB
 
-	public Bullet(PApplet p, float x, float y, float width, float height, float hp, float speed, float damage, Effect effect) {
-		super(p, x, y, width, height, hp);
+	public Bullet(PApplet p, PVector pos, float speed, float damage, Effect effect) {
+		super(p, pos, new PVector(20, 20), 1);
+
+		this.size = new PVector(20, 20);
 		this.effect = effect;
 		this.speed = speed;
 		this.damage = damage;
 	}
 
 	public void move() {
-		x -= speed;
+		pos.x += speed;
 	}
 
+	// This method is called when it collides with a zombie
 	public void hit(Zombie other) {
-		other.recieve(damage, effect);
-		this.hp = 0;
+		hp = 0;
+		other.receive(damage, effect);
+	}
+
+	@Override
+	public void show()
+	{
+		// Temp
+		p.fill(255, 255, 0);
+		p.ellipse(pos.x, pos.y, size.x, size.y);
 	}
 }

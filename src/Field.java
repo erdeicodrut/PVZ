@@ -1,35 +1,38 @@
 import processing.core.PApplet;
+import processing.core.PVector;
 
 class Field {
 	private PApplet p;
-	private float x;
-	private float y;
-	private int width, height;
+	private PVector pos;
 
-	private float cellWidth = 71f;
-	private float cellHeight = 51.5f;
+	private Cell[][] matrix;
+	private PVector dim;
 
-	public  Cell[][] matrix;
-
-	public Field(PApplet p, float x, float y, int width, int height) {
+	public Field(PApplet p, PVector pos, PVector dim) {
 		this.p = p;
+		this.pos = pos;
 
-		this.x = x;
-		this.y = y;
-		this.width = width;
-		this.height = height;
+		this.dim = dim;
 
-		matrix = new Cell[width][height];
+		// Init the matrix
+		matrix = new Cell[(int) dim.y][(int) dim.x];
 	}
 
+	// Reset every cell of the matrix
 	public void clear() {
-		for (int i = 0; i < width; i++) {
-			for (int j = 0; j < height; j++) {
-				matrix[i][j] = new Cell(p, x + j*cellWidth, y + i*cellHeight, cellWidth, cellHeight);
+		for (int i = 0; i < dim.y; i++) {
+			for (int j = 0; j < dim.x; j++) {
+				PVector newPos = new PVector(pos.x + j*Globals.cellSize.x, pos.y + i*Globals.cellSize.y);
+				matrix[i][j] = new Cell(p, newPos, Globals.cellSize);
 			}
 		}
 	}
 
+	public Cell at(int x, int y) {
+		return this.matrix[x][y];
+	}
+
+	// Iterate through each cell and show it
 	public void show() {
 		for (Cell[] line : matrix) {
 			for (Cell cell : line)

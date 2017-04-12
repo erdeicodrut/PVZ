@@ -1,22 +1,29 @@
 import processing.core.PApplet;
+import processing.core.PVector;
 
-class Plant extends Movable {
-	private PApplet p;
+class Plant extends Living {
 	private Effect effect;
-	private float speed;
 	private float damage;
 
-	public Plant(PApplet p, float x, float y, float width, float height, float hp, float speed, Effect effect) {
-		super(p, x, y, width, height, hp);
+	private int timer = 30;
+
+	public Plant(PApplet p, float hp, Effect effect) {
+		super(p, new PVector(0, 0), Globals.flowerSize, hp);
+
 		this.effect = effect;
-		this.speed = speed;
 	}
 
-	public Bullet shoot() {
-		return new Bullet(p, x, y, 15, 15, 1, speed, damage, effect);
+	// Shoots a bullet based on a timer
+	public void shoot() {
+	    if (timer-- < 0) {
+            pvz.bullets.add(new Bullet(p, pos, 15, 15, effect));
+            timer = 30;
+        }
 	}
 
+	@Override
 	public void show() {
-	    
+		p.fill(0, 255, 0);
+		p.rect(pos.x, pos.y, size.x, size.y);
     }
 }
