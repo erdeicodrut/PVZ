@@ -3,9 +3,8 @@ import processing.core.PConstants;
 import processing.core.PVector;
 import processing.event.MouseEvent;
 
-/**
- * Created by roscale on 4/13/17.
- */
+import java.util.Objects;
+
 public class DraggedItem extends GameObject
 {
 	public Plant plant;
@@ -37,7 +36,9 @@ public class DraggedItem extends GameObject
 		Cell cell;
 		if ((cell = (Cell) under) != null)
 		{
-			cell.plantHere(new Plant(plant));
+            Plant fasz = new Plant(plant);
+			cell.plantHere(fasz);
+            pvz.livings.add(fasz);
 		}
 	}
 }

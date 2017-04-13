@@ -7,11 +7,11 @@ class Plant extends Living {
 
 	private int timer = 30;
 
-	public Plant(PApplet p, float hp, Effect effect) {
+	public Plant(PApplet p, float hp, float damage, Effect effect) {
 		super(p, new PVector(0, 0), Globals.flowerSize, hp);
-
+		this.damage = damage;
 		this.effect = effect;
-	}
+    }
 
 	public Plant(Plant plant) {
 		super(plant.p, plant.pos, Globals.flowerSize, plant.hp);
@@ -20,8 +20,10 @@ class Plant extends Living {
 
 	// Shoots a bullet based on a timer
 	public void shoot() {
-	    if (timer-- < 0) {
-            pvz.bullets.add(new Bullet(p, pos, 15, 15, effect));
+        System.out.println(timer);
+        if (timer-- <= 0) {
+            System.out.println(timer + " TRUE");
+			pvz.bullets.add(new Bullet(p, pos, 15, damage, effect));
             timer = 30;
         }
 	}

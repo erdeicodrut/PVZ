@@ -19,7 +19,7 @@ public abstract class GameObject implements IDrawable, IInput
 
 	// Box collision check between 2 GameObject objects
 	public boolean collidesWith(GameObject other) {
-		return !(pos.x + size.x < other.pos.x || pos.x > other.pos.x + other.size.x || pos.y + size.y < other.pos.y || pos.y > other.pos.y + other.size.y);
+		return !((pos.x > other.pos.x + other.size.x) && (pos.y == other.pos.y) ) ;
 	}
 
 	public void setPosition(PVector pos) {
