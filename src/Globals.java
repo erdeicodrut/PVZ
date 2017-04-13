@@ -1,4 +1,6 @@
+import processing.core.PApplet;
 import processing.core.PVector;
+import processing.event.MouseEvent;
 
 public class Globals {
 
@@ -13,4 +15,17 @@ public class Globals {
 
 	public static PVector shopSize = new PVector(50, 450).mult(scale);
 	public static PVector itemSize = new PVector(40f, 40f).mult(scale);
+
+//
+// Helper functions
+//
+
+	public static PVector getMousePos(MouseEvent event)
+	{ return new PVector(event.getX(), event.getY()); }
+
+	public static PVector getMousePos(PApplet p)
+	{ return new PVector(p.mouseX, p.mouseY); }
+
+	public static PVector getRelativeMousePos(PApplet p)
+	{ return new PVector(p.mouseX - p.pmouseX, p.mouseY - p.pmouseY); }
 }

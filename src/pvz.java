@@ -1,5 +1,6 @@
 import processing.core.PApplet;
 import processing.core.PVector;
+import processing.event.MouseEvent;
 
 import java.util.ArrayList;
 
@@ -11,6 +12,9 @@ public class pvz extends PApplet {
     // Collections of entities
     public static ArrayList<Living> livings = new ArrayList<>();
     public static ArrayList<Bullet> bullets = new ArrayList<>();
+
+    public static ArrayList<Item> draggedItems = new ArrayList<>();
+
 
     public void settings() {
         size((int) ( 1600 / 2 * Globals.scale), (int) (1000 / 2 * Globals.scale));
@@ -89,7 +93,18 @@ public class pvz extends PApplet {
             l.show();
         }
 
+        // Showing the dragged items
+//        for (Item cur : draggedItems) {
+//            cur.showDrag();
+//        }
+
     }
 
+    @Override public void mouseMoved(MouseEvent event) { InputManager.mouseMoved(event); }
+    @Override public void mousePressed(MouseEvent event) { InputManager.mousePressed(event); }
+    @Override public void mouseClicked(MouseEvent event) { InputManager.mouseClicked(event); }
+    @Override public void mouseDragged(MouseEvent event) { InputManager.mouseDragged(event); }
+    @Override public void mouseReleased(MouseEvent event) { InputManager.mouseReleased(event); }
+    @Override public void mouseWheel(MouseEvent event) { InputManager.mouseWheel(event); }
 
 }

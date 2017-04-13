@@ -13,6 +13,11 @@ class Plant extends Living {
 		this.effect = effect;
 	}
 
+	public Plant(Plant plant) {
+		super(plant.p, plant.pos, Globals.flowerSize, plant.hp);
+		this.effect = plant.effect;
+	}
+
 	// Shoots a bullet based on a timer
 	public void shoot() {
 	    if (timer-- < 0) {

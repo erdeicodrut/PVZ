@@ -1,7 +1,8 @@
 import processing.core.PApplet;
 import processing.core.PVector;
 
-class Cell extends Drawable {
+class Cell extends GameObject
+{
 	private Plant plant;
 
 	public Cell(PApplet p, PVector pos, PVector size) {
@@ -29,5 +30,7 @@ class Cell extends Drawable {
 	    p.stroke(51);
 	    p.strokeWeight(3);
 		p.rect(pos.x, pos.y, size.x, size.y);
+
+		if (plant != null) plant.show();
 	}
 }
