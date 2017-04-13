@@ -1,9 +1,12 @@
 import processing.core.PApplet;
 import processing.core.PConstants;
 import processing.core.PVector;
+
+import java.awt.dnd.DragSourceAdapter;
 import java.util.ArrayList;
 
-class Shop extends Drawable {
+class Shop extends GameObject
+{
 	private int ballance;
 	private ArrayList<Item> loadout = new ArrayList<>();
 
@@ -26,6 +29,9 @@ class Shop extends Drawable {
 	}
 
 	public void addItem(Item item) {
+		InputManager.addObject(item);
+		pvz.draggedItems.add(item);
+
 	    if (loadout.size() >= 6)
 	        return;
 

@@ -1,7 +1,8 @@
 import processing.core.PApplet;
 import processing.core.PVector;
 
-abstract class Living extends Drawable {
+abstract class Living extends GameObject
+{
 	public float hp;
 
 	public Living(PApplet p, PVector pos, PVector size, float hp) {

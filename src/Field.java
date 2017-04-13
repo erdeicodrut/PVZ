@@ -23,7 +23,10 @@ class Field {
 		for (int i = 0; i < dim.y; i++) {
 			for (int j = 0; j < dim.x; j++) {
 				PVector newPos = new PVector(pos.x + j*Globals.cellSize.x, pos.y + i*Globals.cellSize.y);
-				matrix[i][j] = new Cell(p, newPos, Globals.cellSize);
+				Cell cell = new Cell(p, newPos, Globals.cellSize);
+
+				matrix[i][j] = cell;
+				InputManager.addObject(cell);
 			}
 		}
 	}
