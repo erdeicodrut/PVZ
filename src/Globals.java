@@ -16,6 +16,8 @@ public class Globals {
 	public static PVector shopSize = new PVector(50, 450).mult(scale);
 	public static PVector itemSize = new PVector(40f, 40f).mult(scale);
 
+	public static float bulletDamage = 20f;
+
 //
 // Helper functions
 //
