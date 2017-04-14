@@ -20,6 +20,9 @@ class Cell extends GameObject
 		if (this.isOccupied() == false) {
 			this.plant = toPlant;
 			this.plant.pos = this.pos;
+
+			CollisionManager.addObject(plant);
+
 			return toPlant;
 		}
 		else return null;

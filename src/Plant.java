@@ -18,12 +18,23 @@ class Plant extends Living {
 		this.effect = plant.effect;
 	}
 
+	public void update() {
+		for (Plant plant : pvz.plants)
+			for (Zombie zombie : pvz.zombies)
+				if (plant.pos.y == zombie.pos.y) {
+					plant.shoot();
+					break;
+				}
+	}
+
 	// Shoots a bullet based on a timer
 	public void shoot() {
-        System.out.println(timer);
+//        System.out.println(timer);
         if (timer-- <= 0) {
-            System.out.println(timer + " TRUE");
-			pvz.bullets.add(new Bullet(p, pos, 15, damage, effect));
+//            System.out.println(timer + " TRUE");
+            Bullet bullet = new Bullet(p, pos, 15, damage, effect);
+            CollisionManager.addObject(bullet);
+			pvz.bullets.add(bullet);
             timer = 30;
         }
 	}

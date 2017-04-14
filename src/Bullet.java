@@ -16,6 +16,10 @@ class Bullet extends Living
 		this.damage = damage;
 	}
 
+	public void update() {
+		move();
+	}
+
 	public void move() {
 		pos.x += speed;
 	}
@@ -32,5 +36,15 @@ class Bullet extends Living
 		// Temp
 		p.fill(255, 255, 0);
 		p.ellipse(pos.x, pos.y, size.x, size.y);
+	}
+
+	@Override
+	public void onCollisionEnterWith(ICollision other) {
+		if (other.getClass() == Zombie.class) {
+			Zombie zombie = (Zombie) other;
+			hit(zombie);
+			hp = 0;
+			// System.out.println(zombie.hp);
+		}
 	}
 }
