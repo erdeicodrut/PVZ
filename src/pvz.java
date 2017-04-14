@@ -41,6 +41,10 @@ public class pvz extends PApplet {
 
         livings.add(new Zombie(this, zombiePos, Globals.zombieSize, 100, 3, 5));
 
+//        // Add all livings to the CollisionManager
+//        for (Living living : livings)
+//            CollisionManager.addObject(living);
+
         shop = new Shop(this, new PVector(10, 15), Globals.shopSize);
         shop.addItem(new Item(this, 12, temp));
         shop.addItem(new Item(this, 35, temp));
@@ -71,31 +75,20 @@ public class pvz extends PApplet {
             }
         }
 
-        zombieAttackAndMovement();
-        plantAttack();
-        bulletAttack();
-        garbageCollector();
+        CollisionManager.resolveCollisions();
 
-        for (int i = 0; i < bullets.size(); i++) {
-            System.out.println(bullets.get(i) + " " + bullets.get(i).hp);
-            if (!bullets.get(i).isAlive() || bullets.get(i).pos.x >= width) {
-                System.out.println(bullets.get(i) + " REMOVED");
-                bullets.remove(i);
-            }
+        for (Living living : livings) {
+            living.update();
+            living.show(); // Show other creatures(plants & zombies)
         }
-
 
         // Move and show the bullets
-        for (int i = 0; i < bullets.size(); i++) {
-            bullets.get(i).move();
-            bullets.get(i).show();
-
+        for (Bullet bullet : bullets) {
+            bullet.update();
+            bullet.show();
         }
 
-        // Show other creatures(plants & zombies)
-        for (Living l : livings) {
-            l.show();
-        }
+        garbageCollector();
     }
 
     private void garbageCollector() {
@@ -103,50 +96,34 @@ public class pvz extends PApplet {
         for (int i = 0; i < plants.size(); i++)
             if (!plants.get(i).isAlive()) {
                 dead.add(plants.get(i));
+                CollisionManager.removeObject(plants.get(i));
                 plants.remove(i);
             }
 
         for (int i = 0; i < zombies.size(); i++)
             if (!zombies.get(i).isAlive()) {
                 dead.add(zombies.get(i));
+                CollisionManager.removeObject(zombies.get(i));
                 zombies.remove(i);
+
+                PVector zombiePos = PVector.add(Globals.fieldPos,
+                        new PVector((Globals.fieldDim.x - 1) * Globals.cellSize.x,
+                                3 * Globals.cellSize.y));
+
+                Zombie z = new Zombie(this, zombiePos, Globals.zombieSize, 100, 3, 5);
+                livings.add(z);
+                zombies.add(z);
             }
 
         livings.removeAll(dead);
-    }
 
-    private void bulletAttack() {
-        for (Zombie zombie : zombies) {
-            for (Bullet bullet : bullets) {
-                if (bullet.collidesWith(zombie)) {
-                    bullet.hit(zombie);
-                }
-
+        for (int i = 0; i < bullets.size(); i++) {
+//            System.out.println(bullets.get(i) + " " + bullets.get(i).hp);
+            if (!bullets.get(i).isAlive() || bullets.get(i).pos.x >= width) {
+//                System.out.println(bullets.get(i) + " REMOVED");
+                CollisionManager.removeObject(bullets.get(i));
+                bullets.remove(i);
             }
-        }
-    }
-
-    private void plantAttack() {
-        for (Plant plant : plants)
-            for (Zombie zombie : zombies)
-                if (plant.pos.y == zombie.pos.y) {
-                    plant.shoot();
-                    break;
-                }
-    }
-
-    private void zombieAttackAndMovement() {
-        for (Zombie zombie : zombies) {
-            boolean colided = false;
-            for (Plant plant : plants) {
-                if (zombie.collidesWith(plant)) {
-                    zombie.attack(plant);
-                    colided = true;
-                    break;
-                }
-            }
-            if (colided == false)
-                zombie.move();
         }
     }
 
@@ -156,5 +133,4 @@ public class pvz extends PApplet {
     @Override public void mouseDragged(MouseEvent event) { InputManager.mouseDragged(event); }
     @Override public void mouseReleased(MouseEvent event) { InputManager.mouseReleased(event); }
     @Override public void mouseWheel(MouseEvent event) { InputManager.mouseWheel(event); }
-
 }

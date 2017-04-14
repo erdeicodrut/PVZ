@@ -1,7 +1,7 @@
 import processing.core.PApplet;
 import processing.core.PVector;
 
-public abstract class GameObject implements IDrawable, IInput
+public abstract class GameObject implements IDrawable, IInput, ICollision
 {
 	public PApplet p;
 	public PVector pos;
@@ -26,6 +26,7 @@ public abstract class GameObject implements IDrawable, IInput
 		this.pos = pos;
 	}
 
+	// IInput
 	@Override
 	public boolean containsPoint(PVector point)
 	{
@@ -33,4 +34,9 @@ public abstract class GameObject implements IDrawable, IInput
 		return (point.x >= this.pos.x) && (point.x < bottomRightCorner.x) &&
 				(point.y >= this.pos.y) && (point.y < bottomRightCorner.y);
 	}
+
+	// ICollision
+	@Override
+	public PVector getPosition() { return pos; }
+	public PVector getSize() { return size; }
 }

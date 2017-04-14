@@ -9,6 +9,7 @@ class Zombie extends Living {
 
 	public Zombie(PApplet p, PVector pos, PVector size, float hp, float speed, float damage) {
 		super(p, pos, size, hp);
+		CollisionManager.addObject(this);
 
 		this.speed = speed;
 		this.damage = damage;
@@ -16,6 +17,11 @@ class Zombie extends Living {
 
 	public void move() {
 		pos.x -= speed;
+	}
+
+	public void update() {
+		if (!CollisionManager.isCollidingWithClass(this, Plant.class))
+			move();
 	}
 
 	// This method is called when it collides with a plant
@@ -40,5 +46,13 @@ class Zombie extends Living {
 	public void show() {
 		p.fill(255, 0, 0);
 		p.rect(pos.x, pos.y, size.x, size.y);
+	}
+
+	@Override
+	public void onCollisionWith(ICollision other) {
+		if (other.getClass() == Plant.class) {
+			Plant plant = (Plant) other;
+			attack(plant);
+		}
 	}
 }
