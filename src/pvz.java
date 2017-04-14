@@ -71,83 +71,18 @@ public class pvz extends PApplet {
             }
         }
 
-            // Iterate 2 by 2 and check for collisions
-        for (int i = 0; i < livings.size(); i++) {
-            for (int j = 0; j < livings.size(); j++) {
+        zombieAttackAndMovement();
+        plantAttack();
+        bulletAttack();
+        garbageCollector();
 
-                if (livings.get(i).collidesWith(livings.get(j))) {
-
-                    // Check particular classes
-                    if (livings.get(i).getClass() == Zombie.class && livings.get(j).getClass() == Plant.class) {
-                        Zombie z = (Zombie) livings.get(i);
-                        Plant p = (Plant) livings.get(j);
-
-                        z.attack(p);
-                        // z.moveB();
-
-                    } else if (livings.get(i).getClass() == Zombie.class && livings.get(j).getClass() == Bullet.class) {
-                        Zombie z = (Zombie) livings.get(i);
-                        Bullet b = (Bullet) livings.get(j);
-
-                        b.hit(z);
-
-                    }
-                } else {
-                    if (livings.get(i).getClass() == Zombie.class) {
-                        ((Zombie) livings.get(i)).move();
-                    }
-                }
-            }
-            /*
-            So this is one of the most "treaba de carpaci" you'll ever find here
-             backed up moveB that you find in the nested loops above
-
-            You can't move the zombies otherwise,
-            if you do it in the nested loop you get
-            a zombie that moves with a speed equal
-            to it's speed times the number of livings existent
-             */
-        }
-
-        for (Plant plant : plants)
-            for (Zombie zombie : zombies)
-                if (plant.pos.y == zombie.pos.y) {
-                    plant.shoot();
-                    break;
-                }
-
-        for (Zombie zombie : zombies) {
-            for(Bullet bullet : bullets) {
-                if (bullet.collidesWith(zombie)) {
-                    bullet.hit(zombie);
-                }
-
+        for (int i = 0; i < bullets.size(); i++) {
+            System.out.println(bullets.get(i) + " " + bullets.get(i).hp);
+            if (!bullets.get(i).isAlive() || bullets.get(i).pos.x >= width) {
+                System.out.println(bullets.get(i) + " REMOVED");
+                bullets.remove(i);
             }
         }
-
-        // GARBAGE COLLECTORS
-        ArrayList<GameObject> dead = new ArrayList<>();
-        for (int i = 0; i < plants.size(); i++)
-            if (!plants.get(i).isAlive()) {
-                dead.add(plants.get(i));
-                plants.remove(i);
-            }
-//
-        for (int i = 0; i < zombies.size(); i++)
-            if (!zombies.get(i).isAlive()) {
-                dead.add(zombies.get(i));
-                zombies.remove(i);
-            }
-
-        livings.removeAll(dead);
-//
-       for (int i = 0; i < bullets.size(); i++) {
-           System.out.println(bullets.get(i) + " " + bullets.get(i).hp);
-           if (!bullets.get(i).isAlive() || bullets.get(i).pos.x >= width) {
-               System.out.println(bullets.get(i) + " REMOVED");
-               bullets.remove(i);
-           }
-       }
 
 
         // Move and show the bullets
@@ -155,19 +90,64 @@ public class pvz extends PApplet {
             bullets.get(i).move();
             bullets.get(i).show();
 
-//            if () {
-//                bullets.remove(i);
-////                System.out.println("removed");
-//
-//            }
-//
         }
 
         // Show other creatures(plants & zombies)
         for (Living l : livings) {
             l.show();
         }
+    }
 
+    private void garbageCollector() {
+        ArrayList<GameObject> dead = new ArrayList<>();
+        for (int i = 0; i < plants.size(); i++)
+            if (!plants.get(i).isAlive()) {
+                dead.add(plants.get(i));
+                plants.remove(i);
+            }
+
+        for (int i = 0; i < zombies.size(); i++)
+            if (!zombies.get(i).isAlive()) {
+                dead.add(zombies.get(i));
+                zombies.remove(i);
+            }
+
+        livings.removeAll(dead);
+    }
+
+    private void bulletAttack() {
+        for (Zombie zombie : zombies) {
+            for (Bullet bullet : bullets) {
+                if (bullet.collidesWith(zombie)) {
+                    bullet.hit(zombie);
+                }
+
+            }
+        }
+    }
+
+    private void plantAttack() {
+        for (Plant plant : plants)
+            for (Zombie zombie : zombies)
+                if (plant.pos.y == zombie.pos.y) {
+                    plant.shoot();
+                    break;
+                }
+    }
+
+    private void zombieAttackAndMovement() {
+        for (Zombie zombie : zombies) {
+            boolean colided = false;
+            for (Plant plant : plants) {
+                if (zombie.collidesWith(plant)) {
+                    zombie.attack(plant);
+                    colided = true;
+                    break;
+                }
+            }
+            if (colided == false)
+                zombie.move();
+        }
     }
 
     @Override public void mouseMoved(MouseEvent event) { InputManager.mouseMoved(event); }
