@@ -36,5 +36,7 @@ class Cell extends GameObject
 		p.rect(pos.x, pos.y, size.x, size.y);
 
 		if (plant != null) plant.show();
+
+		if (plant != null && plant.isAlive() == false) { plant = null; }
 	}
 }

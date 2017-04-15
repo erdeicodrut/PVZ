@@ -19,9 +19,7 @@ class Plant extends Living {
     }
 
 	public Plant(Plant plant) {
-		super(plant.p, plant.pos, Globals.flowerSize, plant.hp);
-		this.effect = plant.effect;
-		DebugingNum++;
+		this(plant.p, plant.hp, plant.damage, plant.effect);
 	}
 
 	public void update() {
