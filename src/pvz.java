@@ -11,13 +11,7 @@ public class pvz extends PApplet {
 
     // Collections of entities
     public static ArrayList<Living> livings = new ArrayList<>();
-    public static ArrayList<Bullet> bullets = new ArrayList<>();
-
-    public static ArrayList<Zombie> zombies = new ArrayList<>();
-    public static ArrayList<Plant> plants = new ArrayList<>();
-
     public static ArrayList<Item> draggedItems = new ArrayList<>();
-
 
     public void settings() {
         size((int) ( 1600 / 2 * Globals.scale), (int) (1000 / 2 * Globals.scale));
@@ -31,19 +25,17 @@ public class pvz extends PApplet {
         field.clear();
 
         // Debugging
-        Plant temp = field.at(3, 0).plantHere(new Plant(this, 10, Globals.bulletDamage, Effect.FIRE));
-        if (temp != null)
-            livings.add(temp);
+        Plant temp = field.at(3, 0).plantHere(new Plant(this, 3, Globals.bulletDamage, Effect.FIRE));
+        Plant temp1 = field.at(3, 1).plantHere(new Plant(this, 3, Globals.bulletDamage, Effect.FIRE));
+//        if (temp != null)
+//            livings.add(temp);
+//            livings.add(temp1);
 
         PVector zombiePos = PVector.add(Globals.fieldPos,
                                         new PVector((Globals.fieldDim.x - 1) * Globals.cellSize.x,
                                         3 * Globals.cellSize.y));
 
-        livings.add(new Zombie(this, zombiePos, Globals.zombieSize, 100, 3, 5));
-
-//        // Add all livings to the CollisionManager
-//        for (Living living : livings)
-//            CollisionManager.addObject(living);
+        new Zombie(this, zombiePos, Globals.zombieSize, 10, 3, 5);
 
         shop = new Shop(this, new PVector(10, 15), Globals.shopSize);
         shop.addItem(new Item(this, 12, temp));
@@ -58,72 +50,47 @@ public class pvz extends PApplet {
         background(255);
         fill(0);
 
-        // Show the cells
-        field.show();
-
-        // Shop stuff
-        shop.show();
-
-        zombies.clear();
-        plants.clear();
+        // Update
         for (int i = 0; i < livings.size(); i++) {
-            if (livings.get(i).getClass() == Zombie.class) {
-                zombies.add((Zombie) livings.get(i));
-            }
-            if (livings.get(i).getClass() == Plant.class) {
-                plants.add((Plant) livings.get(i));
-            }
+            livings.get(i).update();
         }
 
+        // Check collisions and clean-up
         CollisionManager.resolveCollisions();
+        garbageCollector();
+
+        // Show
+        field.show(); // Cells
 
         for (Living living : livings) {
-            living.update();
-            living.show(); // Show other creatures(plants & zombies)
+//            System.out.println(living);
+            living.show();
         }
 
-        // Move and show the bullets
-        for (Bullet bullet : bullets) {
-            bullet.update();
-            bullet.show();
-        }
+        shop.show(); // Shop and items
 
-        garbageCollector();
+        for (Item draggedItem : draggedItems) {
+            draggedItem.show();
+        }
     }
 
     private void garbageCollector() {
-        ArrayList<GameObject> dead = new ArrayList<>();
-        for (int i = 0; i < plants.size(); i++)
-            if (!plants.get(i).isAlive()) {
-                dead.add(plants.get(i));
-                CollisionManager.removeObject(plants.get(i));
-                plants.remove(i);
+        int i = 0;
+        while (i < livings.size()) {
+            if (!livings.get(i).isAlive()) {
+                // Debugging
+                if (livings.get(i).getClass() == Zombie.class) {
+                    PVector zombiePos = PVector.add(Globals.fieldPos,
+                            new PVector((Globals.fieldDim.x - 1) * Globals.cellSize.x,
+                                    3 * Globals.cellSize.y));
+                    Zombie zombie = new Zombie(this, zombiePos, Globals.zombieSize, 10, 3, 5);
+                }
+
+                Living removed = livings.remove(i);
+                CollisionManager.removeObject(removed);
             }
-
-        for (int i = 0; i < zombies.size(); i++)
-            if (!zombies.get(i).isAlive()) {
-                dead.add(zombies.get(i));
-                CollisionManager.removeObject(zombies.get(i));
-                zombies.remove(i);
-
-                PVector zombiePos = PVector.add(Globals.fieldPos,
-                        new PVector((Globals.fieldDim.x - 1) * Globals.cellSize.x,
-                                3 * Globals.cellSize.y));
-
-                Zombie z = new Zombie(this, zombiePos, Globals.zombieSize, 100, 3, 5);
-                livings.add(z);
-                zombies.add(z);
-            }
-
-        livings.removeAll(dead);
-
-        for (int i = 0; i < bullets.size(); i++) {
-//            System.out.println(bullets.get(i) + " " + bullets.get(i).hp);
-            if (!bullets.get(i).isAlive() || bullets.get(i).pos.x >= width) {
-//                System.out.println(bullets.get(i) + " REMOVED");
-                CollisionManager.removeObject(bullets.get(i));
-                bullets.remove(i);
-            }
+            else
+                i++;
         }
     }
 

@@ -9,6 +9,8 @@ class Bullet extends Living
 
 	public Bullet(PApplet p, PVector pos, float speed, float damage, Effect effect) {
 		super(p, pos, new PVector(20, 20), 1);
+		pvz.livings.add(this);
+		CollisionManager.addObject(this);
 
 		this.size = new PVector(20, 20);
 		this.effect = effect;
@@ -41,10 +43,10 @@ class Bullet extends Living
 	@Override
 	public void onCollisionEnterWith(ICollision other) {
 		if (other.getClass() == Zombie.class) {
+			System.out.println("COLLIDED");
 			Zombie zombie = (Zombie) other;
-			hit(zombie);
+			this.hit(zombie);
 			hp = 0;
-			// System.out.println(zombie.hp);
 		}
 	}
 }

@@ -4,11 +4,13 @@ import processing.core.PVector;
 class Zombie extends Living {
 	private float speed;
 	private float damage;
+	private float totalDamage = 0;
 
 	private int timer = 30;
 
 	public Zombie(PApplet p, PVector pos, PVector size, float hp, float speed, float damage) {
 		super(p, pos, size, hp);
+		pvz.livings.add(this);
 		CollisionManager.addObject(this);
 
 		this.speed = speed;
@@ -37,9 +39,13 @@ class Zombie extends Living {
 
 	// Receives some damage/effect from a bullet
 	public void receive(float damage, Effect effect) {
-		if (hp > 0) {
-			hp -= damage;
-		}
+			if (hp > 0)
+			{
+				totalDamage += damage;
+			}
+			hp -= totalDamage;
+			System.out.println(this + " ZOMBIE HIT " + hp);
+			totalDamage = 0;
 	}
 
 	@Override
@@ -49,8 +55,10 @@ class Zombie extends Living {
 	}
 
 	@Override
-	public void onCollisionWith(ICollision other) {
-		if (other.getClass() == Plant.class) {
+	public void onCollisionWith(ICollision other)
+	{
+		if (other.getClass() == Plant.class)
+		{
 			Plant plant = (Plant) other;
 			attack(plant);
 		}

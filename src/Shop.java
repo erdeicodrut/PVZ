@@ -29,8 +29,8 @@ class Shop extends GameObject
 	}
 
 	public void addItem(Item item) {
-		InputManager.addObject(item);
 		pvz.draggedItems.add(item);
+		InputManager.addObject(item);
 
 	    if (loadout.size() >= 6)
 	        return;

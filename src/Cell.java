@@ -21,6 +21,7 @@ class Cell extends GameObject
 			this.plant = toPlant;
 			this.plant.pos = this.pos;
 
+			pvz.livings.add(plant);
 			CollisionManager.addObject(plant);
 
 			return toPlant;
@@ -35,5 +36,7 @@ class Cell extends GameObject
 		p.rect(pos.x, pos.y, size.x, size.y);
 
 		if (plant != null) plant.show();
+
+		if (plant != null && plant.isAlive() == false) { plant = null; }
 	}
 }

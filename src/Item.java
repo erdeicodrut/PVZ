@@ -30,10 +30,6 @@ public class Item extends GameObject
     }
 
 	@Override
-	public void mouseReleased(MouseEvent event) {
-	}
-
-	@Override
     public void mousePressed(MouseEvent event)
     {
 	    draggedItem = new DraggedItem(p, pos, plant);

@@ -30,8 +30,6 @@ public abstract class CollisionManager
 
 	public static void addObject(ICollision obj) { queue.add(obj); }
 	public static void removeObject(ICollision obj) {
-		System.out.println("Before: " + queue);
-		System.out.println("Before: " + activeCollisions);
 
 		queue.remove(obj);
 
@@ -44,8 +42,6 @@ public abstract class CollisionManager
 				i++;
 		}
 
-		System.out.println("After: " + queue);
-		System.out.println("After: " + activeCollisions);
 	}
 
 	public static boolean isColliding(ICollision obj)
@@ -102,7 +98,5 @@ public abstract class CollisionManager
 				}
 			}
 
-//		Pair p = activeCollisions.get(0);
-//		System.out.println(p.first + " " + p.second);
 	}
 }
