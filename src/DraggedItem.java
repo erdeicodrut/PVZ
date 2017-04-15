@@ -34,7 +34,7 @@ public class DraggedItem extends GameObject
 	{
 		IInput under = InputManager.getObjectAt(Globals.getMousePos(p));
 		Cell cell;
-		if ((cell = (Cell) under) != null)
+		if ((cell = (Cell) under) != null && !((Cell) under).isOccupied())
 		{
             Plant fasz = new Plant(plant);
 			cell.plantHere(fasz);

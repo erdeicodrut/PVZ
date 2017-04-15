@@ -44,7 +44,6 @@ class Bullet extends Living
 			Zombie zombie = (Zombie) other;
 			hit(zombie);
 			hp = 0;
-			// System.out.println(zombie.hp);
 		}
 	}
 }

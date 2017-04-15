@@ -70,23 +70,25 @@ public class pvz extends PApplet {
             if (livings.get(i).getClass() == Zombie.class) {
                 zombies.add((Zombie) livings.get(i));
             }
-            if (livings.get(i).getClass() == Plant.class) {
+            else if (livings.get(i).getClass() == Plant.class) {
                 plants.add((Plant) livings.get(i));
             }
         }
 
         CollisionManager.resolveCollisions();
 
+
         for (Living living : livings) {
+
             living.update();
             living.show(); // Show other creatures(plants & zombies)
         }
 
-        // Move and show the bullets
         for (Bullet bullet : bullets) {
             bullet.update();
-            bullet.show();
+            bullet.show(); // Show other creatures(plants & zombies)
         }
+
 
         garbageCollector();
     }
@@ -118,9 +120,7 @@ public class pvz extends PApplet {
         livings.removeAll(dead);
 
         for (int i = 0; i < bullets.size(); i++) {
-//            System.out.println(bullets.get(i) + " " + bullets.get(i).hp);
             if (!bullets.get(i).isAlive() || bullets.get(i).pos.x >= width) {
-//                System.out.println(bullets.get(i) + " REMOVED");
                 CollisionManager.removeObject(bullets.get(i));
                 bullets.remove(i);
             }
