@@ -7,7 +7,8 @@ import java.util.ArrayList;
 
 class Shop extends GameObject
 {
-	private int ballance;
+	private static int ballance;
+
 	private ArrayList<Item> loadout = new ArrayList<>();
 
 	public Shop(PApplet p, PVector pos, PVector size) {
@@ -15,7 +16,7 @@ class Shop extends GameObject
 		ballance = 0;
 	}
 
-	public void addBallance(int loan) {
+	public static void addBallance(int loan) {
 		ballance += loan;
 	}
 
@@ -53,6 +54,7 @@ class Shop extends GameObject
 		    item.show();
 
 		p.rect(80, 20, 50, 50);
-		p.text(ballance, 10, 100);
+		p.fill(0);
+		p.text(ballance, 100, 10 + 50);
 	}
 }

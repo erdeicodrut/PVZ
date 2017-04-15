@@ -13,9 +13,10 @@ public abstract class InputManager
 
 	public static IInput getObjectAt(PVector pos)
 	{
-		for (IInput obj : queue)
-			if (obj != focusedObject && obj.containsPoint(pos))
-				return obj;
+		for (int i = queue.size()-1; i >= 0; i--) {
+			if (queue.get(i) != focusedObject && queue.get(i).containsPoint(pos))
+				return queue.get(i);
+		}
 		return null;
 	}
 
@@ -33,10 +34,12 @@ public abstract class InputManager
 	public static void mousePressed(MouseEvent event)
 	{
 		PVector mousePos = Globals.getMousePos(event);
+		System.out.println(mousePos.x + " " + mousePos.y);
 
 		IInput obj;
 		if ((obj = getObjectAt(mousePos)) != null)
 		{
+			System.out.println("DA");
 			focusedObject = obj;
 			obj.mousePressed(event);
 		}
