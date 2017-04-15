@@ -8,11 +8,11 @@ public class pvz extends PApplet {
     // The main grid of the game
     Field field = new Field(this, Globals.fieldPos, Globals.fieldDim);
     Shop shop;
-    Sun sun;
-
     // Collections of entities
     public static ArrayList<Living> livings = new ArrayList<>();
     public static ArrayList<Item> draggedItems = new ArrayList<>();
+    public static ArrayList<Sun> suns = new ArrayList<>();
+
 
     public void settings() {
         size((int) ( 1600 / 2 * Globals.scale), (int) (1000 / 2 * Globals.scale));
@@ -25,25 +25,22 @@ public class pvz extends PApplet {
         // Initializing the grid
         field.clear();
 
-        // Debugging
-        Plant temp = field.at(3, 0).plantHere(new Plant(this, 3, Globals.bulletDamage, Effect.FIRE));
-        Plant temp1 = field.at(3, 1).plantHere(new Plant(this, 3, Globals.bulletDamage, Effect.FIRE));
-
         PVector zombiePos = PVector.add(Globals.fieldPos,
                                         new PVector((Globals.fieldDim.x - 1) * Globals.cellSize.x,
                                         3 * Globals.cellSize.y));
 
         new Zombie(this, zombiePos, Globals.zombieSize, 10, 3, 5);
 
-        sun = new Sun(this);
+        new Sun(this);
 
         shop = new Shop(this, new PVector(10, 15), Globals.shopSize);
-        shop.addItem(new Item(this, 12, temp));
-        shop.addItem(new Item(this, 35, temp));
-        shop.addItem(new Item(this, 40, temp));
-        shop.addItem(new Item(this, 50, temp));
-        shop.addItem(new Item(this, 25, temp));
-        shop.addItem(new Item(this, 10, temp));
+
+        shop.addItem(new Item(this, 12, new Plant(this, 4, 1, Effect.NONE)));
+        shop.addItem(new Item(this, 35, new Plant(this, 4, 1, Effect.NONE)));
+        shop.addItem(new Item(this, 40, new Plant(this, 4, 1, Effect.NONE)));
+        shop.addItem(new Item(this, 50, new Plant(this, 4, 1, Effect.NONE)));
+        shop.addItem(new Item(this, 25, new Plant(this, 4, 1, Effect.NONE)));
+        shop.addItem(new Item(this, 10, new Plant(this, 4, 1, Effect.NONE)));
     }
 
     public void draw() {
@@ -61,7 +58,12 @@ public class pvz extends PApplet {
 
         // Show
         field.show(); // Cells
-        sun.show();
+
+        for (Sun sun : suns) {
+            sun.show();
+        }
+
+        Sun.spawn();
 
         for (Living living : livings) {
 //            System.out.println(living);
