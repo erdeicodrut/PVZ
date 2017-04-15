@@ -25,17 +25,11 @@ public class pvz extends PApplet {
         // Initializing the grid
         field.clear();
 
-        PVector zombiePos = PVector.add(Globals.fieldPos,
-                                        new PVector((Globals.fieldDim.x - 1) * Globals.cellSize.x,
-                                        3 * Globals.cellSize.y));
-
-        new Zombie(this, zombiePos, Globals.zombieSize, 10, 3, 5);
-
         new Sun(this);
 
         shop = new Shop(this, new PVector(10, 15), Globals.shopSize);
 
-        shop.addItem(new Item(this, 12, new Plant(this, 4, 1, Effect.NONE)));
+        shop.addItem(new Item(this, 1, new Plant(this, 4, 1, Effect.NONE)));
         shop.addItem(new Item(this, 35, new Plant(this, 4, 1, Effect.NONE)));
         shop.addItem(new Item(this, 40, new Plant(this, 4, 1, Effect.NONE)));
         shop.addItem(new Item(this, 50, new Plant(this, 4, 1, Effect.NONE)));
@@ -56,38 +50,35 @@ public class pvz extends PApplet {
         CollisionManager.resolveCollisions();
         garbageCollector();
 
-        // Show
-        field.show(); // Cells
+	    Sun.spawn();
+	    Zombie.spawn();
 
-        for (Sun sun : suns) {
-            sun.show();
-        }
+        show();
+    }
 
-        Sun.spawn();
+    private void show() {
+	    field.show(); // Cells
 
-        for (Living living : livings) {
-//            System.out.println(living);
-            living.show();
-        }
 
-        shop.show(); // Shop and items
+	    for (Living living : livings) {
+		    living.show();
+	    }
 
-        for (Item draggedItem : draggedItems) {
-            draggedItem.show();
-        }
+	    shop.show(); // Shop and items
+
+	    for (Item draggedItem : draggedItems) {
+		    draggedItem.show();
+	    }
+
+	    for (Sun sun : suns) {
+		    sun.show();
+	    }
     }
 
     private void garbageCollector() {
         int i = 0;
         while (i < livings.size()) {
             if (!livings.get(i).isAlive()) {
-                // Debugging
-                if (livings.get(i).getClass() == Zombie.class) {
-                    PVector zombiePos = PVector.add(Globals.fieldPos,
-                            new PVector((Globals.fieldDim.x - 1) * Globals.cellSize.x,
-                                    3 * Globals.cellSize.y));
-                    Zombie zombie = new Zombie(this, zombiePos, Globals.zombieSize, 10, 3, 5);
-                }
 
                 Living removed = livings.remove(i);
                 CollisionManager.removeObject(removed);

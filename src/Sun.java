@@ -25,7 +25,7 @@ public class Sun extends GameObject implements IDrawable, IInput
 	public void show()
 	{
 		p.fill(255,255,0);
-		p.ellipse(pos.x,pos.y,size.x, size.y);
+		p.rect(pos.x,pos.y,size.x, size.y);
 	}
 
 	public static void spawn() {

@@ -2,7 +2,6 @@ import processing.core.PApplet;
 import processing.core.PConstants;
 import processing.core.PVector;
 
-import java.awt.dnd.DragSourceAdapter;
 import java.util.ArrayList;
 
 class Shop extends GameObject
@@ -20,8 +19,8 @@ class Shop extends GameObject
 		ballance += loan;
 	}
 
-	public boolean extract(int sum) {
-		if (ballance > 0) {
+	public static boolean extract(int sum) {
+		if (ballance - sum >= 0) {
 			ballance -= sum;
 			return true;
 		} else {
