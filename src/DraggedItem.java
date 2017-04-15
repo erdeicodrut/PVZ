@@ -33,12 +33,18 @@ public class DraggedItem extends GameObject
 	public void mouseReleased(MouseEvent event)
 	{
 		IInput under = InputManager.getObjectAt(Globals.getMousePos(p));
-		Cell cell;
-		if ((cell = (Cell) under) != null && !((Cell) under).isOccupied())
+		if (under == null)
+			return;
+
+		if (under.getClass() == Cell.class)
 		{
-            Plant fasz = new Plant(plant);
-			cell.plantHere(fasz);
-            pvz.livings.add(fasz);
+			Cell cell = (Cell) under;
+			if (!cell.isOccupied())
+			{
+				Plant fasz = new Plant(plant);
+				cell.plantHere(fasz);
+				pvz.livings.add(fasz);
+			}
 		}
 	}
 }

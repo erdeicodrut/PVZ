@@ -8,6 +8,7 @@ public class pvz extends PApplet {
     // The main grid of the game
     Field field = new Field(this, Globals.fieldPos, Globals.fieldDim);
     Shop shop;
+    Sun sun;
 
     // Collections of entities
     public static ArrayList<Living> livings = new ArrayList<>();
@@ -27,15 +28,14 @@ public class pvz extends PApplet {
         // Debugging
         Plant temp = field.at(3, 0).plantHere(new Plant(this, 3, Globals.bulletDamage, Effect.FIRE));
         Plant temp1 = field.at(3, 1).plantHere(new Plant(this, 3, Globals.bulletDamage, Effect.FIRE));
-//        if (temp != null)
-//            livings.add(temp);
-//            livings.add(temp1);
 
         PVector zombiePos = PVector.add(Globals.fieldPos,
                                         new PVector((Globals.fieldDim.x - 1) * Globals.cellSize.x,
                                         3 * Globals.cellSize.y));
 
         new Zombie(this, zombiePos, Globals.zombieSize, 10, 3, 5);
+
+        sun = new Sun(this);
 
         shop = new Shop(this, new PVector(10, 15), Globals.shopSize);
         shop.addItem(new Item(this, 12, temp));
@@ -61,6 +61,7 @@ public class pvz extends PApplet {
 
         // Show
         field.show(); // Cells
+        sun.show();
 
         for (Living living : livings) {
 //            System.out.println(living);

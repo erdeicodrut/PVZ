@@ -18,6 +18,8 @@ public class Globals {
 
 	public static float bulletDamage = 1f;
 
+	public static PVector sunSize = new PVector(30f, 30f).mult(scale);
+
 //
 // Helper functions
 //
