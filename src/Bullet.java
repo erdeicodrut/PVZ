@@ -9,6 +9,8 @@ class Bullet extends Living
 
 	public Bullet(PApplet p, PVector pos, float speed, float damage, Effect effect) {
 		super(p, pos, new PVector(20, 20), 1);
+		pvz.livings.add(this);
+		CollisionManager.addObject(this);
 
 		this.size = new PVector(20, 20);
 		this.effect = effect;

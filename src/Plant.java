@@ -1,6 +1,8 @@
 import processing.core.PApplet;
 import processing.core.PVector;
 
+import java.util.Iterator;
+
 class Plant extends Living {
 	private Effect effect;
 	private float damage;
@@ -23,19 +25,20 @@ class Plant extends Living {
 	}
 
 	public void update() {
-        for (Zombie zombie : pvz.zombies)
-            if (this.pos.y == zombie.pos.y) {
-				this.shoot();
-                break;
+        for (int i = 0; i < pvz.livings.size(); i++)
+        {
+	        Living living = pvz.livings.get(i);
+	        if (living.getClass() == Zombie.class && this.pos.y == living.pos.y){
+	            this.shoot();
+	            break;
             }
+        }
 	}
 
 	// Shoots a bullet based on a timer
 	public void shoot() {
         if (timer-- <= 0) {
-            Bullet bullet = new Bullet(p, pos, 15, damage, effect);
-            CollisionManager.addObject(bullet);
-			pvz.bullets.add(bullet);
+            Bullet bullet = new Bullet(p, PVector.add(pos, PVector.div(size, 2)), 15, damage, effect);
             timer = 30;
         }
 	}

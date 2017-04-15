@@ -9,6 +9,7 @@ class Zombie extends Living {
 
 	public Zombie(PApplet p, PVector pos, PVector size, float hp, float speed, float damage) {
 		super(p, pos, size, hp);
+		pvz.livings.add(this);
 		CollisionManager.addObject(this);
 
 		this.speed = speed;
