@@ -1,7 +1,6 @@
 import java.io.*;
 import java.util.ArrayList;
 
-
 class IOHandler {
 
     public static void main(String[] args) {
@@ -11,7 +10,7 @@ class IOHandler {
     static ArrayList<ArrayList<Enemy>> enemies = new ArrayList<>();
 
     public static void loadInfo() {
-        File file = new File("/home/coddy/Programming/PVZ/src/enemies.txt");
+        File file = new File("D:\\Programming\\PVZ\\src\\enemies.txt");
 
         try {
             int i = 0;
@@ -26,10 +25,8 @@ class IOHandler {
 
                 String[] gotIt = lineInfo.split(",");
 
-
                 while (true) {
                     try {
-
                         String[] infoAbEnemies = gotIt[i].split(":");
 
                         i++;
@@ -41,9 +38,10 @@ class IOHandler {
                     }
                     catch (Exception e) {
                         wave.add(enemies);
-                        return;
+                        break;
                     }
                 }
+                lineInfo = info.readLine();
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
