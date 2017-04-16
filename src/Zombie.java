@@ -7,6 +7,7 @@ class Zombie extends Living {
 	private float totalDamage = 0;
 
 	private int timer = 30;
+	private static int timerSpawn = 150;
 
 	public Zombie(PApplet p, PVector pos, PVector size, float hp, float speed, float damage) {
 		super(p, pos, size, hp);
@@ -38,14 +39,31 @@ class Zombie extends Living {
 	}
 
 	// Receives some damage/effect from a bullet
-	public void receive(float damage, Effect effect) {
-			if (hp > 0)
-			{
-				totalDamage += damage;
-			}
-			hp -= totalDamage;
-			System.out.println(this + " ZOMBIE HIT " + hp);
-			totalDamage = 0;
+	public void receiveDamage(float damage) {
+		if (hp > 0)
+		{
+			totalDamage += damage;
+		}
+		hp -= totalDamage;
+		totalDamage = 0;
+	}
+
+	public void receiveEffect(Effect effect) {
+		Effects.applyEffect(effect, this);
+	}
+
+	public static void spawn() {
+		if (timerSpawn-- == 0)
+		{
+			PVector zombiePos = PVector.add(Globals.fieldPos,
+					new PVector((Globals.fieldDim.x - 1) * Globals.cellSize.x,
+							p.floor(p.random(6f)) * Globals.cellSize.y));
+
+			new Zombie(p, zombiePos, Globals.zombieSize, 10, 1, 5);
+
+			timerSpawn = 150;
+
+		}
 	}
 
 	@Override

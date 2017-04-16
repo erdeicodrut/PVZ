@@ -3,7 +3,7 @@ import processing.core.PVector;
 
 public abstract class GameObject implements IDrawable, IInput, ICollision
 {
-	public PApplet p;
+	public static PApplet p;
 	public PVector pos;
 	public PVector size;
 

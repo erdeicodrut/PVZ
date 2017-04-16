@@ -7,11 +7,13 @@ import java.util.Objects;
 
 public class DraggedItem extends GameObject
 {
+	public int value;
 	public Plant plant;
 	public float red = p.random(255);
 
-	public DraggedItem(PApplet p, PVector pos, Plant plant) {
+	public DraggedItem(PApplet p, PVector pos, int value, Plant plant) {
 		super(p, pos, Globals.itemSize);
+		this.value = value;
 		this.plant = plant;
 	}
 
@@ -42,8 +44,11 @@ public class DraggedItem extends GameObject
 			if (!cell.isOccupied())
 			{
 				Plant fasz = new Plant(plant);
-				cell.plantHere(fasz);
-				pvz.livings.add(fasz);
+
+				if (Shop.extract(value)) {
+					cell.plantHere(fasz);
+					pvz.livings.add(fasz);
+				}
 			}
 		}
 	}

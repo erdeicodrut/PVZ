@@ -32,7 +32,7 @@ public class Item extends GameObject
 	@Override
     public void mousePressed(MouseEvent event)
     {
-	    draggedItem = new DraggedItem(p, pos, plant);
+	    draggedItem = new DraggedItem(p, pos, value, plant);
 	    InputManager.focusedObject = draggedItem;
 	    InputManager.isDragged = true;
     }
