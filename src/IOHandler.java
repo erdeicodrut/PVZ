@@ -10,8 +10,8 @@ class IOHandler {
     static ArrayList<ArrayList<Enemy>> enemies = new ArrayList<>();
 
     public static void loadInfo() {
-        File file = new File("D:\\Programming\\PVZ\\src\\enemies.txt");
-
+        File file = new File("/home/coddy/Programming/PVZ/src/enemies.txt");
+        int h = 0;
         try {
             int i = 0;
 
@@ -19,34 +19,31 @@ class IOHandler {
 
             BufferedReader info = new BufferedReader(new FileReader(file));
 
-            String lineInfo = info.readLine();
+            String[] lineInfo = info.readLine().split(" ");
 
-            while (lineInfo != null) {
 
-                String[] gotIt = lineInfo.split(",");
+            String[] gotIt = lineInfo[h++].split(",");
 
-                while (true) {
-                    try {
-                        String[] infoAbEnemies = gotIt[i].split(":");
+            while (true) {
+                try {
+                    String[] infoAbEnemies = gotIt[i++].split(":");
 
-                        i++;
+                    String c = infoAbEnemies[0];
+                    int n = Integer.parseInt(infoAbEnemies[1]);
 
-                        String c = infoAbEnemies[0];
-                        int n = Integer.parseInt(infoAbEnemies[1]);
-
-                        System.out.println(c + " " + n);
-                    }
-                    catch (Exception e) {
-                        wave.add(enemies);
-                        break;
-                    }
+                    System.out.println(c + " " + n);
+                } catch (Exception e) {
+                    System.out.println("1");
+                    wave.add(enemies);
+                    break;
                 }
-                lineInfo = info.readLine();
             }
         } catch (FileNotFoundException e) {
+            System.out.println("2");
             e.printStackTrace();
             return;
         } catch (IOException e) {
+            System.out.println("3");
             e.printStackTrace();
             return;
         }
@@ -63,5 +60,4 @@ class IOHandler {
             howMany = num;
         }
     }
-
 }
