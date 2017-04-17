@@ -9,43 +9,64 @@ class IOHandler {
 
     static ArrayList<ArrayList<Enemy>> enemies = new ArrayList<>();
 
-    public static void loadInfo() {
+    public static void loadInfo()
+    {
         File file = new File("/home/coddy/Programming/PVZ/src/enemies.txt");
         int h = 0;
-        try {
-            int i = 0;
+        while (true)
+        {
+            try
+            {
+                int i = 0;
 
-            ArrayList<ArrayList<ArrayList<Enemy>>> wave = new ArrayList<>();
+                ArrayList<ArrayList<ArrayList<Enemy>>> wave = new ArrayList<>();
 
-            BufferedReader info = new BufferedReader(new FileReader(file));
+                BufferedReader info = new BufferedReader(new FileReader(file));
 
-            String[] lineInfo = info.readLine().split(" ");
+                String[] lineInfo = info.readLine().split(" ");
 
+                String[] gotIt;
 
-            String[] gotIt = lineInfo[h++].split(",");
+                try
+                {
+                    gotIt = lineInfo[h++].split(",");
+                }
 
-            while (true) {
-                try {
-                    String[] infoAbEnemies = gotIt[i++].split(":");
-
-                    String c = infoAbEnemies[0];
-                    int n = Integer.parseInt(infoAbEnemies[1]);
-
-                    System.out.println(c + " " + n);
-                } catch (Exception e) {
-                    System.out.println("1");
-                    wave.add(enemies);
+                catch (Exception e) {
                     break;
                 }
+
+                while (true)
+                {
+                    try
+                    {
+                        String[] infoAbEnemies = gotIt[i++].split(":");
+
+                        String c = infoAbEnemies[0];
+                        int n = Integer.parseInt(infoAbEnemies[1]);
+
+                        System.out.println(c + " " + n);
+                    }
+                    catch (Exception e)
+                    {
+                        System.out.println("1");
+                        wave.add(enemies);
+                        break;
+                    }
+                }
             }
-        } catch (FileNotFoundException e) {
-            System.out.println("2");
-            e.printStackTrace();
-            return;
-        } catch (IOException e) {
-            System.out.println("3");
-            e.printStackTrace();
-            return;
+            catch (FileNotFoundException e)
+            {
+                System.out.println("2");
+                e.printStackTrace();
+                return;
+            }
+            catch (IOException e)
+            {
+                System.out.println("3");
+                e.printStackTrace();
+                return;
+            }
         }
     }
 
