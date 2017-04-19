@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc2cd2a4-b552-46a0-841a-38aba28b727f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/DraggedItem.class" afterPath="$PROJECT_DIR$/out/production/PVZ/DraggedItem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/pvz.class" afterPath="$PROJECT_DIR$/out/production/PVZ/pvz.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/Cell.class" afterPath="$PROJECT_DIR$/out/production/PVZ/Cell.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/CollisionManager.class" afterPath="$PROJECT_DIR$/out/production/PVZ/CollisionManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/Plant.class" afterPath="$PROJECT_DIR$/out/production/PVZ/Plant.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/Zombie.class" afterPath="$PROJECT_DIR$/out/production/PVZ/Zombie.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cell.java" afterPath="$PROJECT_DIR$/src/Cell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CollisionManager.java" afterPath="$PROJECT_DIR$/src/CollisionManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DraggedItem.java" afterPath="$PROJECT_DIR$/src/DraggedItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/IOHandler.java" afterPath="$PROJECT_DIR$/src/IOHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Plant.java" afterPath="$PROJECT_DIR$/src/Plant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SimplePlant.java" afterPath="$PROJECT_DIR$/src/SimplePlant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Zombie.java" afterPath="$PROJECT_DIR$/src/Zombie.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pvz.java" afterPath="$PROJECT_DIR$/src/pvz.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -731,7 +725,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492433069285</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="It works somehow">
+      <created>1492633404789</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1492633404789</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -834,7 +835,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Made the levelMaker partially" />
     <MESSAGE value="ERRORS" />
-    <option name="LAST_COMMIT_MESSAGE" value="ERRORS" />
+    <MESSAGE value="It works somehow" />
+    <option name="LAST_COMMIT_MESSAGE" value="It works somehow" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
