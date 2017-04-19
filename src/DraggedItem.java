@@ -35,10 +35,9 @@ public class DraggedItem extends GameObject {
         if (under.getClass() == Cell.class) {
             Cell cell = (Cell) under;
             if (!cell.isOccupied()) {
-                Plant fasz = new SimplePlant((SimplePlant) plant);
+                Plant fasz =  plant;
                 if (Shop.extract(value)) {
                     cell.plantHere(fasz);
-                    pvz.plants.add(fasz);
                 }
             }
         }

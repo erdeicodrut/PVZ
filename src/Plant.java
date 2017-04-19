@@ -20,12 +20,16 @@ class Plant extends Living {
 		this(plant.p, plant.hp, plant.damage, plant.effect);
 	}
 
+//	public static Plant getPlant(){
+//		return new Plant(p, 5, 1, Effect.NONE);
+//	}
+
 	public void update() {
         for (int i = 0; i < pvz.zombies.size(); i++)
         {
 	        Zombie living = pvz.zombies.get(i);
 	        if (this.pos.y == living.pos.y){
-	            this.shoot();
+//	            this.shoot();
 	            break;
             }
         }

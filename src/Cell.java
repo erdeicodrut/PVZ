@@ -1,6 +1,8 @@
 import processing.core.PApplet;
 import processing.core.PVector;
 
+import java.lang.reflect.InvocationTargetException;
+
 class Cell extends GameObject
 {
 	private Plant plant;
@@ -15,14 +17,22 @@ class Cell extends GameObject
 
 	// Retain and set the position of the plant passed in
 	public Plant plantHere(Plant toPlant) {
-		//TODO shop stuff
+
 
 		if (this.isOccupied() == false) {
-			this.plant = toPlant;
-			this.plant.pos = this.pos;
+			// this.plant = new Plant(toPlant);
+			try {
+				this.plant = toPlant.getClass().getConstructor(toPlant.getClass()).newInstance(toPlant);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			this.plant.setPosition(this.pos);
 
-			pvz.plants.add(plant);
-			CollisionManager.addObject(plant);
+			System.out.println("Am iesit");
+
+			pvz.plants.add(this.plant);
+			CollisionManager.addObject(this.plant);
+			System.out.println(CollisionManager.queue.size());
 
 			return toPlant;
 		}
@@ -35,7 +45,7 @@ class Cell extends GameObject
 	    p.strokeWeight(3);
 		p.rect(pos.x, pos.y, size.x, size.y);
 
-		if (plant != null) plant.show();
+//		if (plant != null) plant.show();
 
 		if (plant != null && plant.isAlive() == false) { plant = null; }
 	}

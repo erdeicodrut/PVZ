@@ -11,7 +11,7 @@ class IOHandler {
 
     public static void loadInfo()
     {
-        File file = new File("/home/coddy/Programming/PVZ/src/enemies.txt");
+        File file = new File("D:\\Programming\\PVZ\\src\\enemies.txt");
         int h = 0;
         while (true)
         {

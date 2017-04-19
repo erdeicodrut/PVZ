@@ -7,6 +7,8 @@ public class pvz extends PApplet {
     // The main grid of the game
     Field field = new Field(this, Globals.fieldPos, Globals.fieldDim);
     Shop shop;
+    SimplePlant test;
+    Plant test2;
     // Collections of entities
     public static ArrayList<Bullet> bullets = new ArrayList<>();
     public static ArrayList<Zombie> zombies = new ArrayList<>();
@@ -28,7 +30,9 @@ public class pvz extends PApplet {
         field.clear();
 
         new Sun(this);
-
+        test = new SimplePlant(this, new PVector(300, 200));
+        test.setPosition(new PVector(300, 300));
+        test2 = test;
         shop = new Shop(this, new PVector(10, 15), Globals.shopSize);
 
         shop.addItem(new Item(this, 1, new Plant(this, 4, 1, Effect.NONE)));
@@ -47,7 +51,7 @@ public class pvz extends PApplet {
         for (Plant p : plants) p.update();
         for (Bullet b : bullets) b.update();
 
-
+        test2.show();
         // Check collisions and clean-up
         CollisionManager.resolveCollisions();
         garbageCollector();
@@ -58,17 +62,13 @@ public class pvz extends PApplet {
 
 
         Zombie p;
-
         int chance = 5;
-
         int r = floor(random(10));
-
         if (r < chance) {
             p = SimpleZombie.spawn();
         } else {
             p = FlagZombie.spawn();
         }
-
 
         if (p != null) {
             zombies.add(p);
@@ -90,6 +90,10 @@ public class pvz extends PApplet {
 
         for (Item draggedItem : draggedItems) draggedItem.show();
         for (Sun sun : suns) sun.show();
+
+        for (Pair pair : CollisionManager.activeCollisions)
+            System.out.println(pair.first + " " + pair.second);
+        System.out.println("-------------------");
     }
 
     private void garbageCollector() {

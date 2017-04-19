@@ -57,11 +57,11 @@ public abstract class CollisionManager
 		return activeCollisions.contains(new Pair(obj1, obj2));
 	}
 
-	public static boolean isCollidingWithClass(ICollision obj, Class c)
+	public static boolean isCollidingWithClass(ICollision obj, Class<Plant> c)
 	{
 		for (Pair pair : activeCollisions)
-			if ((pair.first == obj && pair.second.getClass() == c) ||
-					(pair.second == obj && pair.first.getClass() == c))
+			if ((pair.first == obj && c.isAssignableFrom(pair.second.getClass())) ||
+					(pair.second == obj && c.isAssignableFrom(pair.first.getClass())))
 				return true;
 		return false;
 	}

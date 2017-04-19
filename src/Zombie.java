@@ -74,12 +74,12 @@ class Zombie extends Living {
 	}
 
 	@Override
-	public void onCollisionWith(ICollision other)
-	{
-		if (other.getClass() == Plant.class)
-		{
+	public void onCollisionWith(ICollision other) {
+		if (Plant.class.isAssignableFrom(other.getClass())) {
+			System.out.println("IF");
 			Plant plant = (Plant) other;
 			attack(plant);
 		}
+
 	}
 }
