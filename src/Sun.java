@@ -6,7 +6,10 @@ public class Sun extends GameObject implements IDrawable, IInput
 {
 	private static int timer = 450;
 
-	public Sun(PApplet p)
+    public boolean isGonnaDie = false;
+
+
+    public Sun(PApplet p)
 	{
 		super(p,new PVector(p.random(p.width * 2/10, p.width * 8/10), p.random(p.height * 2/10, p.height * 8/10)),Globals.sunSize);
 		InputManager.addObject(this);
@@ -16,9 +19,15 @@ public class Sun extends GameObject implements IDrawable, IInput
 	@Override
 	public void mousePressed(MouseEvent event)
 	{
-		Shop.addBallance(25);
-		System.out.println("SUN CLICKED");
-		pvz.suns.remove(this);
+        Shop.addBallance(25);
+        System.out.println("SUN CLICKED");
+        isGonnaDie = true;
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent event)
+	{
+		return;
 	}
 
 	@Override

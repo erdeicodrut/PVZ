@@ -21,7 +21,7 @@ class Cell extends GameObject
 			this.plant = toPlant;
 			this.plant.pos = this.pos;
 
-			pvz.livings.add(plant);
+			pvz.plants.add(plant);
 			CollisionManager.addObject(plant);
 
 			return toPlant;

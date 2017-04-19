@@ -22,4 +22,7 @@ public interface ICollision
 	default void onCollisionEnterWith(ICollision other) {};
 	default void onCollisionWith(ICollision other) {};
 	default void onCollisionExitWith(ICollision other) {};
+
+	default boolean isZombie() { return false; }
+
 }

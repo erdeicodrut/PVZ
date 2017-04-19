@@ -2,17 +2,15 @@ import processing.core.PApplet;
 import processing.core.PVector;
 
 class Zombie extends Living {
-	private float speed;
-	private float damage;
-	private float totalDamage = 0;
+	protected float speed;
+	protected float damage;
+	protected float totalDamage = 0;
 
-	private int timer = 30;
-	private static int timerSpawn = 150;
+	protected int timer = 30;
+	protected static int timerSpawn = 150;
 
 	public Zombie(PApplet p, PVector pos, PVector size, float hp, float speed, float damage) {
 		super(p, pos, size, hp);
-		pvz.livings.add(this);
-		CollisionManager.addObject(this);
 
 		this.speed = speed;
 		this.damage = damage;
@@ -52,21 +50,24 @@ class Zombie extends Living {
 		Effects.applyEffect(effect, this);
 	}
 
-	public static void spawn() {
+    public boolean isZombie() { return true; }
+
+	public static Zombie spawn() {
 		if (timerSpawn-- == 0)
 		{
 			PVector zombiePos = PVector.add(Globals.fieldPos,
 					new PVector((Globals.fieldDim.x - 1) * Globals.cellSize.x,
 							p.floor(p.random(6f)) * Globals.cellSize.y));
 
-			new Zombie(p, zombiePos, Globals.zombieSize, 10, 1, 5);
-
 			timerSpawn = 150;
 
+			return new Zombie(p, zombiePos, Globals.zombieSize, 10, 1, 5);
+
 		}
+		return null;
 	}
 
-	@Override
+    @Override
 	public void show() {
 		p.fill(255, 0, 0);
 		p.rect(pos.x, pos.y, size.x, size.y);

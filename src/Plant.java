@@ -1,11 +1,9 @@
 import processing.core.PApplet;
 import processing.core.PVector;
 
-import java.util.Iterator;
-
 class Plant extends Living {
-	private Effect effect;
-	private float damage;
+	protected Effect effect;
+	protected float damage;
 
 	private int timer = 30;
 
@@ -23,10 +21,10 @@ class Plant extends Living {
 	}
 
 	public void update() {
-        for (int i = 0; i < pvz.livings.size(); i++)
+        for (int i = 0; i < pvz.zombies.size(); i++)
         {
-	        Living living = pvz.livings.get(i);
-	        if (living.getClass() == Zombie.class && this.pos.y == living.pos.y){
+	        Zombie living = pvz.zombies.get(i);
+	        if (this.pos.y == living.pos.y){
 	            this.shoot();
 	            break;
             }

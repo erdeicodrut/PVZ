@@ -73,7 +73,7 @@ public class pvz extends PApplet {
             bullets.get(i).show();
         }
 
-        // Show other creatures(plants & zombies)
+        // Show other creatures(livings & zombies)
         for (Living l : livings) {
             l.show();
         }

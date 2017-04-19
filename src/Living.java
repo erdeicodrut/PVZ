@@ -10,6 +10,7 @@ abstract class Living extends GameObject
 		this.hp = hp;
 	}
 
+
 	public boolean isAlive() {
 		return !(hp <= 0);
 	}

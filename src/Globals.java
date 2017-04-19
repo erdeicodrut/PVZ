@@ -20,6 +20,8 @@ public class Globals {
 
 	public static PVector sunSize = new PVector(30f, 30f).mult(scale);
 
+	public static float speed = 3;
+
 //
 // Helper functions
 //
