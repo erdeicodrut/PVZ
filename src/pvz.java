@@ -7,8 +7,8 @@ public class pvz extends PApplet {
     // The main grid of the game
     Field field = new Field(this, Globals.fieldPos, Globals.fieldDim);
     Shop shop;
-    SimplePlant test;
-    Plant test2;
+    Zombie p;
+
     // Collections of entities
     public static ArrayList<Bullet> bullets = new ArrayList<>();
     public static ArrayList<Zombie> zombies = new ArrayList<>();
@@ -16,7 +16,6 @@ public class pvz extends PApplet {
 
     public static ArrayList<Item> draggedItems = new ArrayList<>();
     public static ArrayList<Sun> suns = new ArrayList<>();
-
 
     public void settings() {
         size((int) (1600 / 2 * Globals.scale), (int) (1000 / 2 * Globals.scale));
@@ -30,17 +29,14 @@ public class pvz extends PApplet {
         field.clear();
 
         new Sun(this);
-        test = new SimplePlant(this, new PVector(300, 200));
-        test.setPosition(new PVector(300, 300));
-        test2 = test;
         shop = new Shop(this, new PVector(10, 15), Globals.shopSize);
 
-        shop.addItem(new Item(this, 1, new Plant(this, 4, 1, Effect.NONE)));
+        shop.addItem(new Item(this, 2, new FirePea(this)));
         shop.addItem(new Item(this, 2, new SimplePlant(this)));
         shop.addItem(new Item(this, 1, new Sunflower(this)));
-        shop.addItem(new Item(this, 50, new Plant(this, 4, 1, Effect.NONE)));
-        shop.addItem(new Item(this, 25, new Plant(this, 4, 1, Effect.NONE)));
-        shop.addItem(new Item(this, 10, new Plant(this, 4, 1, Effect.NONE)));
+        shop.addItem(new Item(this, 1, new WallNut(this)));
+        shop.addItem(new Item(this, 2, new SnowPea(this)));
+        shop.addItem(new Item(this, 3, new MellonPea(this)));
     }
 
     public void draw() {
@@ -57,17 +53,18 @@ public class pvz extends PApplet {
 
         Sun.spawn();
 
-
-
-
-        Zombie p;
         int chance = 5;
         int r = floor(random(10));
-        if (r < chance) {
+        if (r < chance - 2) {
             p = SimpleZombie.spawn();
-        } else {
+        } else if (r == chance) {
             p = FlagZombie.spawn();
-        }
+        } else if (r > chance + 2) {
+            p = BucketheadZombie.spawn();
+        } else if (r > chance) {
+            p = ConeheadZombie.spawn();
+        } else
+            p = PoleVaultingZombie.spawn();
 
         if (p != null) {
             zombies.add(p);
@@ -76,7 +73,6 @@ public class pvz extends PApplet {
         show();
 
     }
-
 
     private void show() {
         field.show(); // Cells
@@ -89,7 +85,6 @@ public class pvz extends PApplet {
 
         for (Item draggedItem : draggedItems) draggedItem.show();
         for (Sun sun : suns) sun.show();
-
     }
 
     private void garbageCollector() {

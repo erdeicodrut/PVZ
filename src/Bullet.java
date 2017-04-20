@@ -1,7 +1,7 @@
 import processing.core.PApplet;
 import processing.core.PVector;
 
-class Bullet extends Living implements Effects
+class Bullet extends Living
 {
 	private float speed;
 	private float damage;
@@ -26,10 +26,13 @@ class Bullet extends Living implements Effects
 		pos.x += speed;
 	}
 
+
+
 	// This method is called when it collides with a zombie
 	public void hit(Zombie other) {
 		hp = 0;
 		other.receiveDamage(damage);
+		Effects.applyEffect(effect, other);
 	}
 
 	@Override

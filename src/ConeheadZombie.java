@@ -5,21 +5,21 @@ import processing.core.PVector;
 import java.io.File;
 import java.util.ArrayList;
 
-public class FlagZombie extends Zombie {
+public class ConeheadZombie extends Zombie {
     private int animationFrame = 0;
     ArrayList<PImage> pics = new ArrayList<>();
 
-    public FlagZombie(PApplet p, PVector zombiePos) {
-        super(p, zombiePos, Globals.zombieSize, 5, Globals.speed, 1);
+    public ConeheadZombie(PApplet p, PVector zombiePos) {
+        super(p, zombiePos, Globals.zombieSize, 6, Globals.speed, 1);
 
-        for (int i = 0; i <= 11; i++) {
+        for (int i = 0; i <= 20; i++) {
             PImage temp;
-            temp = p.loadImage(new File("resources/Zombies/FlagZombie/FlagZombie_" + (i++) + ".png").getAbsolutePath());
+            temp = p.loadImage(new File("resources/Zombies/ConeheadZombie/ConeheadZombie_" + (i++) + ".png").getAbsolutePath());
             pics.add(temp);
         }
     }
 
-    public static FlagZombie spawn() {
+    public static ConeheadZombie spawn() {
         if (timerSpawn-- == 0)
         {
             PVector zombiePos = PVector.add(Globals.fieldPos,
@@ -28,7 +28,7 @@ public class FlagZombie extends Zombie {
 
             timerSpawn = 150;
 
-            return new FlagZombie(p, zombiePos);
+            return new ConeheadZombie(p, zombiePos);
 
         }
         return null;

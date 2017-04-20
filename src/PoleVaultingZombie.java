@@ -5,21 +5,22 @@ import processing.core.PVector;
 import java.io.File;
 import java.util.ArrayList;
 
-public class FlagZombie extends Zombie {
+public class PoleVaultingZombie extends Zombie {
     private int animationFrame = 0;
+    private int jumps = 1;
     ArrayList<PImage> pics = new ArrayList<>();
 
-    public FlagZombie(PApplet p, PVector zombiePos) {
-        super(p, zombiePos, Globals.zombieSize, 5, Globals.speed, 1);
+    public PoleVaultingZombie(PApplet p, PVector zombiePos) {
+        super(p, zombiePos, Globals.zombieSize, 6, Globals.speed, 1);
 
-        for (int i = 0; i <= 11; i++) {
+        for (int i = 0; i <= 9; i++) {
             PImage temp;
-            temp = p.loadImage(new File("resources/Zombies/FlagZombie/FlagZombie_" + (i++) + ".png").getAbsolutePath());
+            temp = p.loadImage(new File("resources/Zombies/PoleVaultingZombie/PoleVaultingZombie_" + (i++) + ".png").getAbsolutePath());
             pics.add(temp);
         }
     }
 
-    public static FlagZombie spawn() {
+    public static PoleVaultingZombie spawn() {
         if (timerSpawn-- == 0)
         {
             PVector zombiePos = PVector.add(Globals.fieldPos,
@@ -28,12 +29,20 @@ public class FlagZombie extends Zombie {
 
             timerSpawn = 150;
 
-            return new FlagZombie(p, zombiePos);
+            return new PoleVaultingZombie(p, zombiePos);
 
         }
         return null;
     }
 
+//    @Override
+//    public void update() {
+//        if (!CollisionManager.isCollidingWithClass(this, Plant.class))
+//            move();
+//        else if (jumps == 1) {
+//            anim
+//        }
+//    }
     @Override
     public void show() {
         if (animationFrame >= pics.size()) animationFrame = 0;
