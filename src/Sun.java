@@ -16,11 +16,17 @@ public class Sun extends GameObject implements IDrawable, IInput
 		pvz.suns.add(this);
 	}
 
+	public Sun(PApplet p, PVector pos)
+	{
+		super(p, pos, Globals.sunSize);
+		InputManager.addObject(this);
+		pvz.suns.add(this);
+	}
+
 	@Override
 	public void mousePressed(MouseEvent event)
 	{
         Shop.addBallance(25);
-        System.out.println("SUN CLICKED");
         isGonnaDie = true;
 	}
 

@@ -43,7 +43,6 @@ class Bullet extends Living implements Effects
 	@Override
 	public void onCollisionEnterWith(ICollision other) {
         if (other.isZombie()) {
-            System.out.println("COLLIDED");
             Zombie zombie = (Zombie) other;
             this.hit(zombie);
             hp = 0;

@@ -45,11 +45,9 @@ class IOHandler {
                         String c = infoAbEnemies[0];
                         int n = Integer.parseInt(infoAbEnemies[1]);
 
-                        System.out.println(c + " " + n);
                     }
                     catch (Exception e)
                     {
-                        System.out.println("1");
                         wave.add(enemies);
                         break;
                     }
@@ -63,7 +61,6 @@ class IOHandler {
             }
             catch (IOException e)
             {
-                System.out.println("3");
                 e.printStackTrace();
                 return;
             }

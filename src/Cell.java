@@ -20,7 +20,6 @@ class Cell extends GameObject
 
 
 		if (this.isOccupied() == false) {
-			// this.plant = new Plant(toPlant);
 			try {
 				this.plant = toPlant.getClass().getConstructor(toPlant.getClass()).newInstance(toPlant);
 			} catch (Exception e) {
@@ -28,11 +27,9 @@ class Cell extends GameObject
 			}
 			this.plant.setPosition(this.pos);
 
-			System.out.println("Am iesit");
 
 			pvz.plants.add(this.plant);
 			CollisionManager.addObject(this.plant);
-			System.out.println(CollisionManager.queue.size());
 
 			return toPlant;
 		}
@@ -45,7 +42,6 @@ class Cell extends GameObject
 	    p.strokeWeight(3);
 		p.rect(pos.x, pos.y, size.x, size.y);
 
-//		if (plant != null) plant.show();
 
 		if (plant != null && plant.isAlive() == false) { plant = null; }
 	}

@@ -34,12 +34,10 @@ public abstract class InputManager
 	public static void mousePressed(MouseEvent event)
 	{
 		PVector mousePos = Globals.getMousePos(event);
-		System.out.println(mousePos.x + " " + mousePos.y);
 
 		IInput obj;
 		if ((obj = getObjectAt(mousePos)) != null)
 		{
-			System.out.println("DA");
 			focusedObject = obj;
 			obj.mousePressed(event);
 		}

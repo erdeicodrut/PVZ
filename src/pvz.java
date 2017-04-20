@@ -37,7 +37,7 @@ public class pvz extends PApplet {
 
         shop.addItem(new Item(this, 1, new Plant(this, 4, 1, Effect.NONE)));
         shop.addItem(new Item(this, 2, new SimplePlant(this)));
-        shop.addItem(new Item(this, 40, new Plant(this, 4, 1, Effect.NONE)));
+        shop.addItem(new Item(this, 1, new Sunflower(this)));
         shop.addItem(new Item(this, 50, new Plant(this, 4, 1, Effect.NONE)));
         shop.addItem(new Item(this, 25, new Plant(this, 4, 1, Effect.NONE)));
         shop.addItem(new Item(this, 10, new Plant(this, 4, 1, Effect.NONE)));
@@ -51,7 +51,6 @@ public class pvz extends PApplet {
         for (Plant p : plants) p.update();
         for (Bullet b : bullets) b.update();
 
-        test2.show();
         // Check collisions and clean-up
         CollisionManager.resolveCollisions();
         garbageCollector();
@@ -91,9 +90,6 @@ public class pvz extends PApplet {
         for (Item draggedItem : draggedItems) draggedItem.show();
         for (Sun sun : suns) sun.show();
 
-        for (Pair pair : CollisionManager.activeCollisions)
-            System.out.println(pair.first + " " + pair.second);
-        System.out.println("-------------------");
     }
 
     private void garbageCollector() {
