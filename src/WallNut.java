@@ -68,15 +68,15 @@ public class WallNut extends Plant {
         if (hp < 5) {
             if (animationFrame >= pics2.size()) animationFrame = 0;
             p.imageMode(PConstants.CENTER);
-            p.image(pics2.get(animationFrame++), pos.x, pos.y);
+            p.image(pics2.get(animationFrame++), pos.x + size.x / 2, pos.y);
         } else if (hp < 10) {
             if (animationFrame >= pics1.size()) animationFrame = 0;
             p.imageMode(PConstants.CENTER);
-            p.image(pics1.get(animationFrame++), pos.x, pos.y);
+            p.image(pics1.get(animationFrame++), pos.x + size.x / 2, pos.y);
         } else {
             if (animationFrame >= pics.size()) animationFrame = 0;
             p.imageMode(PConstants.CENTER);
-            p.image(pics.get(animationFrame++), pos.x, pos.y);
+            p.image(pics.get(animationFrame++), pos.x + size.x / 2, pos.y);
         }
     }
 }

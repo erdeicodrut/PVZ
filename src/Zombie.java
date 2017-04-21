@@ -7,7 +7,7 @@ class Zombie extends Living {
 	protected float totalDamage = 0;
 
 	protected int timer = 30;
-	protected static int timerSpawn = 150;
+	protected static int timerSpawn = Globals.spawnTime;
 
 	public Zombie(PApplet p, PVector pos, PVector size, float hp, float speed, float damage) {
 		super(p, pos, size, hp);
@@ -59,7 +59,7 @@ class Zombie extends Living {
 					new PVector((Globals.fieldDim.x - 1) * Globals.cellSize.x,
 							p.floor(p.random(6f)) * Globals.cellSize.y));
 
-			timerSpawn = 150;
+			timerSpawn = Globals.spawnTime;
 
 			return new Zombie(p, zombiePos, Globals.zombieSize, 10, 1, 5);
 

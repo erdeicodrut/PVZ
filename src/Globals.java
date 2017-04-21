@@ -6,9 +6,9 @@ public class Globals {
 
     public static float scale = 1;
 
-	public static PVector fieldPos = new PVector(40/2 + 70, 200/2).mult(scale);
+	public static PVector fieldPos = new PVector(250, 80).mult(scale);
 	public static PVector fieldDim = new PVector(10, 6).mult(scale);
-	public static PVector cellSize = new PVector(50f, 50f).mult(scale);
+	public static PVector cellSize = new PVector(74f, 80f).mult(scale);
 
 	public static PVector flowerSize = new PVector(100f/2, 100f/2).mult(scale);
 	public static PVector zombieSize = new PVector(100f / 2, 100f / 2).mult(scale);
@@ -21,6 +21,7 @@ public class Globals {
 	public static PVector sunSize = new PVector(30f, 30f).mult(scale);
 
 	public static float speed = 3;
+	public static int spawnTime = 50;
 
 //
 // Helper functions

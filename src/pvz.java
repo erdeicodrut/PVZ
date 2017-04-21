@@ -1,13 +1,18 @@
 import processing.core.PApplet;
+import processing.core.PImage;
 import processing.core.PVector;
 import processing.event.MouseEvent;
+
+import java.io.File;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class pvz extends PApplet {
     // The main grid of the game
     Field field = new Field(this, Globals.fieldPos, Globals.fieldDim);
     Shop shop;
     Zombie p;
+    PImage back;
 
     // Collections of entities
     public static ArrayList<Bullet> bullets = new ArrayList<>();
@@ -18,12 +23,12 @@ public class pvz extends PApplet {
     public static ArrayList<Sun> suns = new ArrayList<>();
 
     public void settings() {
-        size((int) (1600 / 2 * Globals.scale), (int) (1000 / 2 * Globals.scale));
+        back = loadImage(new File("resources/Background/PVZBackground_3.jpg").getAbsolutePath());
+        size((int) (back.width), (int) (back.height));
     }
 
     public void setup() {
         frameRate(30);
-        background(200);
 
         // Initializing the grid
         field.clear();
@@ -40,8 +45,11 @@ public class pvz extends PApplet {
     }
 
     public void draw() {
-        background(255);
         fill(0);
+        background(255);
+        imageMode(CORNER);
+        image(back, 0, 0);
+
 
         for (Zombie z : zombies) z.update();
         for (Plant p : plants) p.update();
@@ -75,11 +83,11 @@ public class pvz extends PApplet {
     }
 
     private void show() {
-        field.show(); // Cells
+//        field.show(); // Cells
 
-        for (Zombie z : zombies) z.show();
         for (Plant p : plants) p.show();
         for (Bullet b : bullets) b.show();
+        for (Zombie z : zombies) z.show();
 
         shop.show(); // Shop and items
 
@@ -123,6 +131,16 @@ public class pvz extends PApplet {
                 removed = null;
             } else
                 i++;
+        }
+    }
+
+    private void sort(ArrayList<Living> ye) {
+        for (int i = 0; i < ye.size() - 1; i++) {
+            for (int j = i + 1; j < ye.size(); j++) {
+                if (ye.get(i).pos.y > ye.get(j).pos.y) {
+                    Collections.swap(ye, i, j);
+                }
+            }
         }
     }
 

@@ -37,7 +37,7 @@ public class SimpleZombie extends Zombie {
                     new PVector((Globals.fieldDim.x - 1) * Globals.cellSize.x,
                             p.floor(p.random(6f)) * Globals.cellSize.y));
 
-            timerSpawn = 150;
+            timerSpawn = Globals.spawnTime;
 
             return new SimpleZombie(p, zombiePos);
 
