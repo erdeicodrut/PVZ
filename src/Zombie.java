@@ -23,9 +23,6 @@ class Zombie extends Living {
 	public void update() {
 		if (!CollisionManager.isCollidingWithClass(this, Plant.class))
 			move();
-		else {
-			show();
-		}
 	}
 
 	// This method is called when it collides with a plant

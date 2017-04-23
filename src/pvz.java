@@ -17,12 +17,12 @@ public class pvz extends PApplet {
     boolean gameOn;
 
     // Collections of entities
-    public static ArrayList<Bullet> bullets = new ArrayList<>();
-    public static ArrayList<Zombie> zombies = new ArrayList<>();
-    public static ArrayList<Plant> plants = new ArrayList<>();
+    public static ArrayList<Bullet> bullets;
+    public static ArrayList<Zombie> zombies;
+    public static ArrayList<Plant> plants;
 
-    public static ArrayList<Item> draggedItems = new ArrayList<>();
-    public static ArrayList<Sun> suns = new ArrayList<>();
+    public static ArrayList<Item> draggedItems;
+    public static ArrayList<Sun> suns;
 
     public void settings() {
         back = loadImage(new File("resources/Background/PVZBackground_3.jpg").getAbsolutePath());
@@ -30,6 +30,13 @@ public class pvz extends PApplet {
     }
 
     public void setup() {
+        textSize(17);
+        bullets = new ArrayList<>();
+        zombies = new ArrayList<>();
+        plants = new ArrayList<>();
+        draggedItems = new ArrayList<>();
+        suns = new ArrayList<>();
+
         gameOn = true;
         frameRate(30);
 
@@ -101,7 +108,8 @@ public class pvz extends PApplet {
             }
             show();
         } else {
-            background(200, 30, 10);
+            imageMode(CORNER);
+            image(loadImage(new File("resources/Background/lost.jpg").getAbsolutePath()), 0, 0);
             textSize(50);
             text("GAME OVER", width/2, height/2);
         }

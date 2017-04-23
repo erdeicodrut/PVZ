@@ -52,17 +52,18 @@ public class SimpleZombie extends Zombie {
             }
             timer = 30;
         }
-        if (animationFrameAtatck >= picsAttack.size()) animationFrameAtatck = 0;
-        p.imageMode(PConstants.CENTER);
-        p.image(picsAttack.get(animationFrameAtatck++), pos.x, pos.y);
-        animationFrame = 50;
     }
 
     @Override
     public void show() {
-        if (animationFrame > 40) return;
-        if (animationFrame >= pics.size()) animationFrame = 0;
         p.imageMode(PConstants.CENTER);
-        p.image(pics.get(animationFrame++), pos.x, pos.y);
+        if (animationFrame >= pics.size()) animationFrame = 0;
+        if (animationFrameAtatck >= picsAttack.size()) animationFrameAtatck = 0;
+
+        if (CollisionManager.isCollidingWithClass(this, Plant.class)) {
+            p.image(picsAttack.get(animationFrameAtatck++), pos.x, pos.y);
+        } else {
+            p.image(pics.get(animationFrame++), pos.x, pos.y);
+        }
     }
 }

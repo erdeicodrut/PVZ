@@ -26,7 +26,7 @@ public class Item extends GameObject
 
         p.textAlign(PConstants.CENTER, PConstants.CENTER);
         p.fill( 0);
-        p.text(value, pos.x  + size.x * 2,  pos.y + size.y + 5);
+        p.text(value, pos.x  + size.x - 20,  pos.y + size.y - 1);
     }
 
 	@Override
