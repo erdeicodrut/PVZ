@@ -23,6 +23,9 @@ class Zombie extends Living {
 	public void update() {
 		if (!CollisionManager.isCollidingWithClass(this, Plant.class))
 			move();
+		else {
+			show();
+		}
 	}
 
 	// This method is called when it collides with a plant
@@ -76,9 +79,8 @@ class Zombie extends Living {
 	@Override
 	public void onCollisionWith(ICollision other) {
 		if (Plant.class.isAssignableFrom(other.getClass())) {
-			Plant plant = (Plant) other;
-			attack(plant);
-		}
-
+            Plant plant = (Plant) other;
+            attack(plant);
+        }
 	}
 }

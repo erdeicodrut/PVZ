@@ -1,11 +1,17 @@
 import processing.core.PApplet;
+import processing.core.PImage;
 import processing.core.PVector;
+
+import java.util.ArrayList;
 
 class Plant extends Living {
 	protected Effect effect;
 	protected float damage;
 
-	private int timer = 30;
+    public PImage card;
+
+
+    private int timer = 30;
 
 	public static int DebugingNum = 0;
 

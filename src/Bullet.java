@@ -1,11 +1,15 @@
 import processing.core.PApplet;
+import processing.core.PImage;
 import processing.core.PVector;
+
+import java.io.File;
 
 class Bullet extends Living
 {
 	private float speed;
 	private float damage;
 	private Effect effect;
+	PImage pic;
 
 	public Bullet(PApplet p, PVector pos, float speed, float damage, Effect effect) {
 		super(p, pos, new PVector(20, 20), 1);
@@ -16,6 +20,14 @@ class Bullet extends Living
 		this.effect = effect;
 		this.speed = speed;
 		this.damage = damage;
+
+		if (Effect.ICE == effect) {
+            pic = p.loadImage(new File("resources/Bullets/PB_ICE/PB1_0.png").getAbsolutePath());
+        } else if (Effect.MELLON == effect){
+			pic = p.loadImage(new File("resources/Bullets/PB_Normal/Mellon.png").getAbsolutePath());
+		} else {
+			pic = p.loadImage(new File("resources/Bullets/PB_Normal/PB0_R.png").getAbsolutePath());
+		}
 	}
 
 	public void update() {
@@ -38,9 +50,7 @@ class Bullet extends Living
 	@Override
 	public void show()
 	{
-		// Temp
-		p.fill(255, 255, 0);
-		p.ellipse(pos.x, pos.y, size.x, size.y);
+        p.image(pic, pos.x, pos.y);
 	}
 
 	@Override

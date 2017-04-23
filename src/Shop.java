@@ -1,17 +1,21 @@
 import processing.core.PApplet;
 import processing.core.PConstants;
+import processing.core.PImage;
 import processing.core.PVector;
 
+import java.io.File;
 import java.util.ArrayList;
 
 class Shop extends GameObject
 {
 	private static int ballance;
+	PImage sunPic;
 
 	private ArrayList<Item> loadout = new ArrayList<>();
 
 	public Shop(PApplet p, PVector pos, PVector size) {
 		super(p, pos, size);
+		sunPic = p.loadImage(new File("resources/Sun/Sun/Sun_1.png").getAbsolutePath());
 		ballance = 0;
 	}
 
@@ -52,8 +56,10 @@ class Shop extends GameObject
 		for (Item item : loadout)
 		    item.show();
 
-		p.rect(80, 20, 50, 50);
+		p.image(sunPic,130,20);
+		p.fill(255);
+		p.rect(120, 80, 100, 27);
 		p.fill(0);
-		p.text(ballance, 100, 10 + 50);
+		p.text(ballance, 170, 93);
 	}
 }

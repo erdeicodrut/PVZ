@@ -37,7 +37,7 @@ public class Sunflower extends Plant {
 
     public void spawnSun() {
         if (timer-- < 0) {
-            new Sun(p, new PVector(pos.x + 0, pos.y + 50));
+            new Sun(p, new PVector(pos.x + p.random(-40,40), pos.y + 50 + + p.random(-40,40)));
             timer = 300;
         }
     }

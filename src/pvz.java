@@ -13,6 +13,7 @@ public class pvz extends PApplet {
     Shop shop;
     Zombie p;
     PImage back;
+    boolean gameOn;
 
     // Collections of entities
     public static ArrayList<Bullet> bullets = new ArrayList<>();
@@ -28,6 +29,7 @@ public class pvz extends PApplet {
     }
 
     public void setup() {
+        gameOn = true;
         frameRate(30);
 
         // Initializing the grid
@@ -36,54 +38,74 @@ public class pvz extends PApplet {
         new Sun(this);
         shop = new Shop(this, new PVector(10, 15), Globals.shopSize);
 
-        shop.addItem(new Item(this, 2, new FirePea(this)));
-        shop.addItem(new Item(this, 2, new SimplePlant(this)));
-        shop.addItem(new Item(this, 1, new Sunflower(this)));
-        shop.addItem(new Item(this, 1, new WallNut(this)));
-        shop.addItem(new Item(this, 2, new SnowPea(this)));
-        shop.addItem(new Item(this, 3, new MellonPea(this)));
+        FirePea tempFire = new FirePea(this);
+        SimplePlant tempSimpe = new SimplePlant(this);
+        Sunflower tempSun = new Sunflower(this);
+        WallNut tempWall = new WallNut(this);
+        SnowPea tempSnow = new SnowPea(this);
+        MellonPea tempMello = new MellonPea(this);
+
+        tempFire.card = loadImage(new File("resources/Cards/Card_Cactus.png").getAbsolutePath());
+        tempSimpe.card = loadImage(new File("resources/Cards/Card_Peashooter.png").getAbsolutePath());
+        tempSun.card = loadImage(new File("resources/Cards/Card_SunFlower.png").getAbsolutePath());
+        tempWall.card = loadImage(new File("resources/Cards/Card_Wall-Nut.png").getAbsolutePath());
+        tempSnow.card = loadImage(new File("resources/Cards/Card_SnowPea.png").getAbsolutePath());
+        tempMello.card = loadImage(new File("resources/Cards/Card_Threepeater.png").getAbsolutePath());
+
+        shop.addItem(new Item(this, 2, tempFire));
+        shop.addItem(new Item(this, 2, tempSimpe));
+        shop.addItem(new Item(this, 1, tempSun));
+        shop.addItem(new Item(this, 1, tempWall));
+        shop.addItem(new Item(this, 2, tempSnow));
+        shop.addItem(new Item(this, 3, tempMello));
     }
 
     public void draw() {
-        fill(0);
-        background(255);
-        imageMode(CORNER);
-        image(back, 0, 0);
+        if (gameOn == true) {
+            fill(0);
+            background(255);
+            imageMode(CORNER);
+            image(back, 0, 0);
 
 
-        for (Zombie z : zombies) z.update();
-        for (Plant p : plants) p.update();
-        for (Bullet b : bullets) b.update();
+            for (Zombie z : zombies) { z.update(); if (z.pos.x < 100) gameOn = false; }
+            for (Plant p : plants) p.update();
+            for (Bullet b : bullets) b.update();
 
-        // Check collisions and clean-up
-        CollisionManager.resolveCollisions();
-        garbageCollector();
+            // Check collisions and clean-up
+            CollisionManager.resolveCollisions();
+            garbageCollector();
 
-        Sun.spawn();
+            Sun.spawn();
 
-        int chance = 5;
-        int r = floor(random(10));
-        if (r < chance - 2) {
-            p = SimpleZombie.spawn();
-        } else if (r == chance) {
-            p = FlagZombie.spawn();
-        } else if (r > chance + 2) {
-            p = BucketheadZombie.spawn();
-        } else if (r > chance) {
-            p = ConeheadZombie.spawn();
-        } else
-            p = PoleVaultingZombie.spawn();
+            int chance = 5;
+            int r = floor(random(10));
+            if (r < chance - 2) {
+                p = SimpleZombie.spawn();
+            } else if (r == chance) {
+                p = FlagZombie.spawn();
+            } else if (r > chance + 2) {
+                p = BucketheadZombie.spawn();
+            } else if (r > chance) {
+                p = ConeheadZombie.spawn();
+            } else
+                p = PoleVaultingZombie.spawn();
 
-        if (p != null) {
-            zombies.add(p);
-            CollisionManager.addObject(p);
+            if (p != null) {
+                zombies.add(p);
+                CollisionManager.addObject(p);
+            }
+            show();
+        } else {
+            background(200, 30, 10);
+            textSize(50);
+            text("GAME OVER", width/2, height/2);
         }
-        show();
 
     }
 
     private void show() {
-//        field.show(); // Cells
+        field.show(); // Cells
 
         for (Plant p : plants) p.show();
         for (Bullet b : bullets) b.show();

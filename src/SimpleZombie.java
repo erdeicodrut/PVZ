@@ -6,8 +6,8 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class SimpleZombie extends Zombie {
-    private int animationFrame = 0;
-    private int animationFrameAtatck = 0;
+    public int animationFrame = 0;
+    public int animationFrameAtatck = 0;
 
     ArrayList<PImage> pics = new ArrayList<>();
     ArrayList<PImage> picsAttack = new ArrayList<>();
