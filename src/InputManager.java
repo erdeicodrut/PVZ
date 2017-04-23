@@ -2,6 +2,9 @@ import processing.core.PVector;
 import processing.event.MouseEvent;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 
 public abstract class InputManager
 {
@@ -9,7 +12,14 @@ public abstract class InputManager
 	public static IInput focusedObject;
 	public static boolean isDragged = false;
 
-	public static void addObject(IInput obj) { queue.add(obj); }
+	public static void sortQueue() {
+		Arrays.sort(new List[]{Arrays.asList(queue)});
+	}
+
+	public static void addObject(IInput obj) {
+		queue.add(obj);
+		sortQueue();
+	}
 
 	public static IInput getObjectAt(PVector pos)
 	{

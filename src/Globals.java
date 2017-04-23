@@ -14,11 +14,11 @@ public class Globals {
 	public static PVector zombieSize = new PVector(100f / 2, 100f / 2).mult(scale);
 
 	public static PVector shopSize = new PVector(50, 450).mult(scale);
-	public static PVector itemSize = new PVector(40f, 40f).mult(scale);
+	public static PVector itemSize = new PVector(100f, 50f).mult(scale);
 
 	public static float bulletDamage = 1f;
 
-	public static PVector sunSize = new PVector(30f, 30f).mult(scale);
+	public static PVector sunSize = new PVector(50f, 50f).mult(scale);
 
 	public static float speed = 3;
 	public static int spawnTime = 50;

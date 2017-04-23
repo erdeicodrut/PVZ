@@ -5,7 +5,7 @@ import java.lang.reflect.InvocationTargetException;
 
 class Cell extends GameObject
 {
-	private Plant plant;
+	public Plant plant;
 
 	public Cell(PApplet p, PVector pos, PVector size) {
 	    super(p, pos, size);
@@ -34,6 +34,10 @@ class Cell extends GameObject
 			return toPlant;
 		}
 		else return null;
+	}
+
+	public void clean() {
+		plant.hp = 0;
 	}
 
 	public void show() {

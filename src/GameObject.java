@@ -23,7 +23,12 @@ public abstract class GameObject implements IDrawable, IInput, ICollision
 	}
 
 	public void setPosition(PVector pos) {
-		this.pos = pos;
+		this.pos.set(pos.x, pos.y);
+	}
+
+	public void setZ(float z) {
+		this.pos.z = z;
+		InputManager.sortQueue();
 	}
 
 	// IInput
@@ -33,6 +38,11 @@ public abstract class GameObject implements IDrawable, IInput, ICollision
 		PVector bottomRightCorner = PVector.add(this.pos, this.size);
 		return (point.x >= this.pos.x) && (point.x < bottomRightCorner.x) &&
 				(point.y >= this.pos.y) && (point.y < bottomRightCorner.y);
+	}
+
+	@Override
+	public float getZ() {
+		return this.pos.z;
 	}
 
 	// ICollision

@@ -51,7 +51,7 @@ class Shop extends GameObject
 	{
 		p.rectMode(PConstants.CORNER);
 		p.fill(242 , 50 , 100);
-		p.rect(pos.x, pos.y, size.x , size.y);
+//		p.rect(pos.x, pos.y, size.x , size.y);
 
 		for (Item item : loadout)
 		    item.show();

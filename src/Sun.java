@@ -32,6 +32,8 @@ public class Sun extends GameObject implements IDrawable, IInput
 	public Sun(PApplet p, PVector pos)
 	{
 		super(p, pos, Globals.sunSize);
+		setZ(1);
+
 		InputManager.addObject(this);
 		pvz.suns.add(this);
 		for (int i = 0; i <= 21; i++) {
@@ -66,4 +68,13 @@ public class Sun extends GameObject implements IDrawable, IInput
 			timer = 450;
 		}
 	}
+
+	@Override
+	public boolean containsPoint(PVector point)
+	{
+		PVector bottomRightCorner = PVector.add(this.pos, this.size);
+		return (point.x >= this.pos.x - size.x) && (point.x < bottomRightCorner.x) &&
+				(point.y >= this.pos.y - size.y) && (point.y < bottomRightCorner.y);
+	}
+
 }

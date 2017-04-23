@@ -11,6 +11,7 @@ public class pvz extends PApplet {
     // The main grid of the game
     Field field = new Field(this, Globals.fieldPos, Globals.fieldDim);
     Shop shop;
+    Shovel shovel;
     Zombie p;
     PImage back;
     boolean gameOn;
@@ -37,6 +38,8 @@ public class pvz extends PApplet {
 
         new Sun(this);
         shop = new Shop(this, new PVector(10, 15), Globals.shopSize);
+
+        shovel = new Shovel(this);
 
         FirePea tempFire = new FirePea(this);
         SimplePlant tempSimpe = new SimplePlant(this);
@@ -77,6 +80,7 @@ public class pvz extends PApplet {
             garbageCollector();
 
             Sun.spawn();
+            shovel.show();
 
             int chance = 5;
             int r = floor(random(10));
