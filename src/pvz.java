@@ -111,13 +111,13 @@ public class pvz extends PApplet {
             imageMode(CORNER);
             image(loadImage(new File("resources/Background/lost.jpg").getAbsolutePath()), 0, 0);
             textSize(50);
-            text("GAME OVER", width/2, height/2);
+            text("Game Over", width/2, height/2);
         }
 
     }
 
     private void show() {
-        field.show(); // Cells
+//        field.show(); // Cells
 
         for (Plant p : plants) p.show();
         for (Bullet b : bullets) b.show();

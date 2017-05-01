@@ -20,7 +20,7 @@ public class Globals {
 
 	public static PVector sunSize = new PVector(50f, 50f).mult(scale);
 
-	public static float speed = 3;
+	public static float speed = 2;
 	public static int spawnTime = 50;
 
 //
