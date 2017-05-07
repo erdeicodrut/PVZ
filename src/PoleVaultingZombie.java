@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class PoleVaultingZombie extends Zombie {
     public int animationFrameJump = 0;
     public int animationFrame = 0;
+    public int animationFrameWalk = 0;
     public int animationFrameAtatck = 0;
     private int jumps = 1;
 
@@ -137,11 +138,16 @@ public class PoleVaultingZombie extends Zombie {
             p.imageMode(PConstants.CENTER);
             if (animationFrame >= pics.size()) animationFrame = 0;
             if (animationFrameAtatck >= picsAttack.size()) animationFrameAtatck = 0;
+            if (animationFrameWalk >= picsWalk.size()) animationFrameWalk = 0;
 
             if (CollisionManager.isCollidingWithClass(this, Plant.class)) {
                 p.image(picsAttack.get(animationFrameAtatck++), pos.x, pos.y);
             } else {
-                p.image(pics.get(animationFrame++), pos.x, pos.y);
+                if (hasJumped == true) {
+                    p.image(picsWalk.get(animationFrameWalk++), pos.x, pos.y);
+                } else {
+                    p.image(pics.get(animationFrame++), pos.x, pos.y);
+                }
             }
         }
     }
