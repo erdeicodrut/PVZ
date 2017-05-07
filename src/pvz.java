@@ -1,3 +1,4 @@
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import processing.core.PApplet;
 import processing.core.PImage;
 import processing.core.PVector;
@@ -6,8 +7,16 @@ import processing.event.MouseEvent;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Objects;
 
 public class pvz extends PApplet {
+    String simpleZombieString;
+    String poleVaultZombiString;
+    String cornheadZombieString;
+    String bucketheadZombieString;
+    String flagZombieString;
+
+
     // The main grid of the game
     Field field = new Field(this, Globals.fieldPos, Globals.fieldDim);
     Shop shop;
@@ -30,6 +39,8 @@ public class pvz extends PApplet {
     }
 
     public void setup() {
+
+        IOHandler.loadInfo();
         textSize(17);
         bullets = new ArrayList<>();
         zombies = new ArrayList<>();
@@ -68,6 +79,13 @@ public class pvz extends PApplet {
         shop.addItem(new Item(this, 1, tempWall));
         shop.addItem(new Item(this, 2, tempSnow));
         shop.addItem(new Item(this, 3, tempMello));
+
+
+        simpleZombieString = SimpleZombie.class.toString().replace("class ", "");
+        poleVaultZombiString = PoleVaultingZombie.class.toString().replace("class ", "");
+        cornheadZombieString = ConeheadZombie.class.toString().replace("class ", "");
+        bucketheadZombieString = BucketheadZombie.class.toString().replace("class ", "");
+        flagZombieString= FlagZombie.class.toString().replace("class ", "");
     }
 
     public void draw() {
@@ -76,7 +94,6 @@ public class pvz extends PApplet {
             background(255);
             imageMode(CORNER);
             image(back, 0, 0);
-
 
             for (Zombie z : zombies) { z.update(); if (z.pos.x < 100) gameOn = false; }
             for (Plant p : plants) p.update();
@@ -89,24 +106,11 @@ public class pvz extends PApplet {
             Sun.spawn();
             shovel.show();
 
-            int chance = 5;
-            int r = floor(random(10));
-            if (r < chance - 2) {
-                p = SimpleZombie.spawn();
-            } else if (r == chance) {
-                p = FlagZombie.spawn();
-            } else if (r > chance + 2) {
-                p = BucketheadZombie.spawn();
-            } else if (r > chance) {
-                p = ConeheadZombie.spawn();
-            } else
-                p = PoleVaultingZombie.spawn();
+            if (IOHandler.toSpawn.size() > 1) spawner();
+//            else youWon();
 
-            if (p != null) {
-                zombies.add(p);
-                CollisionManager.addObject(p);
-            }
             show();
+//            field.show();
         } else {
             imageMode(CORNER);
             image(loadImage(new File("resources/Background/lost.jpg").getAbsolutePath()), 0, 0);
@@ -114,6 +118,37 @@ public class pvz extends PApplet {
             text("Game Over", width/2, height/2);
         }
 
+    }
+
+    private void spawner() {
+        int index = floor(random(IOHandler.toSpawn.size() - 1));
+
+        if (IOHandler.toSpawn.get(index).equals(simpleZombieString)) {
+                p = SimpleZombie.spawn();
+        } else
+
+        if (Objects.equals(IOHandler.toSpawn.get(index), poleVaultZombiString)) {
+                p = PoleVaultingZombie.spawn();
+        } else
+
+        if (Objects.equals(IOHandler.toSpawn.get(index), cornheadZombieString)) {
+                p = ConeheadZombie.spawn();
+        } else
+
+        if (Objects.equals(IOHandler.toSpawn.get(index), bucketheadZombieString)) {
+                p = BucketheadZombie.spawn();
+        } else
+
+        if (Objects.equals(IOHandler.toSpawn.get(index), flagZombieString)) {
+                p = FlagZombie.spawn();
+        }
+
+        IOHandler.toSpawn.remove(index);
+
+        if (p != null) {
+            zombies.add(p);
+            CollisionManager.addObject(p);
+        }
     }
 
     private void show() {

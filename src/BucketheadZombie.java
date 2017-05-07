@@ -11,6 +11,8 @@ public class BucketheadZombie extends Zombie {
     ArrayList<PImage> pics = new ArrayList<>();
     ArrayList<PImage> picsAttack = new ArrayList<>();
 
+    public BucketheadZombie() { super(); }
+
     public BucketheadZombie(PApplet p, PVector zombiePos) {
         super(p, zombiePos, Globals.zombieSize, 8, Globals.speed, 1);
 
@@ -32,7 +34,7 @@ public class BucketheadZombie extends Zombie {
         {
             PVector zombiePos = PVector.add(Globals.fieldPos,
                     new PVector((Globals.fieldDim.x - 1) * Globals.cellSize.x,
-                            p.floor(p.random(6f)) * Globals.cellSize.y));
+                            p.floor(p.random(5f)) * Globals.cellSize.y));
 
             timerSpawn = Globals.spawnTime;
 

@@ -7,6 +7,8 @@ public abstract class GameObject implements IDrawable, IInput, ICollision
 	public PVector pos;
 	public PVector size;
 
+	public GameObject() {}
+
 	public GameObject(PApplet p) {
 		this.p = p;
 	}

@@ -13,6 +13,8 @@ public class FlagZombie extends Zombie {
     ArrayList<PImage> pics = new ArrayList<>();
     ArrayList<PImage> picsAttack = new ArrayList<>();
 
+    public FlagZombie() { super(); }
+
     public FlagZombie(PApplet p, PVector zombiePos) {
         super(p, zombiePos, Globals.zombieSize, 5, Globals.speed, 1);
 
@@ -34,7 +36,7 @@ public class FlagZombie extends Zombie {
         {
             PVector zombiePos = PVector.add(Globals.fieldPos,
                     new PVector((Globals.fieldDim.x - 1) * Globals.cellSize.x,
-                            p.floor(p.random(6f)) * Globals.cellSize.y));
+                            p.floor(p.random(5f)) * Globals.cellSize.y));
 
             timerSpawn = Globals.spawnTime;
 

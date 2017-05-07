@@ -21,6 +21,8 @@ public class PoleVaultingZombie extends Zombie {
     boolean hasJumped, doShow = true;
     private Plant toAvoid;
 
+    public PoleVaultingZombie() { super(); }
+
     public PoleVaultingZombie(PApplet p, PVector zombiePos) {
         super(p, zombiePos, Globals.zombieSize, 6, Globals.speed, 1);
 
@@ -59,7 +61,7 @@ public class PoleVaultingZombie extends Zombie {
         if (timerSpawn-- == 0) {
             PVector zombiePos = PVector.add(Globals.fieldPos,
                     new PVector((Globals.fieldDim.x - 1) * Globals.cellSize.x,
-                                p.floor(p.random(6f)) * Globals.cellSize.y));
+                                p.floor(p.random(5f)) * Globals.cellSize.y));
 
             timerSpawn = Globals.spawnTime;
 

@@ -36,6 +36,6 @@ public class MellonPea extends Plant {
     public void show() {
         if (animationFrame >= pics.size()) animationFrame = 0;
         p.imageMode(PConstants.CENTER);
-        p.image(pics.get(animationFrame++), pos.x + size.x / 2, pos.y);
+        p.image(pics.get(animationFrame++), pos.x + size.x, pos.y + size.y);
     }
 }

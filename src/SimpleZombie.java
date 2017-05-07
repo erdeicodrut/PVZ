@@ -12,6 +12,8 @@ public class SimpleZombie extends Zombie {
     ArrayList<PImage> pics = new ArrayList<>();
     ArrayList<PImage> picsAttack = new ArrayList<>();
 
+    public SimpleZombie() { super(); };
+
     public SimpleZombie(PApplet p, PVector pos) {
         super(p, pos, Globals.zombieSize, 4, Globals.speed, 1);
 // add walking animation
@@ -35,7 +37,7 @@ public class SimpleZombie extends Zombie {
         {
             PVector zombiePos = PVector.add(Globals.fieldPos,
                     new PVector((Globals.fieldDim.x - 1) * Globals.cellSize.x,
-                            p.floor(p.random(6f)) * Globals.cellSize.y));
+                            p.floor(p.random(5f)) * Globals.cellSize.y));
 
             timerSpawn = Globals.spawnTime;
 

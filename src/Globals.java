@@ -7,8 +7,8 @@ public class Globals {
     public static float scale = 1;
 
 	public static PVector fieldPos = new PVector(250, 80).mult(scale);
-	public static PVector fieldDim = new PVector(9, 6).mult(scale);
-	public static PVector cellSize = new PVector(82f, 80f).mult(scale);
+	public static PVector fieldDim = new PVector(9, 5).mult(scale);
+	public static PVector cellSize = new PVector(82f, 95f).mult(scale);
 
 	public static PVector flowerSize = new PVector(100f/2, 100f/2).mult(scale);
 	public static PVector zombieSize = new PVector(100f / 2, 100f / 2).mult(scale);

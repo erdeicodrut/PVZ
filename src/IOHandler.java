@@ -1,5 +1,7 @@
 import java.io.*;
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Objects;
 
 class IOHandler {
 
@@ -7,19 +9,18 @@ class IOHandler {
         loadInfo();
     }
 
-    static ArrayList<ArrayList<Enemy>> enemies = new ArrayList<>();
+    public static ArrayList<String> toSpawn;
 
     public static void loadInfo()
     {
-        File file = new File("D:\\Programming\\PVZ\\src\\enemies.txt");
+        toSpawn = new ArrayList<>();
+        File file = new File((new File("src/enemies.txt").getAbsolutePath()));
         int h = 0;
         while (true)
         {
             try
             {
                 int i = 0;
-
-                ArrayList<ArrayList<ArrayList<Enemy>>> wave = new ArrayList<>();
 
                 BufferedReader info = new BufferedReader(new FileReader(file));
 
@@ -42,20 +43,22 @@ class IOHandler {
                     {
                         String[] infoAbEnemies = gotIt[i++].split(":");
 
-                        String c = infoAbEnemies[0];
+                        String zombieClass = infoAbEnemies[0];
                         int n = Integer.parseInt(infoAbEnemies[1]);
 
+                        for (int num = 0; num < n * Globals.spawnTime; num++) {
+                            toSpawn.add(zombieClass);
+                        }
                     }
                     catch (Exception e)
                     {
-                        wave.add(enemies);
                         break;
                     }
                 }
             }
             catch (FileNotFoundException e)
             {
-                System.out.println("2");
+                System.out.println("File not found");
                 e.printStackTrace();
                 return;
             }
@@ -64,18 +67,6 @@ class IOHandler {
                 e.printStackTrace();
                 return;
             }
-        }
-    }
-
-
-    class Enemy {
-
-        private String name;
-        private int howMany;
-
-        public Enemy(String obj, int num) {
-            name = obj;
-            howMany = num;
         }
     }
 }

@@ -2,6 +2,8 @@ import processing.core.PApplet;
 import processing.core.PConstants;
 import processing.core.PImage;
 import processing.core.PVector;
+import sun.font.CoreMetrics;
+
 import java.io.File;
 import java.util.ArrayList;
 
@@ -11,6 +13,8 @@ public class ConeheadZombie extends Zombie {
     public int animationFrameAtatck = 0;
     ArrayList<PImage> pics = new ArrayList<>();
     ArrayList<PImage> picsAttack = new ArrayList<>();
+
+    public ConeheadZombie() { super(); }
 
     public ConeheadZombie(PApplet p, PVector zombiePos) {
         super(p, zombiePos, Globals.zombieSize, 6, Globals.speed, 1);
@@ -33,7 +37,7 @@ public class ConeheadZombie extends Zombie {
         {
             PVector zombiePos = PVector.add(Globals.fieldPos,
                     new PVector((Globals.fieldDim.x - 1) * Globals.cellSize.x,
-                            p.floor(p.random(6f)) * Globals.cellSize.y));
+                            p.floor(p.random(5f)) * Globals.cellSize.y));
 
             timerSpawn = Globals.spawnTime;
 
