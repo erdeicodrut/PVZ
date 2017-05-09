@@ -15,7 +15,7 @@ public class SimpleZombie extends Zombie {
     public SimpleZombie() { super(); };
 
     public SimpleZombie(PApplet p, PVector pos) {
-        super(p, pos, Globals.zombieSize, 4, Globals.speed, 1);
+        super(p, pos, Globals.zombieSize, 10, Globals.speed, 1);
 // add walking animation
         for (int i = 0; i <= 21; i++) {
             PImage temp = new PImage();

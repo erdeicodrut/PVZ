@@ -11,7 +11,7 @@ public class MellonPea extends Plant {
     ArrayList<PImage> pics = new ArrayList<>();
 
     public MellonPea(PApplet p, PVector pos) {
-        super(p, 5, 1, Effect.MELLON );
+        super(p, 3, 2, Effect.MELLON );
         for (int i = 0; i <= 14; i++) {
             PImage temp;
             temp = p.loadImage(new File("resources/Plants/Threepeater/Threepeater_" + (i++) + ".png").getAbsolutePath());
@@ -20,7 +20,7 @@ public class MellonPea extends Plant {
     }
 
     public MellonPea(PApplet p) {
-        super(p, 5, 1, Effect.MELLON );
+        super(p, 3, 2, Effect.MELLON );
         for (int i = 0; i <= 14; i++) {
             PImage temp;
             temp = p.loadImage(new File("resources/Plants/Threepeater/Threepeater_" + (i++) + ".png").getAbsolutePath());

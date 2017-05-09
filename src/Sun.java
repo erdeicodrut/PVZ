@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class Sun extends GameObject implements IDrawable, IInput
 {
-	private static int timer = 450;
+	private static int timer = 180;
 
     public boolean isGonnaDie = false;
 

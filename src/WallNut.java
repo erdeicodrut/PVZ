@@ -13,7 +13,7 @@ public class WallNut extends Plant {
     ArrayList<PImage> pics2 = new ArrayList<>();
 
     public WallNut(PApplet p, PVector pos) {
-        super(p, 20, 0, Effect.NONE );
+        super(p, 40, 0, Effect.NONE );
         for (int i = 0; i <= 15; i++) {
             PImage temp;
             temp = p.loadImage(new File("resources/Plants/WallNut/WallNut/WallNut_" + (i++) + ".png").getAbsolutePath());
@@ -34,7 +34,7 @@ public class WallNut extends Plant {
     }
 
     public WallNut(PApplet p) {
-        super(p, 20, 0, Effect.NONE );
+        super(p, 40, 0, Effect.NONE );
         for (int i = 0; i <= 15; i++) {
             PImage temp;
             temp = p.loadImage(new File("resources/Plants/WallNut/WallNut/WallNut_" + (i++) + ".png").getAbsolutePath());
@@ -68,11 +68,11 @@ public class WallNut extends Plant {
         if (hp < 5) {
             if (animationFrame >= pics2.size()) animationFrame = 0;
             p.imageMode(PConstants.CENTER);
-            p.image(pics2.get(animationFrame++), pos.x + size.x / 2, pos.y);
+            p.image(pics2.get(animationFrame++), pos.x + size.x, pos.y + size.y);
         } else if (hp < 10) {
             if (animationFrame >= pics1.size()) animationFrame = 0;
             p.imageMode(PConstants.CENTER);
-            p.image(pics1.get(animationFrame++), pos.x + size.x / 2, pos.y);
+            p.image(pics1.get(animationFrame++), pos.x + size.x, pos.y + size.y);
         } else {
             if (animationFrame >= pics.size()) animationFrame = 0;
             p.imageMode(PConstants.CENTER);

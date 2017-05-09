@@ -17,7 +17,7 @@ public class ConeheadZombie extends Zombie {
     public ConeheadZombie() { super(); }
 
     public ConeheadZombie(PApplet p, PVector zombiePos) {
-        super(p, zombiePos, Globals.zombieSize, 6, Globals.speed, 1);
+        super(p, zombiePos, Globals.zombieSize, 27, Globals.speed, 1);
 
         for (int i = 0; i <= 20; i++) {
             PImage temp;

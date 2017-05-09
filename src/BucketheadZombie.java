@@ -14,7 +14,7 @@ public class BucketheadZombie extends Zombie {
     public BucketheadZombie() { super(); }
 
     public BucketheadZombie(PApplet p, PVector zombiePos) {
-        super(p, zombiePos, Globals.zombieSize, 8, Globals.speed, 1);
+        super(p, zombiePos, Globals.zombieSize, 65, Globals.speed, 1);
 
         for (int i = 0; i <= 14; i++) {
             PImage temp;

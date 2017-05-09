@@ -73,12 +73,12 @@ public class pvz extends PApplet {
         tempSnow.card = loadImage(new File("resources/Cards/Card_SnowPea.png").getAbsolutePath());
         tempMello.card = loadImage(new File("resources/Cards/Card_Threepeater.png").getAbsolutePath());
 
-        shop.addItem(new Item(this, 2, tempFire));
-        shop.addItem(new Item(this, 2, tempSimpe));
-        shop.addItem(new Item(this, 1, tempSun));
-        shop.addItem(new Item(this, 1, tempWall));
-        shop.addItem(new Item(this, 2, tempSnow));
-        shop.addItem(new Item(this, 3, tempMello));
+        shop.addItem(new Item(this, 175, tempFire));
+        shop.addItem(new Item(this, 100, tempSimpe));
+        shop.addItem(new Item(this, 50, tempSun));
+        shop.addItem(new Item(this, 50, tempWall));
+        shop.addItem(new Item(this, 175, tempSnow));
+        shop.addItem(new Item(this, 250, tempMello));
 
 
         simpleZombieString = SimpleZombie.class.toString().replace("class ", "");

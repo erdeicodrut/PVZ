@@ -25,7 +25,7 @@ public class PoleVaultingZombie extends Zombie {
     public PoleVaultingZombie() { super(); }
 
     public PoleVaultingZombie(PApplet p, PVector zombiePos) {
-        super(p, zombiePos, Globals.zombieSize, 6, Globals.speed, 1);
+        super(p, zombiePos, Globals.zombieSize, 17, Globals.speed, 1);
 
         hasJumped = false;
 
@@ -92,7 +92,7 @@ public class PoleVaultingZombie extends Zombie {
         if (animationFrameJump >= picsJump.size()) animationFrameJump = picsJump.size() - 1;
         p.imageMode(PConstants.CENTER);
         p.image(picsJump.get(animationFrameJump), pos.x, pos.y);
-        if (a % 2 == 0) animationFrameJump++;
+        if (a % 4 == 0) animationFrameJump++;
 
     }
 

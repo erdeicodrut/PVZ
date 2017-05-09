@@ -11,7 +11,7 @@ public class FirePea extends Plant {
     ArrayList<PImage> pics = new ArrayList<>();
 
     public FirePea(PApplet p, PVector pos) {
-        super(p, 5, 1, Effect.FIRE );
+        super(p, 3, 2, Effect.FIRE );
         for (int i = 0; i <= 12; i++) {
             PImage temp;
             temp = p.loadImage(new File("resources/Plants/FirePea/FirePea_" + (i++) + ".png").getAbsolutePath());
@@ -20,7 +20,7 @@ public class FirePea extends Plant {
     }
 
     public FirePea(PApplet p) {
-        super(p, 5, 1, Effect.FIRE);
+        super(p, 3, 2, Effect.FIRE);
         for (int i = 0; i <= 12; i++) {
             PImage temp;
             temp = p.loadImage(new File("resources/Plants/FirePea/FirePea_" + (i++) + ".png").getAbsolutePath());

@@ -16,7 +16,7 @@ public class FlagZombie extends Zombie {
     public FlagZombie() { super(); }
 
     public FlagZombie(PApplet p, PVector zombiePos) {
-        super(p, zombiePos, Globals.zombieSize, 5, Globals.speed, 1);
+        super(p, zombiePos, Globals.zombieSize, 11, Globals.speed, 1);
 
         for (int i = 0; i <= 11; i++) {
             PImage temp;

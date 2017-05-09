@@ -11,7 +11,7 @@ public class SnowPea extends Plant {
     ArrayList<PImage> pics = new ArrayList<>();
 
     public SnowPea(PApplet p, PVector pos) {
-        super(p, 5, 1, Effect.ICE );
+        super(p, 3, 1, Effect.ICE );
         for (int i = 0; i <= 14; i++) {
             PImage temp;
             temp = p.loadImage(new File("resources/Plants/SnowPea/SnowPea_" + (i++) + ".png").getAbsolutePath());
@@ -20,7 +20,7 @@ public class SnowPea extends Plant {
     }
 
     public SnowPea(PApplet p) {
-        super(p, 5, 1, Effect.ICE );
+        super(p, 3, 1, Effect.ICE );
         for (int i = 0; i <= 14; i++) {
             PImage temp;
             temp = p.loadImage(new File("resources/Plants/SnowPea/SnowPea_" + (i++) + ".png").getAbsolutePath());

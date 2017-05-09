@@ -11,7 +11,7 @@ public class SimplePlant extends Plant{
     ArrayList<PImage> pics = new ArrayList<>();
 
     public SimplePlant(PApplet p, PVector pos) {
-        super(p, 5, 1, Effect.NONE );
+        super(p, 3, 1, Effect.NONE );
         for (int i = 0; i <= 12; i++) {
             PImage temp;
             temp = p.loadImage(new File("resources/Plants/Peashooter/Peashooter_" + (i++) + ".png").getAbsolutePath());
@@ -26,7 +26,7 @@ public class SimplePlant extends Plant{
 
 
     public SimplePlant(PApplet p) {
-        super(p, 5, 1, Effect.NONE );
+        super(p, 3, 1, Effect.NONE );
         for (int i = 0; i <= 12; i++) {
             PImage temp;
             temp = p.loadImage(new File("resources/Plants/Peashooter/Peashooter_" + (i++) + ".png").getAbsolutePath());
