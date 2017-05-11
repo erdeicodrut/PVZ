@@ -88,7 +88,7 @@ public class pvz extends PApplet {
     }
 
     public void draw() {
-        if (zombies.size() != 0 || IOHandler.toSpawn.size() != 0) {
+        if (gameOn == true && (zombies.size() != 0 || IOHandler.toSpawn.size() != 0)) {
             fill(0);
             background(255);
             imageMode(CORNER);
@@ -106,21 +106,21 @@ public class pvz extends PApplet {
             shovel.show();
 
             if (IOHandler.toSpawn.size() > 0) spawner();
-//            else youWon();
 
             show();
-//            field.show();
         } else {
             if (gameOn == false) {
                 imageMode(CORNER);
                 image(loadImage(new File("resources/Background/lost.jpg").getAbsolutePath()), 0, 0);
                 textSize(50);
                 text("Game Over", width / 2, height / 2);
+                noLoop();
             } else if (IOHandler.toSpawn.size() == 0 && zombies.size() == 0) {
                 imageMode(CORNER);
                 image(back, 0, 0);
                 textSize(50);
                 text("You Won", width / 2, height / 2);
+                noLoop();
             }
         }
     }
@@ -130,22 +130,14 @@ public class pvz extends PApplet {
 
         if (IOHandler.toSpawn.get(index).equals(simpleZombieString)) {
                 p = SimpleZombie.spawn();
-        } else
-
-        if (Objects.equals(IOHandler.toSpawn.get(index), poleVaultZombiString)) {
-                p = PoleVaultingZombie.spawn();
-        } else
-
-        if (Objects.equals(IOHandler.toSpawn.get(index), cornheadZombieString)) {
-                p = ConeheadZombie.spawn();
-        } else
-
-        if (Objects.equals(IOHandler.toSpawn.get(index), bucketheadZombieString)) {
-                p = BucketheadZombie.spawn();
-        } else
-
-        if (Objects.equals(IOHandler.toSpawn.get(index), flagZombieString)) {
-                p = FlagZombie.spawn();
+        } else if (Objects.equals(IOHandler.toSpawn.get(index), poleVaultZombiString)) {
+            p = PoleVaultingZombie.spawn();
+        } else if (Objects.equals(IOHandler.toSpawn.get(index), cornheadZombieString)) {
+            p = ConeheadZombie.spawn();
+        } else if (Objects.equals(IOHandler.toSpawn.get(index), bucketheadZombieString)) {
+            p = BucketheadZombie.spawn();
+        } else if (Objects.equals(IOHandler.toSpawn.get(index), flagZombieString)) {
+            p = FlagZombie.spawn();
         }
 
         IOHandler.toSpawn.remove(index);
