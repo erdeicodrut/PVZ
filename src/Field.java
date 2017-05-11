@@ -5,7 +5,7 @@ class Field {
 	private PApplet p;
 	private PVector pos;
 
-	private Cell[][] matrix;
+	public Cell[][] matrix;
 	private PVector dim;
 
 	public Field(PApplet p, PVector pos, PVector dim) {

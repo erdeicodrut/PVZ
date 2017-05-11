@@ -7,25 +7,15 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class MellonPea extends Plant {
+    int a = 0;
     private int animationFrame = 0;
-    ArrayList<PImage> pics = new ArrayList<>();
 
     public MellonPea(PApplet p, PVector pos) {
         super(p, 3, 2, Effect.MELLON );
-        for (int i = 0; i <= 14; i++) {
-            PImage temp;
-            temp = p.loadImage(new File("resources/Plants/Threepeater/Threepeater_" + (i++) + ".png").getAbsolutePath());
-            pics.add(temp);
-        }
     }
 
     public MellonPea(PApplet p) {
         super(p, 3, 2, Effect.MELLON );
-        for (int i = 0; i <= 14; i++) {
-            PImage temp;
-            temp = p.loadImage(new File("resources/Plants/Threepeater/Threepeater_" + (i++) + ".png").getAbsolutePath());
-            pics.add(temp);
-        }
     }
 
     public MellonPea(MellonPea plant) {
@@ -34,8 +24,11 @@ public class MellonPea extends Plant {
 
     @Override
     public void show() {
-        if (animationFrame >= pics.size()) animationFrame = 0;
+        a++;
+
+        if (animationFrame >= Globals.picsMellonPea.size()) animationFrame = 0;
         p.imageMode(PConstants.CENTER);
-        p.image(pics.get(animationFrame++), pos.x + size.x, pos.y + size.y);
+        p.image(Globals.picsMellonPea.get(animationFrame), pos.x + size.x, pos.y + size.y);
+        if (a % 2 == 0) animationFrame++;
     }
 }

@@ -7,17 +7,11 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class SimplePlant extends Plant{
+    int a = 0;
     private int animationFrame = 0;
-    ArrayList<PImage> pics = new ArrayList<>();
 
     public SimplePlant(PApplet p, PVector pos) {
         super(p, 3, 1, Effect.NONE );
-        for (int i = 0; i <= 12; i++) {
-            PImage temp;
-            temp = p.loadImage(new File("resources/Plants/Peashooter/Peashooter_" + (i++) + ".png").getAbsolutePath());
-            pics.add(temp);
-        }
-
     }
 
     public SimplePlant(SimplePlant plant) {
@@ -27,18 +21,16 @@ public class SimplePlant extends Plant{
 
     public SimplePlant(PApplet p) {
         super(p, 3, 1, Effect.NONE );
-        for (int i = 0; i <= 12; i++) {
-            PImage temp;
-            temp = p.loadImage(new File("resources/Plants/Peashooter/Peashooter_" + (i++) + ".png").getAbsolutePath());
-            pics.add(temp);
-        }
-
     }
 
     @Override
     public void show() {
-        if (animationFrame >= pics.size()) animationFrame = 0;
+        a++;
+
+        if (animationFrame >= Globals.picPea.size()) animationFrame = 0;
         p.imageMode(PConstants.CENTER);
-        p.image(pics.get(animationFrame++), pos.x + size.x, pos.y + size.y);
+        p.image(Globals.picPea.get(animationFrame), pos.x + size.x, pos.y + size.y);
+        if (a % 2 == 0) animationFrame++;
+
     }
 }

@@ -15,17 +15,12 @@ public class Sun extends GameObject implements IDrawable, IInput
 
     int animationFrame = 0;
 
-    ArrayList<PImage> pic = new ArrayList <>();
-
 
     public Sun(PApplet p)
 	{
 		super(p,new PVector(p.random(p.width * 2/10, p.width * 8/10), p.random(p.height * 2/10, p.height * 8/10)),Globals.sunSize);
 		InputManager.addObject(this);
 		pvz.suns.add(this);
-		for (int i = 0; i <= 21; i++) {
-			pic.add(p.loadImage(new File("resources/Sun/Sun/Sun_" + i + ".png").getAbsolutePath()));
-		}
 	}
 
 
@@ -36,9 +31,7 @@ public class Sun extends GameObject implements IDrawable, IInput
 
 		InputManager.addObject(this);
 		pvz.suns.add(this);
-		for (int i = 0; i <= 21; i++) {
-			pic.add(p.loadImage(new File("resources/Sun/Sun/Sun_" + i + ".png").getAbsolutePath()));
-		}
+
 	}
 
 	@Override
@@ -57,9 +50,9 @@ public class Sun extends GameObject implements IDrawable, IInput
 	@Override
 	public void show()
 	{
-		if (animationFrame >= pic.size()) animationFrame = 0;
+		if (animationFrame >= Globals.picSun.size()) animationFrame = 0;
 		p.imageMode(PConstants.CENTER);
-		p.image(pic.get(animationFrame++), pos.x, pos.y);
+		p.image(Globals.picSun.get(animationFrame++), pos.x, pos.y);
 	}
 
 	public static void spawn() {

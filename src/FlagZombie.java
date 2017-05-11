@@ -7,28 +7,16 @@ import java.util.ArrayList;
 
 public class FlagZombie extends Zombie {
 
+    int a = 0;
+
     public int animationFrame = 0;
     public int animationFrameAtatck = 0;
 
-    ArrayList<PImage> pics = new ArrayList<>();
-    ArrayList<PImage> picsAttack = new ArrayList<>();
 
     public FlagZombie() { super(); }
 
     public FlagZombie(PApplet p, PVector zombiePos) {
         super(p, zombiePos, Globals.zombieSize, 11, Globals.speed, 1);
-
-        for (int i = 0; i <= 11; i++) {
-            PImage temp;
-            temp = p.loadImage(new File("resources/Zombies/FlagZombie/FlagZombie_" + (i++) + ".png").getAbsolutePath());
-            pics.add(temp);
-        }
-
-        for (int i = 0; i <= 10; i++) {
-            PImage temp = new PImage();
-            temp = p.loadImage(new File("resources/Zombies/FlagZombieAttack/FlagZombieAttack_" + (i++) + ".png").getAbsolutePath());
-            picsAttack.add(temp);
-        }
     }
 
     public static FlagZombie spawn() {
@@ -57,14 +45,18 @@ public class FlagZombie extends Zombie {
 
     @Override
     public void show() {
+        a++;
+
         p.imageMode(PConstants.CENTER);
-        if (animationFrame >= pics.size()) animationFrame = 0;
-        if (animationFrameAtatck >= picsAttack.size()) animationFrameAtatck = 0;
+        if (animationFrame >= Globals.picsFlagZombie.size()) animationFrame = 0;
+        if (animationFrameAtatck >= Globals.picsFlagZombieAttack.size()) animationFrameAtatck = 0;
 
         if (CollisionManager.isCollidingWithClass(this, Plant.class)) {
-            p.image(picsAttack.get(animationFrameAtatck++), pos.x, pos.y);
+            p.image(Globals.picsFlagZombieAttack.get(animationFrameAtatck), pos.x, pos.y);
+            if (a % 3 == 0) animationFrameAtatck++;
         } else {
-            p.image(pics.get(animationFrame++), pos.x, pos.y);
+            p.image(Globals.picsFlagZombie.get(animationFrame), pos.x, pos.y);
+            if (a % 3 == 0) animationFrame++;
         }
     }
 }

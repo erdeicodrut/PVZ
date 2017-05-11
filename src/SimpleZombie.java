@@ -6,29 +6,15 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class SimpleZombie extends Zombie {
+    int a = 0;
+
     public int animationFrame = 0;
     public int animationFrameAtatck = 0;
-
-    ArrayList<PImage> pics = new ArrayList<>();
-    ArrayList<PImage> picsAttack = new ArrayList<>();
 
     public SimpleZombie() { super(); };
 
     public SimpleZombie(PApplet p, PVector pos) {
         super(p, pos, Globals.zombieSize, 10, Globals.speed, 1);
-// add walking animation
-        for (int i = 0; i <= 21; i++) {
-            PImage temp = new PImage();
-            temp = p.loadImage(new File("resources/Zombies/Zombie/Zombie_" + (i++) + ".png").getAbsolutePath());
-            pics.add(temp);
-        }
-
- // add attacking animation
-        for (int i = 0; i <= 20; i++) {
-            PImage temp = new PImage();
-            temp = p.loadImage(new File("resources/Zombies/ZombieAttack/ZombieAttack_" + (i++) + ".png").getAbsolutePath());
-            picsAttack.add(temp);
-        }
     }
 
 
@@ -59,13 +45,13 @@ public class SimpleZombie extends Zombie {
     @Override
     public void show() {
         p.imageMode(PConstants.CENTER);
-        if (animationFrame >= pics.size()) animationFrame = 0;
-        if (animationFrameAtatck >= picsAttack.size()) animationFrameAtatck = 0;
+        if (animationFrame >= Globals.picsSimpleZombie.size()) animationFrame = 0;
+        if (animationFrameAtatck >= Globals.picsSimpleZombieAttack.size()) animationFrameAtatck = 0;
 
         if (CollisionManager.isCollidingWithClass(this, Plant.class)) {
-            p.image(picsAttack.get(animationFrameAtatck++), pos.x, pos.y);
+            p.image(Globals.picsSimpleZombieAttack.get(animationFrameAtatck++), pos.x, pos.y);
         } else {
-            p.image(pics.get(animationFrame++), pos.x, pos.y);
+            p.image(Globals.picsSimpleZombie.get(animationFrame++), pos.x, pos.y);
         }
     }
 }

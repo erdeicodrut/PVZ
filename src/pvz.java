@@ -1,4 +1,3 @@
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import processing.core.PApplet;
 import processing.core.PImage;
 import processing.core.PVector;
@@ -10,12 +9,12 @@ import java.util.Collections;
 import java.util.Objects;
 
 public class pvz extends PApplet {
+
     String simpleZombieString;
     String poleVaultZombiString;
     String cornheadZombieString;
     String bucketheadZombieString;
     String flagZombieString;
-
 
     // The main grid of the game
     Field field = new Field(this, Globals.fieldPos, Globals.fieldDim);
@@ -39,7 +38,7 @@ public class pvz extends PApplet {
     }
 
     public void setup() {
-
+        load();
         IOHandler.loadInfo();
         textSize(17);
         bullets = new ArrayList<>();
@@ -89,7 +88,7 @@ public class pvz extends PApplet {
     }
 
     public void draw() {
-        if (gameOn == true) {
+        if (zombies.size() != 0 || IOHandler.toSpawn.size() != 0) {
             fill(0);
             background(255);
             imageMode(CORNER);
@@ -106,22 +105,28 @@ public class pvz extends PApplet {
             Sun.spawn();
             shovel.show();
 
-            if (IOHandler.toSpawn.size() > 1) spawner();
+            if (IOHandler.toSpawn.size() > 0) spawner();
 //            else youWon();
 
             show();
 //            field.show();
         } else {
-            imageMode(CORNER);
-            image(loadImage(new File("resources/Background/lost.jpg").getAbsolutePath()), 0, 0);
-            textSize(50);
-            text("Game Over", width/2, height/2);
+            if (gameOn == false) {
+                imageMode(CORNER);
+                image(loadImage(new File("resources/Background/lost.jpg").getAbsolutePath()), 0, 0);
+                textSize(50);
+                text("Game Over", width / 2, height / 2);
+            } else if (IOHandler.toSpawn.size() == 0 && zombies.size() == 0) {
+                imageMode(CORNER);
+                image(back, 0, 0);
+                textSize(50);
+                text("You Won", width / 2, height / 2);
+            }
         }
-
     }
 
     private void spawner() {
-        int index = floor(random(IOHandler.toSpawn.size() - 1));
+        int index = floor(random(IOHandler.toSpawn.size()));
 
         if (IOHandler.toSpawn.get(index).equals(simpleZombieString)) {
                 p = SimpleZombie.spawn();
@@ -168,9 +173,17 @@ public class pvz extends PApplet {
         int i = 0;
         while (i < plants.size()) {
             if (!plants.get(i).isAlive()) {
-
                 Living removed = plants.remove(i);
                 CollisionManager.removeObject(removed);
+
+                for (Cell[] line : field.matrix) {
+                    for (Cell obj : line) {
+                        if (obj.plant == removed) {
+                            obj.clear();
+                        }
+                    }
+                }
+
             } else
                 i++;
         }
@@ -197,7 +210,6 @@ public class pvz extends PApplet {
             if (suns.get(i).isGonnaDie) {
                 Sun removed = suns.remove(i);
                 InputManager.queue.remove(removed);
-                removed = null;
             } else
                 i++;
         }
@@ -211,6 +223,145 @@ public class pvz extends PApplet {
                 }
             }
         }
+    }
+
+    private void load() {
+        for (int i = 0; i <= 9; i++) {
+            PImage temp;
+            temp = loadImage(new File("resources/Zombies/PoleVaultingZombie/PoleVaultingZombie_" + (i++) + ".png").getAbsolutePath());
+            Globals.VaultPics.add(temp);
+        }
+
+        for (int i = 0; i <= 13; i++) {
+            PImage temp;
+            temp = loadImage(new File("resources/Zombies/PoleVaultingZombieAttack/PoleVaultingZombieAttack_" + (i++) + ".png").getAbsolutePath());
+            Globals.VaultPicsAttack.add(temp);
+        }
+
+        for (int i = 0; i <= 9; i++) {
+            PImage temp;
+            temp = loadImage(new File("resources/Zombies/PoleVaultingZombieJump/PoleVaultingZombieJump_" + (i++) + ".png").getAbsolutePath());
+            Globals.VaultPicsJump.add(temp);
+        }
+
+        for (int i = 0; i <= 24; i++) {
+            PImage temp;
+            temp = loadImage(new File("resources/Zombies/PoleVaultingZombieWalk/PoleVaultingZombieWalk_" + (i++) + ".png").getAbsolutePath());
+            Globals.VaultPicsWalk.add(temp);
+        }
+
+
+
+        for (int i = 0; i <= 14; i++) {
+            PImage temp;
+            temp = loadImage(new File("resources/Zombies/BucketheadZombie/BucketheadZombie_" + (i++) + ".png").getAbsolutePath());
+            Globals.picsBucketHead.add(temp);
+        }
+
+        for (int i = 0; i <= 10; i++) {
+            PImage temp = new PImage();
+            temp = loadImage(new File("resources/Zombies/BucketheadZombieAttack/BucketheadZombieAttack_" + (i++) + ".png").getAbsolutePath());
+            Globals.picsBucketHeadAttack.add(temp);
+        }
+
+
+        for (int i = 0; i <= 21; i++) {
+            PImage temp = new PImage();
+            temp = loadImage(new File("resources/Zombies/Zombie/Zombie_" + (i++) + ".png").getAbsolutePath());
+            Globals.picsSimpleZombie.add(temp);
+        }
+
+        for (int i = 0; i <= 20; i++) {
+            PImage temp = new PImage();
+            temp = loadImage(new File("resources/Zombies/ZombieAttack/ZombieAttack_" + (i++) + ".png").getAbsolutePath());
+            Globals.picsSimpleZombieAttack.add(temp);
+        }
+
+
+
+        for (int i = 0; i <= 11; i++) {
+            PImage temp;
+            temp = loadImage(new File("resources/Zombies/FlagZombie/FlagZombie_" + (i++) + ".png").getAbsolutePath());
+            Globals.picsFlagZombie.add(temp);
+        }
+
+        for (int i = 0; i <= 10; i++) {
+            PImage temp;
+            temp = loadImage(new File("resources/Zombies/FlagZombieAttack/FlagZombieAttack_" + (i++) + ".png").getAbsolutePath());
+            Globals.picsFlagZombieAttack.add(temp);
+        }
+
+
+        for (int i = 0; i <= 20; i++) {
+            PImage temp;
+            temp = loadImage(new File("resources/Zombies/ConeheadZombie/ConeheadZombie_" + (i++) + ".png").getAbsolutePath());
+            Globals.picsConheadZombie.add(temp);
+        }
+
+        for (int i = 0; i <= 10; i++) {
+            PImage temp;
+            temp = loadImage(new File("resources/Zombies/ConeheadZombieAttack/ConeheadZombieAttack_" + (i++) + ".png").getAbsolutePath());
+            Globals.picsConheadZombieAttack.add(temp);
+        }
+
+
+        for (int i = 0; i <= 12; i++) {
+            PImage temp;
+            temp = loadImage(new File("resources/Plants/Peashooter/Peashooter_" + (i++) + ".png").getAbsolutePath());
+            Globals.picPea.add(temp);
+        }
+
+
+        for (int i = 0; i <= 15; i++) {
+            PImage temp;
+            temp = loadImage(new File("resources/Plants/WallNut/WallNut/WallNut_" + (i++) + ".png").getAbsolutePath());
+            Globals.picWall.add(temp);
+        }
+
+        for (int i = 0; i <= 10; i++) {
+            PImage temp;
+            temp = loadImage(new File("resources/Plants/WallNut/Wallnut_cracked1/Wallnut_cracked1_" + (i++) + ".png").getAbsolutePath());
+            Globals.picWall1.add(temp);
+        }
+
+        for (int i = 0; i <= 14; i++) {
+            PImage temp;
+            temp = loadImage(new File("resources/Plants/WallNut/Wallnut_cracked2/Wallnut_cracked2_" + (i++) + ".png").getAbsolutePath());
+            Globals.picWall2.add(temp);
+        }
+
+
+        for (int i = 0; i <= 17; i++) {
+            PImage temp;
+            temp = loadImage(new File("resources/Plants/Sunflower/SunFlower_" + (i++) + ".png").getAbsolutePath());
+            Globals.picSunflower.add(temp);
+        }
+
+
+        for (int i = 0; i <= 12; i++) {
+            PImage temp;
+            temp = loadImage(new File("resources/Plants/FirePea/FirePea_" + (i++) + ".png").getAbsolutePath());
+            Globals.picFirePea.add(temp);
+        }
+
+
+        for (int i = 0; i <= 14; i++) {
+            PImage temp;
+            temp = loadImage(new File("resources/Plants/SnowPea/SnowPea_" + (i++) + ".png").getAbsolutePath());
+            Globals.picsSnowPea.add(temp);
+        }
+
+        for (int i = 0; i <= 14; i++) {
+            PImage temp;
+            temp = loadImage(new File("resources/Plants/Threepeater/Threepeater_" + (i++) + ".png").getAbsolutePath());
+            Globals.picsMellonPea.add(temp);
+        }
+
+
+        for (int i = 0; i <= 21; i++) {
+            Globals.picSun.add(loadImage(new File("resources/Sun/Sun/Sun_" + i + ".png").getAbsolutePath()));
+        }
+
     }
 
     @Override

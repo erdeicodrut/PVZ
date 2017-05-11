@@ -2,6 +2,8 @@ import processing.core.PApplet;
 import processing.core.PConstants;
 import processing.core.PImage;
 import processing.core.PVector;
+
+import javax.xml.bind.annotation.XmlElementDecl;
 import java.io.File;
 import java.util.ArrayList;
 
@@ -14,10 +16,6 @@ public class PoleVaultingZombie extends Zombie {
 
     int a = 0;
 
-    ArrayList <PImage> pics = new ArrayList <>();
-    ArrayList <PImage> picsAttack = new ArrayList <>();
-    ArrayList <PImage> picsJump = new ArrayList <>();
-    ArrayList <PImage> picsWalk = new ArrayList <>();
 
     boolean hasJumped, doShow = true;
     private Plant toAvoid;
@@ -28,34 +26,6 @@ public class PoleVaultingZombie extends Zombie {
         super(p, zombiePos, Globals.zombieSize, 17, Globals.speed, 1);
 
         hasJumped = false;
-
-        for (int i = 0; i <= 9; i++) {
-            PImage temp;
-            temp = p.loadImage(new File("resources/Zombies/PoleVaultingZombie/PoleVaultingZombie_" + (i++) + ".png").getAbsolutePath());
-            pics.add(temp);
-        }
-
-        for (int i = 0; i <= 13; i++) {
-            PImage temp;
-            temp = p.loadImage(new File("resources/Zombies/PoleVaultingZombieAttack/PoleVaultingZombieAttack_" + (i++) + ".png").getAbsolutePath());
-            picsAttack.add(temp);
-        }
-
-        for (int i = 0; i <= 9; i++) {
-            PImage temp;
-            temp = p.loadImage(new File("resources/Zombies/PoleVaultingZombieJump/PoleVaultingZombieJump_" + (i++) + ".png").getAbsolutePath());
-            picsJump.add(temp);
-        }
-
-        for (int i = 0; i <= 24; i++) {
-            PImage temp;
-            temp = p.loadImage(new File("resources/Zombies/PoleVaultingZombieWalk/PoleVaultingZombieWalk_" + (i++) + ".png").getAbsolutePath());
-            picsWalk.add(temp);
-        }
-
-
-
-
     }
 
     public static PoleVaultingZombie spawn() {
@@ -89,9 +59,9 @@ public class PoleVaultingZombie extends Zombie {
         doShow = false;
 
         a++;
-        if (animationFrameJump >= picsJump.size()) animationFrameJump = picsJump.size() - 1;
+        if (animationFrameJump >= Globals.VaultPicsJump.size()) animationFrameJump = Globals.VaultPicsJump.size() - 1;
         p.imageMode(PConstants.CENTER);
-        p.image(picsJump.get(animationFrameJump), pos.x, pos.y);
+        p.image(Globals.VaultPicsJump.get(animationFrameJump), pos.x, pos.y);
         if (a % 4 == 0) animationFrameJump++;
 
     }
@@ -111,12 +81,8 @@ public class PoleVaultingZombie extends Zombie {
             Plant plant = (Plant) other;
 
             if (toAvoid == null && plant != toAvoid) {
-                System.out.println("Jump");
                 if (hasJumped == false) toAvoid = plant;
-            }
-            else
-                attack(plant);
-
+            } else attack(plant);
         }
     }
 
@@ -135,18 +101,22 @@ public class PoleVaultingZombie extends Zombie {
     @Override
     public void show() {
         if (doShow) {
+            a++;
+
             p.imageMode(PConstants.CENTER);
-            if (animationFrame >= pics.size()) animationFrame = 0;
-            if (animationFrameAtatck >= picsAttack.size()) animationFrameAtatck = 0;
-            if (animationFrameWalk >= picsWalk.size()) animationFrameWalk = 0;
+            if (animationFrame >= Globals.VaultPics.size()) animationFrame = 0;
+            if (animationFrameAtatck >= Globals.VaultPicsAttack.size()) animationFrameAtatck = 0;
+            if (animationFrameWalk >= Globals.VaultPicsWalk.size()) animationFrameWalk = 0;
 
             if (CollisionManager.isCollidingWithClass(this, Plant.class)) {
-                p.image(picsAttack.get(animationFrameAtatck++), pos.x, pos.y);
+                p.image(Globals.VaultPicsAttack.get(animationFrameAtatck++), pos.x, pos.y);
             } else {
                 if (hasJumped == true) {
-                    p.image(picsWalk.get(animationFrameWalk++), pos.x, pos.y);
+                    p.image(Globals.VaultPicsWalk.get(animationFrameWalk), pos.x, pos.y);
+                    if (a % 3 == 0) animationFrameWalk++;
                 } else {
-                    p.image(pics.get(animationFrame++), pos.x, pos.y);
+                    p.image(Globals.VaultPics.get(animationFrame), pos.x, pos.y);
+                    if (a % 3 == 0) animationFrame++;
                 }
             }
         }

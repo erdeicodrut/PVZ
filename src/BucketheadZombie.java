@@ -6,27 +6,15 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class BucketheadZombie extends Zombie {
+    int a = 0;
+
     public int animationFrame = 0;
     public int animationFrameAtatck = 0;
-    ArrayList<PImage> pics = new ArrayList<>();
-    ArrayList<PImage> picsAttack = new ArrayList<>();
 
     public BucketheadZombie() { super(); }
 
     public BucketheadZombie(PApplet p, PVector zombiePos) {
-        super(p, zombiePos, Globals.zombieSize, 65, Globals.speed, 1);
-
-        for (int i = 0; i <= 14; i++) {
-            PImage temp;
-            temp = p.loadImage(new File("resources/Zombies/BucketheadZombie/BucketheadZombie_" + (i++) + ".png").getAbsolutePath());
-            pics.add(temp);
-        }
-
-        for (int i = 0; i <= 10; i++) {
-            PImage temp = new PImage();
-            temp = p.loadImage(new File("resources/Zombies/BucketheadZombieAttack/BucketheadZombieAttack_" + (i++) + ".png").getAbsolutePath());
-            picsAttack.add(temp);
-        }
+        super(p, zombiePos, Globals.zombieSize, 55, Globals.speed, 1);
     }
 
     public static BucketheadZombie spawn() {
@@ -45,27 +33,32 @@ public class BucketheadZombie extends Zombie {
     }
 
     public void attack(Plant other) {
+        a++;
         if (timer-- < 0) {
             if (other.hp > 0) {
                 other.hp -= damage;
             }
             timer = 30;
         }
-        if (animationFrameAtatck >= picsAttack.size()) animationFrameAtatck = 0;
+        if (animationFrameAtatck >= Globals.picsBucketHeadAttack.size()) animationFrameAtatck = 0;
         p.imageMode(PConstants.CENTER);
-        p.image(picsAttack.get(animationFrameAtatck++), pos.x, pos.y);
+        p.image(Globals.picsBucketHeadAttack.get(animationFrameAtatck), pos.x, pos.y);
+        if (a % 5 == 0) animationFrameAtatck++;
     }
 
     @Override
     public void show() {
+        a++;
         p.imageMode(PConstants.CENTER);
-        if (animationFrame >= pics.size()) animationFrame = 0;
-        if (animationFrameAtatck >= picsAttack.size()) animationFrameAtatck = 0;
+        if (animationFrame >= Globals.picsBucketHead.size()) animationFrame = 0;
+        if (animationFrameAtatck >= Globals.picsBucketHeadAttack.size()) animationFrameAtatck = 0;
 
         if (CollisionManager.isCollidingWithClass(this, Plant.class)) {
-            p.image(picsAttack.get(animationFrameAtatck++), pos.x, pos.y);
+            p.image(Globals.picsBucketHeadAttack.get(animationFrameAtatck), pos.x, pos.y);
+            if (a % 5 == 0) animationFrameAtatck++;
         } else {
-            p.image(pics.get(animationFrame++), pos.x, pos.y);
+            p.image(Globals.picsBucketHead.get(animationFrame), pos.x, pos.y);
+            if (a % 5 == 0) animationFrame++;
         }
     }
 }

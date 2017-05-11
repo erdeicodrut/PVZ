@@ -7,26 +7,18 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class Sunflower extends Plant {
+    int a = 0;
+
     private int animationFrame = 0;
     private static int timer = 180;
-    ArrayList<PImage> pics = new ArrayList<>();
 
     public Sunflower(PApplet p, PVector pos) {
         super(p, 3, 0, Effect.NONE );
-        for (int i = 0; i <= 17; i++) {
-            PImage temp;
-            temp = p.loadImage(new File("resources/Plants/Sunflower/SunFlower_" + (i++) + ".png").getAbsolutePath());
-            pics.add(temp);
-        }
+
     }
 
     public Sunflower(PApplet p) {
         super(p, 3, 0, Effect.NONE );
-        for (int i = 0; i <= 17; i++) {
-            PImage temp;
-            temp = p.loadImage(new File("resources/Plants/Sunflower/SunFlower_" + (i++) + ".png").getAbsolutePath());
-            pics.add(temp);
-        }
     }
 
 
@@ -49,8 +41,10 @@ public class Sunflower extends Plant {
 
     @Override
     public void show() {
-        if (animationFrame >= pics.size()) animationFrame = 0;
+        a++;
+        if (animationFrame >= Globals.picSunflower.size()) animationFrame = 0;
         p.imageMode(PConstants.CENTER);
-        p.image(pics.get(animationFrame++), pos.x + size.x, pos.y + size.y);
+        p.image(Globals.picSunflower.get(animationFrame), pos.x + size.x, pos.y + size.y);
+        if (a % 2 == 0) animationFrame++;
     }
 }

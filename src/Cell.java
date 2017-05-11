@@ -40,6 +40,8 @@ class Cell extends GameObject
 		plant.hp = 0;
 	}
 
+	public void clear() { plant = null; }
+
 	public void show() {
 	    p.noFill();
 	    p.stroke(51);

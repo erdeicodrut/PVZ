@@ -1,6 +1,9 @@
 import processing.core.PApplet;
+import processing.core.PImage;
 import processing.core.PVector;
 import processing.event.MouseEvent;
+
+import java.util.ArrayList;
 
 public class Globals {
 
@@ -20,8 +23,42 @@ public class Globals {
 
 	public static PVector sunSize = new PVector(50f, 50f).mult(scale);
 
-	public static float speed = 2;
+	public static float speed = 1;
 	public static int spawnTime = 300;
+
+    public static ArrayList<PImage> VaultPics  = new ArrayList<>();
+    public static ArrayList<PImage> VaultPicsAttack  = new ArrayList<>();
+    public static ArrayList<PImage> VaultPicsJump  = new ArrayList<>();
+    public static ArrayList<PImage> VaultPicsWalk  = new ArrayList<>();
+
+    public static ArrayList<PImage> picsBucketHead = new ArrayList<>();
+    public static ArrayList<PImage> picsBucketHeadAttack = new ArrayList<>();
+
+    public static ArrayList<PImage> picsSimpleZombie = new ArrayList<>();
+    public static ArrayList<PImage> picsSimpleZombieAttack = new ArrayList<>();
+
+    public static ArrayList<PImage> picsFlagZombie = new ArrayList<>();
+    public static ArrayList<PImage> picsFlagZombieAttack = new ArrayList<>();
+
+    public static ArrayList<PImage> picsConheadZombie = new ArrayList<>();
+    public static ArrayList<PImage> picsConheadZombieAttack = new ArrayList<>();
+
+    public static ArrayList<PImage> picPea = new ArrayList<>();
+
+    public static ArrayList<PImage> picWall = new ArrayList<>();
+    public static ArrayList<PImage> picWall1 = new ArrayList<>();
+    public static ArrayList<PImage> picWall2 = new ArrayList<>();
+
+    public static ArrayList<PImage> picSunflower = new ArrayList<>();
+
+    public static ArrayList<PImage> picFirePea = new ArrayList<>();
+
+    public static ArrayList<PImage> picsSnowPea = new ArrayList<>();
+
+    public static ArrayList<PImage> picsMellonPea = new ArrayList<>();
+
+    public static ArrayList<PImage> picSun = new ArrayList <>();
+
 
 //
 // Helper functions

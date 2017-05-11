@@ -7,51 +7,16 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class WallNut extends Plant {
+    int a = 0;
+
     private int animationFrame = 0;
-    ArrayList<PImage> pics = new ArrayList<>();
-    ArrayList<PImage> pics1 = new ArrayList<>();
-    ArrayList<PImage> pics2 = new ArrayList<>();
 
     public WallNut(PApplet p, PVector pos) {
         super(p, 40, 0, Effect.NONE );
-        for (int i = 0; i <= 15; i++) {
-            PImage temp;
-            temp = p.loadImage(new File("resources/Plants/WallNut/WallNut/WallNut_" + (i++) + ".png").getAbsolutePath());
-            pics.add(temp);
-        }
-
-        for (int i = 0; i <= 10; i++) {
-            PImage temp;
-            temp = p.loadImage(new File("resources/Plants/WallNut/Wallnut_cracked1/Wallnut_cracked1_" + (i++) + ".png").getAbsolutePath());
-            pics1.add(temp);
-        }
-
-        for (int i = 0; i <= 14; i++) {
-            PImage temp;
-            temp = p.loadImage(new File("resources/Plants/WallNut/Wallnut_cracked2/Wallnut_cracked2_" + (i++) + ".png").getAbsolutePath());
-            pics2.add(temp);
-        }
     }
 
     public WallNut(PApplet p) {
         super(p, 40, 0, Effect.NONE );
-        for (int i = 0; i <= 15; i++) {
-            PImage temp;
-            temp = p.loadImage(new File("resources/Plants/WallNut/WallNut/WallNut_" + (i++) + ".png").getAbsolutePath());
-            pics.add(temp);
-        }
-
-        for (int i = 0; i <= 10; i++) {
-            PImage temp;
-            temp = p.loadImage(new File("resources/Plants/WallNut/Wallnut_cracked1/Wallnut_cracked1_" + (i++) + ".png").getAbsolutePath());
-            pics1.add(temp);
-        }
-
-        for (int i = 0; i <= 14; i++) {
-            PImage temp;
-            temp = p.loadImage(new File("resources/Plants/WallNut/Wallnut_cracked2/Wallnut_cracked2_" + (i++) + ".png").getAbsolutePath());
-            pics2.add(temp);
-        }
     }
 
     public WallNut(WallNut plant) {
@@ -65,18 +30,22 @@ public class WallNut extends Plant {
 
     @Override
     public void show() {
+        a++;
+
         if (hp < 5) {
-            if (animationFrame >= pics2.size()) animationFrame = 0;
+            if (animationFrame >= Globals.picWall2.size()) animationFrame = 0;
             p.imageMode(PConstants.CENTER);
-            p.image(pics2.get(animationFrame++), pos.x + size.x, pos.y + size.y);
+            p.image(Globals.picWall2.get(animationFrame), pos.x + size.x, pos.y + size.y);
         } else if (hp < 10) {
-            if (animationFrame >= pics1.size()) animationFrame = 0;
+            if (animationFrame >= Globals.picWall1.size()) animationFrame = 0;
             p.imageMode(PConstants.CENTER);
-            p.image(pics1.get(animationFrame++), pos.x + size.x, pos.y + size.y);
+            p.image(Globals.picWall1.get(animationFrame), pos.x + size.x, pos.y + size.y);
         } else {
-            if (animationFrame >= pics.size()) animationFrame = 0;
+            if (animationFrame >= Globals.picWall.size()) animationFrame = 0;
             p.imageMode(PConstants.CENTER);
-            p.image(pics.get(animationFrame++), pos.x + size.x, pos.y + size.y);
+            p.image(Globals.picWall.get(animationFrame), pos.x + size.x, pos.y + size.y);
         }
+
+        if (a % 2 == 0) animationFrame++;
     }
 }
