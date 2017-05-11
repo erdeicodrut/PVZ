@@ -17,6 +17,6 @@ paulVault = input()
 print("How many Zombies with cons on their heads do you want?")
 conHead = input()
 
-file.write('SimpleZombie:{} FlagZombie:{} BucketHeadZombie:{} PoleVaultingZombie:{} ConeHeadZombie:{}'.format(simpleZombie, flagZombie, bucketHead, paulVault, conHead))
+file.write('SimpleZombie:{} FlagZombie:{} BucketheadZombie:{} PoleVaultingZombie:{} ConeheadZombie:{}'.format(simpleZombie, flagZombie, bucketHead, paulVault, conHead))
 
 file.close()
