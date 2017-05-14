@@ -5,39 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc2cd2a4-b552-46a0-841a-38aba28b727f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PVZ.jar" afterPath="$PROJECT_DIR$/PVZ.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/BucketheadZombie.class" afterPath="$PROJECT_DIR$/out/production/PVZ/BucketheadZombie.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/ConeheadZombie.class" afterPath="$PROJECT_DIR$/out/production/PVZ/ConeheadZombie.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/DraggedItem.class" afterPath="$PROJECT_DIR$/out/production/PVZ/DraggedItem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/FirePea.class" afterPath="$PROJECT_DIR$/out/production/PVZ/FirePea.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/FlagZombie.class" afterPath="$PROJECT_DIR$/out/production/PVZ/FlagZombie.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/Item.class" afterPath="$PROJECT_DIR$/out/production/PVZ/Item.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/MellonPea.class" afterPath="$PROJECT_DIR$/out/production/PVZ/MellonPea.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/Plant.class" afterPath="$PROJECT_DIR$/out/production/PVZ/Plant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/PoleVaultingZombie.class" afterPath="$PROJECT_DIR$/out/production/PVZ/PoleVaultingZombie.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/Shop.class" afterPath="$PROJECT_DIR$/out/production/PVZ/Shop.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/Shovel.class" afterPath="$PROJECT_DIR$/out/production/PVZ/Shovel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/SimplePlant.class" afterPath="$PROJECT_DIR$/out/production/PVZ/SimplePlant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/SimpleZombie.class" afterPath="$PROJECT_DIR$/out/production/PVZ/SimpleZombie.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/SnowPea.class" afterPath="$PROJECT_DIR$/out/production/PVZ/SnowPea.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/Sunflower.class" afterPath="$PROJECT_DIR$/out/production/PVZ/Sunflower.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/WallNut.class" afterPath="$PROJECT_DIR$/out/production/PVZ/WallNut.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/pvz.class" afterPath="$PROJECT_DIR$/out/production/PVZ/pvz.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/enemies.txt" afterPath="$PROJECT_DIR$/out/production/PVZ/enemies.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DraggedItem.java" afterPath="$PROJECT_DIR$/src/DraggedItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FirePea.java" afterPath="$PROJECT_DIR$/src/FirePea.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Item.java" afterPath="$PROJECT_DIR$/src/Item.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MellonPea.java" afterPath="$PROJECT_DIR$/src/MellonPea.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Plant.java" afterPath="$PROJECT_DIR$/src/Plant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shop.java" afterPath="$PROJECT_DIR$/src/Shop.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shovel.java" afterPath="$PROJECT_DIR$/src/Shovel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SimplePlant.java" afterPath="$PROJECT_DIR$/src/SimplePlant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SnowPea.java" afterPath="$PROJECT_DIR$/src/SnowPea.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Sunflower.java" afterPath="$PROJECT_DIR$/src/Sunflower.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WallNut.java" afterPath="$PROJECT_DIR$/src/WallNut.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/enemies.txt" afterPath="$PROJECT_DIR$/src/enemies.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pvz.java" afterPath="$PROJECT_DIR$/src/pvz.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -269,6 +237,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -791,7 +760,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -800,9 +768,9 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19385593" sideWeight="0.52118003" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21914893" sideWeight="0.5234375" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21914893" sideWeight="0.47881997" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21914893" sideWeight="0.4765625" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.48789713" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
