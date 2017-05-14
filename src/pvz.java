@@ -23,13 +23,14 @@ public class pvz extends PApplet {
     Zombie p;
     PImage back;
     boolean gameOn;
+    public static boolean iShow;
 
     // Collections of entities
     public static ArrayList<Bullet> bullets;
     public static ArrayList<Zombie> zombies;
     public static ArrayList<Plant> plants;
 
-    public static ArrayList<Item> draggedItems;
+    public static ArrayList<Item> itemHabarnam;
     public static ArrayList<Sun> suns;
 
     public void settings() {
@@ -44,7 +45,7 @@ public class pvz extends PApplet {
         bullets = new ArrayList<>();
         zombies = new ArrayList<>();
         plants = new ArrayList<>();
-        draggedItems = new ArrayList<>();
+        itemHabarnam = new ArrayList<>();
         suns = new ArrayList<>();
 
         gameOn = true;
@@ -97,6 +98,12 @@ public class pvz extends PApplet {
             for (Zombie z : zombies) { z.update(); if (z.pos.x < 100) gameOn = false; }
             for (Plant p : plants) p.update();
             for (Bullet b : bullets) b.update();
+
+            if (iShow == true) {
+                imageMode(CENTER);
+                image(DraggedItem.draggedItem.plant.firstFrame, mouseX, mouseY);
+            }
+
 
             // Check collisions and clean-up
             CollisionManager.resolveCollisions();
@@ -157,7 +164,7 @@ public class pvz extends PApplet {
 
         shop.show(); // Shop and items
 
-        for (Item draggedItem : draggedItems) draggedItem.show();
+        for (Item draggedItem : itemHabarnam) draggedItem.show();
         for (Sun sun : suns) sun.show();
     }
 

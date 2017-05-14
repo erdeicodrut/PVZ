@@ -3,16 +3,24 @@ import processing.core.PConstants;
 import processing.core.PVector;
 import processing.event.MouseEvent;
 
+import java.util.ArrayList;
+
 public class DraggedItem extends GameObject {
+    public static DraggedItem draggedItem;
+
+    public Item item;
     public int value;
     public Plant plant;
     public float red = p.random(255);
 
-    public DraggedItem(PApplet p, PVector pos, int value, Plant plant) {
+    public DraggedItem(PApplet p, PVector pos, int value, Plant plant, Item item) {
         super(p, pos, Globals.itemSize);
+        this.item = item;
         this.value = value;
         this.plant = plant;
+        DraggedItem.draggedItem = this;
     }
+
 
     @Override
     public void show() {
@@ -24,6 +32,8 @@ public class DraggedItem extends GameObject {
     @Override
     public void mouseDragged(MouseEvent event) {
         pos.add(Globals.getRelativeMousePos(p));
+        pvz.iShow = true;
+
     }
 
     @Override
@@ -41,5 +51,6 @@ public class DraggedItem extends GameObject {
                 }
             }
         }
+        pvz.iShow = false;
     }
 }

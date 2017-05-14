@@ -12,10 +12,13 @@ public class MellonPea extends Plant {
 
     public MellonPea(PApplet p, PVector pos) {
         super(p, 3, 2, Effect.MELLON );
+        firstFrame = Globals.picsMellonPea.get(0);
     }
 
     public MellonPea(PApplet p) {
         super(p, 3, 2, Effect.MELLON );
+        firstFrame = Globals.picsMellonPea.get(0);
+
     }
 
     public MellonPea(MellonPea plant) {

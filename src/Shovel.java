@@ -11,7 +11,7 @@ public class Shovel extends DraggedItem {
     PImage pic;
 
     public Shovel (PApplet p) {
-        super(p, new PVector(p.width - 100, p.height - 100), 0, null);
+        super(p, new PVector(p.width - 100, p.height - 100), 0, null, null);
         pic = p.loadImage(new File("resources/Items/Menu/Shovel.png").getAbsolutePath());
         origin = new PVector(p.width - 100, p.height - 100);
         InputManager.addObject(this);

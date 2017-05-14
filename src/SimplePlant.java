@@ -10,17 +10,20 @@ public class SimplePlant extends Plant{
     int a = 0;
     private int animationFrame = 0;
 
+
     public SimplePlant(PApplet p, PVector pos) {
         super(p, 3, 1, Effect.NONE );
+        firstFrame = Globals.picPea.get(0);
     }
 
     public SimplePlant(SimplePlant plant) {
         this(plant.p, plant.pos);
+        firstFrame = Globals.picPea.get(0);
     }
-
 
     public SimplePlant(PApplet p) {
         super(p, 3, 1, Effect.NONE );
+        firstFrame = Globals.picPea.get(0);
     }
 
     @Override

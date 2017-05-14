@@ -7,6 +7,7 @@ import java.util.ArrayList;
 class Plant extends Living {
 	protected Effect effect;
 	protected float damage;
+	public PImage firstFrame;
 
     public PImage card;
 

@@ -23,7 +23,6 @@ public class Item extends GameObject
         p.imageMode(PConstants.CORNER);
         p.image(plant.card, pos.x, pos.y);
 
-
         p.textAlign(PConstants.CENTER, PConstants.CENTER);
         p.fill( 0);
         p.text(value, pos.x  + size.x - 20,  pos.y + size.y - 1);
@@ -32,9 +31,11 @@ public class Item extends GameObject
 	@Override
     public void mousePressed(MouseEvent event)
     {
-	    draggedItem = new DraggedItem(p, pos, value, plant);
+	    draggedItem = new DraggedItem(p, pos, value, plant, this);
 	    InputManager.focusedObject = draggedItem;
 	    InputManager.isDragged = true;
+
+	    System.out.println("pressed");
     }
 
 	@Override
@@ -42,6 +43,5 @@ public class Item extends GameObject
 	{
 		if (draggedItem != null)
 			draggedItem.show();
-
 	}
 }

@@ -13,11 +13,14 @@ public class FirePea extends Plant {
 
     public FirePea(PApplet p, PVector pos) {
         super(p, 3, 2, Effect.FIRE );
+        firstFrame = Globals.picFirePea.get(0);
+
     }
 
     public FirePea(PApplet p) {
         super(p, 3, 2, Effect.FIRE);
-   }
+        firstFrame = Globals.picFirePea.get(0);
+    }
 
     public FirePea(FirePea plant) {
         this(plant.p, plant.pos);

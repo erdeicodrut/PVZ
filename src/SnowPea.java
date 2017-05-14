@@ -12,10 +12,12 @@ public class SnowPea extends Plant {
 
     public SnowPea(PApplet p, PVector pos) {
         super(p, 3, 1, Effect.ICE );
+        firstFrame = Globals.picsSnowPea.get(0);
     }
 
     public SnowPea(PApplet p) {
         super(p, 3, 1, Effect.ICE );
+        firstFrame = Globals.picsSnowPea.get(0);
     }
 
     public SnowPea(SnowPea plant) {

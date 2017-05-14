@@ -17,10 +17,12 @@ public class WallNut extends Plant {
 
     public WallNut(PApplet p) {
         super(p, 40, 0, Effect.NONE );
+        firstFrame = Globals.picWall.get(0);
     }
 
     public WallNut(WallNut plant) {
         this(plant.p, plant.pos);
+        firstFrame = Globals.picWall.get(0);
     }
 
     @Override
