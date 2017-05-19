@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc2cd2a4-b552-46a0-841a-38aba28b727f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Dies.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/Globals.class" afterPath="$PROJECT_DIR$/out/production/PVZ/Globals.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/Sunflower.class" afterPath="$PROJECT_DIR$/out/production/PVZ/Sunflower.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/pvz.class" afterPath="$PROJECT_DIR$/out/production/PVZ/pvz.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/enemies.txt" afterPath="$PROJECT_DIR$/out/production/PVZ/enemies.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Globals.java" afterPath="$PROJECT_DIR$/src/Globals.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Sun.java" afterPath="$PROJECT_DIR$/src/Sun.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Sunflower.java" afterPath="$PROJECT_DIR$/src/Sunflower.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/enemies.txt" afterPath="$PROJECT_DIR$/src/enemies.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pvz.java" afterPath="$PROJECT_DIR$/src/pvz.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -302,7 +292,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -315,45 +305,13 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PVZ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PVZ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PVZ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PVZ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="SearchEverywhereHistoryKey" value="glo&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Globals.java&#10;sun&#9;FILE&#9;file:///home/roscale/Downloads/PVZ/src/Sunflower.java&#10;plant&#9;PSI&#9;JAVA://Plant&#10;plan&#9;FILE&#9;file:///home/roscale/Downloads/PVZ/src/SimplePlant.java&#10;mell&#9;FILE&#9;file:///home/roscale/Downloads/PVZ/src/MellonPea.java&#10;sno&#9;FILE&#9;file:///home/roscale/Downloads/PVZ/src/SnowPea.java&#10;wa&#9;FILE&#9;file:///home/roscale/Downloads/PVZ/src/WallNut.java&#10;fire&#9;FILE&#9;file:///home/roscale/Downloads/PVZ/src/FirePea.java&#10;ioh&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/IOHandler.java&#10;Sun&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Sunflower.java&#10;s&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/SimplePlant.java&#10;simpl&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/SimpleZombie.java&#10;bucket&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/BucketheadZombie.java&#10;Mell&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/MellonPea.java&#10;Snow&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/SnowPea.java&#10;Fire&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/FirePea.java&#10;Wall&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/WallNut.java&#10;sim&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/SimpleZombie.java&#10;con&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/ConeheadZombie.java&#10;zom&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/FlagZombie.java&#10;zomb&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/SimpleZombie.java&#10;Zombie&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/BucketheadZombie.java&#10;zombie&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Zombie.java&#10;Glo&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Globals.java&#10;game&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/GameObject.java&#10;cell&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Cell.java&#10;fie&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Field.java&#10;pv&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/pvz.java&#10;wall&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/WallNut.java&#10;fi&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/FirePea.java&#10;ene&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/enemies.txt&#10;f&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/FlagZombie.java&#10;Gam&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/GameObject.java&#10;livin&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Living.java&#10;io&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/IOHandler.java&#10;mana&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/InputManager.java&#10;lev&#9;PSI&#9;JAVA://PoleVaultingZombie&#10;po&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/PoleVaultingZombie.java&#10;item&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Item.java&#10;zo&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/PoleVaultingZombie.java&#10;show&#9;PSI&#9;JAVA://pvz#show&#10;simple&#9;PSI&#9;JAVA://SimpleZombie&#10;pvz&#9;FILE&#9;file:///home/coddy/Programming/PVZ/PVZ-processing/src/pvz.java&#10;bull&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Bullet.java&#10;sho&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Shop.java&#10;ite&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Item.java&#10;pla&#9;PSI&#9;JAVA://Plant&#10;liv&#9;PSI&#9;JAVA://Living&#10;livi&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Living.java&#10;col&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/CollisionManager.java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="extract.method.default.visibility" value="private" />
@@ -765,7 +723,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494748334959</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added dieded graphics">
+      <created>1495205555515</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1495205555515</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView">
@@ -779,7 +744,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="366" width="1920" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -826,7 +790,8 @@
     <MESSAGE value="LevelMakerComplete" />
     <MESSAGE value="P" />
     <MESSAGE value="Well, All done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Well, All done" />
+    <MESSAGE value="Added dieded graphics" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added dieded graphics" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
