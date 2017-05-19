@@ -5,7 +5,6 @@ import processing.event.MouseEvent;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Objects;
 
 public class pvz extends PApplet {
@@ -33,6 +32,10 @@ public class pvz extends PApplet {
     public static ArrayList<Item> itemHabarnam;
     public static ArrayList<Sun> suns;
 
+    public static ArrayList<Dies> dead;
+
+
+
     public void settings() {
         back = loadImage(new File("resources/Background/PVZBackground_3.jpg").getAbsolutePath());
         size((int) (back.width), (int) (back.height));
@@ -47,6 +50,7 @@ public class pvz extends PApplet {
         plants = new ArrayList<>();
         itemHabarnam = new ArrayList<>();
         suns = new ArrayList<>();
+        dead = new ArrayList<>();
 
         gameOn = true;
         frameRate(30);
@@ -161,6 +165,7 @@ public class pvz extends PApplet {
         for (Plant p : plants) p.show();
         for (Bullet b : bullets) b.show();
         for (Zombie z : zombies) z.show();
+        for (Dies z : dead) z.show();
 
         shop.show(); // Shop and items
 
@@ -192,6 +197,17 @@ public class pvz extends PApplet {
 
                 Living removed = zombies.remove(i);
                 CollisionManager.removeObject(removed);
+                String className = removed.getClass().toString();
+                className = className.replace("class ", "");
+                System.out.println(className);
+                System.out.println(poleVaultZombiString);
+
+                if (Objects.equals(className,poleVaultZombiString)) {
+                    dead.add(new Dies(this, Globals.deadPaul, removed.pos));
+                } else {
+                    dead.add(new Dies(this, Globals.deadZombie, removed.pos));
+                }
+
             } else
                 i++;
         }
@@ -211,16 +227,6 @@ public class pvz extends PApplet {
                 InputManager.queue.remove(removed);
             } else
                 i++;
-        }
-    }
-
-    private void sort(ArrayList<Living> ye) {
-        for (int i = 0; i < ye.size() - 1; i++) {
-            for (int j = i + 1; j < ye.size(); j++) {
-                if (ye.get(i).pos.y > ye.get(j).pos.y) {
-                    Collections.swap(ye, i, j);
-                }
-            }
         }
     }
 
@@ -356,10 +362,25 @@ public class pvz extends PApplet {
             Globals.picsMellonPea.add(temp);
         }
 
-
         for (int i = 0; i <= 21; i++) {
-            Globals.picSun.add(loadImage(new File("resources/Sun/Sun/Sun_" + i + ".png").getAbsolutePath()));
+            PImage temp;
+            temp = loadImage(new File("resources/Sun/Sun/Sun_" + (i++) + ".png").getAbsolutePath());
+            Globals.picSun.add(temp);
         }
+
+
+
+        // dieded guys
+
+        for (int i = 0; i <= 9; i++) {
+            Globals.deadZombie.add(loadImage(new File("resources/Zombies/ZombieDie.atlas/ZombieDie_" + i + ".png").getAbsolutePath()));
+            //
+        }
+
+        for (int i = 0; i <= 8; i++) {
+            Globals.deadPaul.add(loadImage(new File("resources/Zombies/PoleVaultingZombieDie.atlas/PoleVaultingZombieDie_" + i + ".png").getAbsolutePath()));
+        }
+
 
     }
 

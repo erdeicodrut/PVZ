@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc2cd2a4-b552-46a0-841a-38aba28b727f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Dies.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/Globals.class" afterPath="$PROJECT_DIR$/out/production/PVZ/Globals.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/Sunflower.class" afterPath="$PROJECT_DIR$/out/production/PVZ/Sunflower.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/pvz.class" afterPath="$PROJECT_DIR$/out/production/PVZ/pvz.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/enemies.txt" afterPath="$PROJECT_DIR$/out/production/PVZ/enemies.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Globals.java" afterPath="$PROJECT_DIR$/src/Globals.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Sun.java" afterPath="$PROJECT_DIR$/src/Sun.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Sunflower.java" afterPath="$PROJECT_DIR$/src/Sunflower.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/enemies.txt" afterPath="$PROJECT_DIR$/src/enemies.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pvz.java" afterPath="$PROJECT_DIR$/src/pvz.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,6 +28,38 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/PVZ$Main.coverage" NAME="Main Coverage Results" MODIFIED="1494149588481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+            <file leaf-file-name="Dies.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/Dies.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="400">
+                    <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+                    <folding>
+                      <element signature="imports" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="Globals.java" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/Globals.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="491">
+                    <caret line="57" column="58" lean-forward="false" selection-start-line="57" selection-start-column="58" selection-end-line="57" selection-end-column="58" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="ExportToHTMLSettings">
     <option name="printScope" value="1" />
@@ -28,36 +70,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pvz.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pvz.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pvz.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2100">
-              <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+            <state relative-caret-position="363">
+              <caret line="204" column="35" lean-forward="false" selection-start-line="204" selection-start-column="35" selection-end-line="204" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1494707226000" expanded="true" signature="5853:5921" ph="{...}" />
-                <marker date="1494707226000" expanded="false" signature="5959:7229" ph="{...}" />
-                <marker date="1494707226000" expanded="false" signature="7275:7533" ph="{...}" />
-                <marker date="1494707226000" expanded="true" signature="7559:12779" ph="{...}" />
-                <marker date="1494707226000" expanded="false" signature="12839:12850" ph=" { " />
-                <marker date="1494707226000" expanded="false" signature="12881:12887" ph=" }" />
-                <marker date="1494707226000" expanded="false" signature="12949:12960" ph=" { " />
-                <marker date="1494707226000" expanded="false" signature="12993:12999" ph=" }" />
-                <marker date="1494707226000" expanded="false" signature="13061:13072" ph=" { " />
-                <marker date="1494707226000" expanded="false" signature="13105:13111" ph=" }" />
-                <marker date="1494707226000" expanded="false" signature="13173:13184" ph=" { " />
-                <marker date="1494707226000" expanded="false" signature="13217:13223" ph=" }" />
+                <marker date="1495205454054" expanded="true" signature="5938:6006" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sunflower.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Sun.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Sun.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="671">
+              <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConeheadZombie.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ConeheadZombie.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1000">
+              <caret line="57" column="41" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sunflower.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Sunflower.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="700">
+              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,7 +118,7 @@
       <file leaf-file-name="DraggedItem.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DraggedItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
+            <state relative-caret-position="460">
               <caret line="28" column="39" lean-forward="false" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
               <folding>
                 <marker date="1494706942000" expanded="true" signature="1423:1429" ph="{...}" />
@@ -81,7 +134,6 @@
               <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
               <folding>
                 <marker date="1494706589000" expanded="false" signature="658:664" ph=" }" />
-                <marker date="1494706589000" expanded="true" signature="703:965" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -92,43 +144,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="100">
               <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding>
-                <marker date="1494707040000" expanded="true" signature="389:516" ph="{...}" />
-                <marker date="1494707040000" expanded="false" signature="544:549" ph=" { " />
-                <marker date="1494707040000" expanded="false" signature="601:604" ph=" }" />
-                <marker date="1494707040000" expanded="true" signature="629:854" ph="{...}" />
-                <marker date="1494707040000" expanded="true" signature="914:1083" ph="{...}" />
-                <marker date="1494707040000" expanded="true" signature="1116:1184" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Shovel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Shovel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="13" column="76" lean-forward="false" selection-start-line="13" selection-start-column="76" selection-end-line="13" selection-end-column="76" />
-              <folding>
-                <marker date="1494706639000" expanded="true" signature="667:1000" ph="{...}" />
-                <marker date="1494706639000" expanded="false" signature="1024:1035" ph=" { " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FirePea.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FirePea.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
-              <folding>
-                <marker date="1494706563000" expanded="false" signature="353:358" ph=" }" />
-                <marker date="1494706563000" expanded="false" signature="528:532" ph=" }" />
-                <marker date="1494706563000" expanded="true" signature="567:578" ph=" { " />
-                <marker date="1494706563000" expanded="true" signature="603:609" ph=" }" />
-                <marker date="1494706563000" expanded="true" signature="648:916" ph="{...}" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -136,30 +152,11 @@
       <file leaf-file-name="WallNut.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/WallNut.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="200">
               <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
               <folding>
                 <marker date="1494706554000" expanded="false" signature="432:437" ph=" }" />
                 <marker date="1494706554000" expanded="false" signature="599:605" ph=" }" />
-                <marker date="1494706554000" expanded="false" signature="645:656" ph=" { " />
-                <marker date="1494706554000" expanded="false" signature="663:669" ph=" }" />
-                <marker date="1494706554000" expanded="true" signature="708:1491" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SnowPea.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SnowPea.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-              <folding>
-                <marker date="1494706543000" expanded="false" signature="351:356" ph=" }" />
-                <marker date="1494706543000" expanded="false" signature="525:531" ph=" }" />
-                <marker date="1494706543000" expanded="false" signature="566:577" ph=" { " />
-                <marker date="1494706543000" expanded="false" signature="602:608" ph=" }" />
-                <marker date="1494706543000" expanded="true" signature="647:918" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -188,7 +185,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>trasfor</find>
       <find>trasfo</find>
       <find>trasf</find>
       <find>tras</find>
@@ -218,6 +214,7 @@
       <find>pic</find>
       <find>try</find>
       <find>b</find>
+      <find>gar</find>
     </findStrings>
     <replaceStrings>
       <replace>pos.x - pos.x/2,</replace>
@@ -264,10 +261,8 @@
         <option value="$PROJECT_DIR$/src/SimpleZombie.java" />
         <option value="$PROJECT_DIR$/src/ConeheadZombie.java" />
         <option value="$PROJECT_DIR$/src/FlagZombie.java" />
-        <option value="$PROJECT_DIR$/src/Sun.java" />
         <option value="$PROJECT_DIR$/src/enemies.txt" />
         <option value="$PROJECT_DIR$/src/IOHandler.java" />
-        <option value="$PROJECT_DIR$/src/Globals.java" />
         <option value="$PROJECT_DIR$/src/InputManager.java" />
         <option value="$PROJECT_DIR$/src/Shop.java" />
         <option value="$PROJECT_DIR$/src/Item.java" />
@@ -279,13 +274,16 @@
         <option value="$PROJECT_DIR$/src/Shovel.java" />
         <option value="$PROJECT_DIR$/src/DraggedItem.java" />
         <option value="$PROJECT_DIR$/src/Plant.java" />
-        <option value="$PROJECT_DIR$/src/pvz.java" />
         <option value="$PROJECT_DIR$/src/Sunflower.java" />
+        <option value="$PROJECT_DIR$/src/Dies.java" />
+        <option value="$PROJECT_DIR$/src/Globals.java" />
+        <option value="$PROJECT_DIR$/src/Sun.java" />
+        <option value="$PROJECT_DIR$/src/pvz.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="27" />
+    <option name="y" value="366" />
     <option name="width" value="1920" />
     <option name="height" value="1053" />
   </component>
@@ -318,7 +316,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -332,14 +330,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PVZ" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PVZ" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-    <property name="SearchEverywhereHistoryKey" value="sun&#9;FILE&#9;file:///home/roscale/Downloads/PVZ/src/Sunflower.java&#10;plant&#9;PSI&#9;JAVA://Plant&#10;plan&#9;FILE&#9;file:///home/roscale/Downloads/PVZ/src/SimplePlant.java&#10;mell&#9;FILE&#9;file:///home/roscale/Downloads/PVZ/src/MellonPea.java&#10;sno&#9;FILE&#9;file:///home/roscale/Downloads/PVZ/src/SnowPea.java&#10;wa&#9;FILE&#9;file:///home/roscale/Downloads/PVZ/src/WallNut.java&#10;fire&#9;FILE&#9;file:///home/roscale/Downloads/PVZ/src/FirePea.java&#10;ioh&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/IOHandler.java&#10;Sun&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Sunflower.java&#10;s&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/SimplePlant.java&#10;simpl&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/SimpleZombie.java&#10;bucket&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/BucketheadZombie.java&#10;Mell&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/MellonPea.java&#10;Snow&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/SnowPea.java&#10;Fire&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/FirePea.java&#10;Wall&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/WallNut.java&#10;sim&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/SimpleZombie.java&#10;con&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/ConeheadZombie.java&#10;zom&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/FlagZombie.java&#10;zomb&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/SimpleZombie.java&#10;Zombie&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/BucketheadZombie.java&#10;zombie&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Zombie.java&#10;Glo&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Globals.java&#10;game&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/GameObject.java&#10;cell&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Cell.java&#10;fie&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Field.java&#10;pv&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/pvz.java&#10;wall&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/WallNut.java&#10;fi&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/FirePea.java&#10;glo&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Globals.java&#10;ene&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/enemies.txt&#10;f&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/FlagZombie.java&#10;Gam&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/GameObject.java&#10;livin&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Living.java&#10;io&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/IOHandler.java&#10;mana&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/InputManager.java&#10;lev&#9;PSI&#9;JAVA://PoleVaultingZombie&#10;po&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/PoleVaultingZombie.java&#10;item&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Item.java&#10;zo&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/PoleVaultingZombie.java&#10;show&#9;PSI&#9;JAVA://pvz#show&#10;simple&#9;PSI&#9;JAVA://SimpleZombie&#10;pvz&#9;FILE&#9;file:///home/coddy/Programming/PVZ/PVZ-processing/src/pvz.java&#10;bull&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Bullet.java&#10;sho&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Shop.java&#10;ite&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Item.java&#10;pla&#9;PSI&#9;JAVA://Plant&#10;liv&#9;PSI&#9;JAVA://Living&#10;livi&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Living.java&#10;col&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/CollisionManager.java" />
+    <property name="SearchEverywhereHistoryKey" value="glo&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Globals.java&#10;sun&#9;FILE&#9;file:///home/roscale/Downloads/PVZ/src/Sunflower.java&#10;plant&#9;PSI&#9;JAVA://Plant&#10;plan&#9;FILE&#9;file:///home/roscale/Downloads/PVZ/src/SimplePlant.java&#10;mell&#9;FILE&#9;file:///home/roscale/Downloads/PVZ/src/MellonPea.java&#10;sno&#9;FILE&#9;file:///home/roscale/Downloads/PVZ/src/SnowPea.java&#10;wa&#9;FILE&#9;file:///home/roscale/Downloads/PVZ/src/WallNut.java&#10;fire&#9;FILE&#9;file:///home/roscale/Downloads/PVZ/src/FirePea.java&#10;ioh&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/IOHandler.java&#10;Sun&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Sunflower.java&#10;s&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/SimplePlant.java&#10;simpl&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/SimpleZombie.java&#10;bucket&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/BucketheadZombie.java&#10;Mell&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/MellonPea.java&#10;Snow&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/SnowPea.java&#10;Fire&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/FirePea.java&#10;Wall&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/WallNut.java&#10;sim&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/SimpleZombie.java&#10;con&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/ConeheadZombie.java&#10;zom&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/FlagZombie.java&#10;zomb&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/SimpleZombie.java&#10;Zombie&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/BucketheadZombie.java&#10;zombie&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Zombie.java&#10;Glo&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Globals.java&#10;game&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/GameObject.java&#10;cell&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Cell.java&#10;fie&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Field.java&#10;pv&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/pvz.java&#10;wall&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/WallNut.java&#10;fi&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/FirePea.java&#10;ene&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/enemies.txt&#10;f&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/FlagZombie.java&#10;Gam&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/GameObject.java&#10;livin&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Living.java&#10;io&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/IOHandler.java&#10;mana&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/InputManager.java&#10;lev&#9;PSI&#9;JAVA://PoleVaultingZombie&#10;po&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/PoleVaultingZombie.java&#10;item&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Item.java&#10;zo&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/PoleVaultingZombie.java&#10;show&#9;PSI&#9;JAVA://pvz#show&#10;simple&#9;PSI&#9;JAVA://SimpleZombie&#10;pvz&#9;FILE&#9;file:///home/coddy/Programming/PVZ/PVZ-processing/src/pvz.java&#10;bull&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Bullet.java&#10;sho&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Shop.java&#10;ite&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Item.java&#10;pla&#9;PSI&#9;JAVA://Plant&#10;liv&#9;PSI&#9;JAVA://Living&#10;livi&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/Living.java&#10;col&#9;FILE&#9;file:///home/coddy/Programming/PVZ/src/CollisionManager.java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -746,7 +758,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494570763012</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Well, All done">
+      <created>1494748334959</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1494748334959</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -759,7 +778,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <frame x="0" y="366" width="1920" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -768,15 +788,15 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21914893" sideWeight="0.5234375" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21914893" sideWeight="0.52552086" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21914893" sideWeight="0.4765625" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21914893" sideWeight="0.47447917" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.48789713" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16666667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16666667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -819,7 +839,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/String.class" />
     <entry file="jar://$PROJECT_DIR$/lib/core.jar!/processing/core/PConstants.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -942,13 +961,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Spawner.java" />
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar!/java/util/ArrayList.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Field.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -970,13 +982,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ConeheadZombie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="59" column="9" lean-forward="true" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BucketheadZombie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="559">
@@ -991,17 +996,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sun.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="e#922#923#0" expanded="false" />
-            <element signature="e#935#936#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Cell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="770">
@@ -1013,14 +1007,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Globals.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1076,28 +1062,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SnowPea.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
+        <state relative-caret-position="280">
           <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
           <folding>
             <marker date="1494706543000" expanded="false" signature="351:356" ph=" }" />
             <marker date="1494706543000" expanded="false" signature="525:531" ph=" }" />
-            <marker date="1494706543000" expanded="false" signature="566:577" ph=" { " />
-            <marker date="1494706543000" expanded="false" signature="602:608" ph=" }" />
-            <marker date="1494706543000" expanded="true" signature="647:918" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FirePea.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="360">
           <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
           <folding>
+            <element signature="e#608#609#0" expanded="false" />
             <marker date="1494706563000" expanded="false" signature="353:358" ph=" }" />
             <marker date="1494706563000" expanded="false" signature="528:532" ph=" }" />
-            <marker date="1494706563000" expanded="true" signature="567:578" ph=" { " />
-            <marker date="1494706563000" expanded="true" signature="603:609" ph=" }" />
-            <marker date="1494706563000" expanded="true" signature="648:916" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1107,9 +1088,48 @@
         <state relative-caret-position="140">
           <caret line="13" column="76" lean-forward="false" selection-start-line="13" selection-start-column="76" selection-end-line="13" selection-end-column="76" />
           <folding>
-            <marker date="1494706639000" expanded="true" signature="667:1000" ph="{...}" />
-            <marker date="1494706639000" expanded="false" signature="1024:1035" ph=" { " />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1025#1026#0" expanded="false" />
+            <element signature="e#1067#1068#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DraggedItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="28" column="39" lean-forward="false" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+          <folding>
+            <marker date="1494706942000" expanded="true" signature="1423:1429" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SimplePlant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding>
+            <marker date="1494706589000" expanded="false" signature="658:664" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sunflower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ConeheadZombie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1000">
+          <caret line="57" column="41" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1125,35 +1145,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/WallNut.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="200">
           <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding>
             <marker date="1494706554000" expanded="false" signature="432:437" ph=" }" />
             <marker date="1494706554000" expanded="false" signature="599:605" ph=" }" />
-            <marker date="1494706554000" expanded="false" signature="645:656" ph=" { " />
-            <marker date="1494706554000" expanded="false" signature="663:669" ph=" }" />
-            <marker date="1494706554000" expanded="true" signature="708:1491" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DraggedItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="28" column="39" lean-forward="false" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
-          <folding>
-            <marker date="1494706942000" expanded="true" signature="1423:1429" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SimplePlant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-          <folding>
-            <marker date="1494706589000" expanded="false" signature="658:664" ph=" }" />
-            <marker date="1494706589000" expanded="true" signature="703:965" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1162,44 +1158,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar!/java/util/ArrayList.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dies.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
           <folding>
-            <marker date="1494707040000" expanded="true" signature="389:516" ph="{...}" />
-            <marker date="1494707040000" expanded="false" signature="544:549" ph=" { " />
-            <marker date="1494707040000" expanded="false" signature="601:604" ph=" }" />
-            <marker date="1494707040000" expanded="true" signature="629:854" ph="{...}" />
-            <marker date="1494707040000" expanded="true" signature="914:1083" ph="{...}" />
-            <marker date="1494707040000" expanded="true" signature="1116:1184" ph="{...}" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="671">
+          <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Globals.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="57" column="58" lean-forward="false" selection-start-line="57" selection-start-column="58" selection-end-line="57" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pvz.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2100">
-          <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+        <state relative-caret-position="363">
+          <caret line="204" column="35" lean-forward="false" selection-start-line="204" selection-start-column="35" selection-end-line="204" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1494707226000" expanded="true" signature="5853:5921" ph="{...}" />
-            <marker date="1494707226000" expanded="false" signature="5959:7229" ph="{...}" />
-            <marker date="1494707226000" expanded="false" signature="7275:7533" ph="{...}" />
-            <marker date="1494707226000" expanded="true" signature="7559:12779" ph="{...}" />
-            <marker date="1494707226000" expanded="false" signature="12839:12850" ph=" { " />
-            <marker date="1494707226000" expanded="false" signature="12881:12887" ph=" }" />
-            <marker date="1494707226000" expanded="false" signature="12949:12960" ph=" { " />
-            <marker date="1494707226000" expanded="false" signature="12993:12999" ph=" }" />
-            <marker date="1494707226000" expanded="false" signature="13061:13072" ph=" { " />
-            <marker date="1494707226000" expanded="false" signature="13105:13111" ph=" }" />
-            <marker date="1494707226000" expanded="false" signature="13173:13184" ph=" { " />
-            <marker date="1494707226000" expanded="false" signature="13217:13223" ph=" }" />
+            <marker date="1495205454054" expanded="true" signature="5938:6006" ph="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sunflower.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

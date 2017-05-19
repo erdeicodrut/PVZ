@@ -19,8 +19,6 @@ public class Globals {
 	public static PVector shopSize = new PVector(50, 450).mult(scale);
 	public static PVector itemSize = new PVector(100f, 50f).mult(scale);
 
-	public static float bulletDamage = 1f;
-
 	public static PVector sunSize = new PVector(50f, 50f).mult(scale);
 
 	public static float speed = 1;
@@ -57,12 +55,16 @@ public class Globals {
 
     public static ArrayList<PImage> picsMellonPea = new ArrayList<>();
 
-    public static ArrayList<PImage> picSun = new ArrayList <>();
+    public static ArrayList<PImage> picSun = new ArrayList<>();
 
 
-//
-// Helper functions
-//
+    public static ArrayList<PImage> deadZombie = new ArrayList<>();
+    public static ArrayList<PImage> deadPaul = new ArrayList<>();
+
+
+
+
+
 
 	public static PVector getMousePos(MouseEvent event)
 	{ return new PVector(event.getX(), event.getY()); }

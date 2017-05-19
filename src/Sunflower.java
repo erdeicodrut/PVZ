@@ -1,10 +1,7 @@
 import processing.core.PApplet;
 import processing.core.PConstants;
-import processing.core.PImage;
 import processing.core.PVector;
 
-import java.io.File;
-import java.util.ArrayList;
 
 public class Sunflower extends Plant {
     int a = 0;

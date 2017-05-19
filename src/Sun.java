@@ -1,11 +1,8 @@
 import processing.core.PApplet;
 import processing.core.PConstants;
-import processing.core.PImage;
 import processing.core.PVector;
 import processing.event.MouseEvent;
 
-import java.io.File;
-import java.util.ArrayList;
 
 public class Sun extends GameObject implements IDrawable, IInput
 {
