@@ -39,6 +39,14 @@ public class DraggedItem extends GameObject {
     @Override
     public void mouseReleased(MouseEvent event) {
         IInput under = InputManager.getObjectAt(Globals.getMousePos(p));
+        if (p.mouseX < Globals.fieldPos.x || p.mouseY < Globals.fieldPos.y ||
+                p.mouseX > Globals.fieldPos.x + Globals.cellSize.x * Globals.fieldDim.x ||
+                p.mouseY > Globals.fieldPos.y + Globals.cellSize.y * Globals.fieldDim.y ) {
+            pvz.iShow = false;
+            return;
+
+        }
+
         if (under == null)
             return;
 
