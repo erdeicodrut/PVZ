@@ -5,8 +5,79 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc2cd2a4-b552-46a0-841a-38aba28b727f" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHead.atlas/PoleVaultingZombieLostHead_0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHead.atlas/PoleVaultingZombieLostHead_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHead.atlas/PoleVaultingZombieLostHead_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHead.atlas/PoleVaultingZombieLostHead_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHead.atlas/PoleVaultingZombieLostHead_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHead.atlas/PoleVaultingZombieLostHead_5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHead.atlas/PoleVaultingZombieLostHead_6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHead.atlas/PoleVaultingZombieLostHead_7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHead.atlas/PoleVaultingZombieLostHead_8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHead.atlas/PoleVaultingZombieLostHead_9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_17.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_19.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_21.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_22.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_23.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_24.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_25.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_26.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_27.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_28.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/PoleVaultingZombieLostHeadWalk.atlas/PoleVaultingZombieLostHeadWalk_9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/ZombieLostHead.atlas/ZombieLostHead_0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/ZombieLostHead.atlas/ZombieLostHead_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/ZombieLostHead.atlas/ZombieLostHead_10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/ZombieLostHead.atlas/ZombieLostHead_11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/ZombieLostHead.atlas/ZombieLostHead_12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/ZombieLostHead.atlas/ZombieLostHead_13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/ZombieLostHead.atlas/ZombieLostHead_14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/ZombieLostHead.atlas/ZombieLostHead_15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/ZombieLostHead.atlas/ZombieLostHead_16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/ZombieLostHead.atlas/ZombieLostHead_17.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/ZombieLostHead.atlas/ZombieLostHead_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/ZombieLostHead.atlas/ZombieLostHead_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/ZombieLostHead.atlas/ZombieLostHead_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/ZombieLostHead.atlas/ZombieLostHead_5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/ZombieLostHead.atlas/ZombieLostHead_6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/ZombieLostHead.atlas/ZombieLostHead_7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/ZombieLostHead.atlas/ZombieLostHead_8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Zombies/ZombieLostHead.atlas/ZombieLostHead_9.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/BucketheadZombie.class" afterPath="$PROJECT_DIR$/out/production/PVZ/BucketheadZombie.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/ConeheadZombie.class" afterPath="$PROJECT_DIR$/out/production/PVZ/ConeheadZombie.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/FlagZombie.class" afterPath="$PROJECT_DIR$/out/production/PVZ/FlagZombie.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/Globals.class" afterPath="$PROJECT_DIR$/out/production/PVZ/Globals.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/IOHandler.class" afterPath="$PROJECT_DIR$/out/production/PVZ/IOHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/Item.class" afterPath="$PROJECT_DIR$/out/production/PVZ/Item.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/PoleVaultingZombie.class" afterPath="$PROJECT_DIR$/out/production/PVZ/PoleVaultingZombie.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/Shovel.class" afterPath="$PROJECT_DIR$/out/production/PVZ/Shovel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/SimpleZombie.class" afterPath="$PROJECT_DIR$/out/production/PVZ/SimpleZombie.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/Zombie.class" afterPath="$PROJECT_DIR$/out/production/PVZ/Zombie.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/pvz.class" afterPath="$PROJECT_DIR$/out/production/PVZ/pvz.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Globals.java" afterPath="$PROJECT_DIR$/src/Globals.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shovel.java" afterPath="$PROJECT_DIR$/src/Shovel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/enemies.txt" afterPath="$PROJECT_DIR$/src/enemies.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pvz.java" afterPath="$PROJECT_DIR$/src/pvz.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,63 +100,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pvz.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pvz.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pvz.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="84" column="37" lean-forward="false" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Globals.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Globals.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="67" column="54" lean-forward="false" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="54" />
+            <state relative-caret-position="164">
+              <caret line="84" column="39" lean-forward="false" selection-start-line="84" selection-start-column="39" selection-end-line="84" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BucketheadZombie.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BucketheadZombie.java">
+      <file leaf-file-name="enemies.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/enemies.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="58" column="37" lean-forward="false" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+            <state relative-caret-position="0">
+              <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConeheadZombie.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ConeheadZombie.java">
+      <file leaf-file-name="Dies.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Dies.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="57" column="36" lean-forward="false" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FlagZombie.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FlagZombie.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="56" column="32" lean-forward="false" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PoleVaultingZombie.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PoleVaultingZombie.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="117" column="40" lean-forward="false" selection-start-line="117" selection-start-column="40" selection-end-line="117" selection-end-column="40" />
+            <state relative-caret-position="272">
+              <caret line="20" column="41" lean-forward="false" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -94,8 +133,38 @@
       <file leaf-file-name="SimpleZombie.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SimpleZombie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="51" column="77" lean-forward="false" selection-start-line="51" selection-start-column="77" selection-end-line="51" selection-end-column="77" />
+            <state relative-caret-position="340">
+              <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConeheadZombie.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ConeheadZombie.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="29" column="33" lean-forward="false" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FlagZombie.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FlagZombie.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BucketheadZombie.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BucketheadZombie.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="28" column="39" lean-forward="false" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -112,6 +181,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>spaw</find>
       <find>j</find>
       <find>S</find>
       <find>Sy</find>
@@ -141,7 +211,6 @@
       <find>Print</find>
       <find>Printl</find>
       <find>Println</find>
-      <find>Buckethead</find>
     </findStrings>
     <replaceStrings>
       <replace>pos.x - pos.x/2,</replace>
@@ -196,21 +265,22 @@
         <option value="$PROJECT_DIR$/src/Dies.java" />
         <option value="$PROJECT_DIR$/src/DraggedItem.java" />
         <option value="$PROJECT_DIR$/src/Shovel.java" />
-        <option value="$PROJECT_DIR$/src/Zombie.java" />
-        <option value="$PROJECT_DIR$/src/IOHandler.java" />
-        <option value="$PROJECT_DIR$/src/ConeheadZombie.java" />
-        <option value="$PROJECT_DIR$/src/enemies.txt" />
-        <option value="$PROJECT_DIR$/src/FlagZombie.java" />
         <option value="$PROJECT_DIR$/src/PoleVaultingZombie.java" />
-        <option value="$PROJECT_DIR$/src/pvz.java" />
+        <option value="$PROJECT_DIR$/src/ConeheadZombie.java" />
         <option value="$PROJECT_DIR$/src/SimpleZombie.java" />
         <option value="$PROJECT_DIR$/src/BucketheadZombie.java" />
+        <option value="$PROJECT_DIR$/src/FlagZombie.java" />
+        <option value="$PROJECT_DIR$/src/Zombie.java" />
+        <option value="$PROJECT_DIR$/src/IOHandler.java" />
         <option value="$PROJECT_DIR$/src/Globals.java" />
+        <option value="$PROJECT_DIR$/src/enemies.txt" />
+        <option value="$PROJECT_DIR$/src/pvz.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -243,7 +313,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -272,8 +343,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -284,6 +354,125 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="extract.method.default.visibility" value="private" />
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/BucketheadZombie.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/ConeheadZombie.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/FlagZombie.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/IOHandler.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Item.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/PoleVaultingZombie.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/SimpleZombie.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Zombie.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/pvz.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -706,14 +895,7 @@
       <option name="project" value="LOCAL" />
       <updated>1495480962484</updated>
     </task>
-    <task id="LOCAL-00020" summary="Half Headed Zombies">
-      <created>1495645403711</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1495645403711</updated>
-    </task>
-    <option name="localTasksCounter" value="21" />
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -726,7 +908,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -739,12 +921,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21914893" sideWeight="0.52552086" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19281046" sideWeight="0.47447917" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.48789713" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.48789713" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15355521" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15128593" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -752,15 +934,94 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39893618" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21914893" sideWeight="0.52552086" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39893618" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32864583" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19361702" sideWeight="0.47447917" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.48789713" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14895834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19385593" sideWeight="0.52118003" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934355" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32765958" sideWeight="0.49583334" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19281046" sideWeight="0.47881997" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.48789713" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32864583" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14977308" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -776,8 +1037,7 @@
     <MESSAGE value="Well, All done" />
     <MESSAGE value="Added dieded graphics" />
     <MESSAGE value="Optimizations" />
-    <MESSAGE value="Half Headed Zombies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Half Headed Zombies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimizations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -790,6 +1050,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="jar://$PROJECT_DIR$/lib/core.jar!/processing/core/PConstants.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/Zombies/FlagZombie.atlas/FlagZombie_0.png" />
     <entry file="file://$PROJECT_DIR$/resources/Background/firstpage.jpg">
       <provider selected="true" editor-type-id="images">
@@ -914,8 +1181,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
+        <state relative-caret-position="595">
           <caret line="44" column="24" lean-forward="false" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -975,9 +1243,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Sunflower.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
+        <state relative-caret-position="595">
           <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -989,92 +1259,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/WallNut.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar!/java/util/ArrayList.class" />
-    <entry file="file://$PROJECT_DIR$/src/Dies.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GameObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
           <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-          <folding>
-            <element signature="e#703#704#0" expanded="true" />
-            <element signature="e#736#737#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DraggedItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="34" column="25" lean-forward="false" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+        <state relative-caret-position="136">
+          <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Shovel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="11" column="64" lean-forward="false" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+        <state relative-caret-position="-17">
+          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Plant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="100">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IOHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="60" column="27" lean-forward="false" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#164#165#0" expanded="false" />
-            <element signature="e#190#191#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Zombie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="86" column="31" lean-forward="false" selection-start-line="86" selection-start-column="31" selection-end-line="86" selection-end-column="31" />
+        <state relative-caret-position="504">
+          <caret line="86" column="42" lean-forward="false" selection-start-line="86" selection-start-column="42" selection-end-line="86" selection-end-column="42" />
           <folding>
-            <element signature="e#1805#1806#0" expanded="true" />
-            <element signature="e#1846#1847#0" expanded="true" />
+            <element signature="e#1805#1806#0" expanded="false" />
+            <element signature="e#1846#1847#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Sun.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="52" column="5" lean-forward="false" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+        <state relative-caret-position="459">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/a.out">
+    <entry file="file://$PROJECT_DIR$/src/IOHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="748">
+          <caret line="49" column="45" lean-forward="false" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WallNut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Globals.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="64" column="48" lean-forward="false" selection-start-line="64" selection-start-column="48" selection-end-line="64" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BucketheadZombie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="28" column="39" lean-forward="false" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FlagZombie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PoleVaultingZombie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="49" column="27" lean-forward="false" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ConeheadZombie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="29" column="33" lean-forward="false" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SimpleZombie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dies.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" column="41" lean-forward="false" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -1082,65 +1385,15 @@
     <entry file="file://$PROJECT_DIR$/src/enemies.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="89" lean-forward="false" selection-start-line="0" selection-start-column="89" selection-end-line="0" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ConeheadZombie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="57" column="36" lean-forward="false" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FlagZombie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="56" column="32" lean-forward="false" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PoleVaultingZombie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="117" column="40" lean-forward="false" selection-start-line="117" selection-start-column="40" selection-end-line="117" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SimpleZombie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="51" column="77" lean-forward="false" selection-start-line="51" selection-start-column="77" selection-end-line="51" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BucketheadZombie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="58" column="37" lean-forward="false" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pvz.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="84" column="37" lean-forward="false" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Globals.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="67" column="54" lean-forward="false" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="54" />
+        <state relative-caret-position="164">
+          <caret line="84" column="39" lean-forward="false" selection-start-line="84" selection-start-column="39" selection-end-line="84" selection-end-column="39" />
           <folding />
         </state>
       </provider>
