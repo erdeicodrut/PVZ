@@ -61,6 +61,8 @@ public class Globals {
     public static ArrayList<PImage> deadZombie = new ArrayList<>();
     public static ArrayList<PImage> deadPaul = new ArrayList<>();
 
+    public static ArrayList<PImage> deadZombieHalf = new ArrayList<>();
+    public static ArrayList<PImage> deadPaulHalf = new ArrayList<>();
 
 
 

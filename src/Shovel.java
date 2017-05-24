@@ -4,7 +4,6 @@ import processing.core.PImage;
 import processing.core.PVector;
 import processing.event.MouseEvent;
 
-import javax.print.attribute.standard.PrinterMoreInfoManufacturer;
 import java.io.File;
 
 public class Shovel extends DraggedItem {

@@ -201,9 +201,16 @@ public class pvz extends PApplet {
                 className = className.replace("class ", "");
 
                 if (Objects.equals(className,poleVaultZombiString)) {
-                    dead.add(new Dies(this, Globals.deadPaul, removed.pos));
-                } else {
-                    dead.add(new Dies(this, Globals.deadZombie, removed.pos));
+                    System.out.println("Am intrat");
+                    if (p.hp < 7) {
+                        dead.add(new Dies(this, Globals.deadPaulHalf, p.pos));
+                    } else if (p.hp == 0) {
+                        dead.add(new Dies(this, Globals.deadPaul, removed.pos));
+                    } else if ( p.hp < 6 ){
+                        dead.add(new Dies(this, Globals.deadZombieHalf, p.pos));
+                    } else {
+                        dead.add(new Dies(this, Globals.deadZombie, removed.pos));
+                    }
                 }
 
             } else
@@ -378,6 +385,16 @@ public class pvz extends PApplet {
         for (int i = 0; i <= 8; i++) {
             Globals.deadPaul.add(loadImage(new File("resources/Zombies/PoleVaultingZombieDie.atlas/PoleVaultingZombieDie_" + i + ".png").getAbsolutePath()));
         }
+
+        for (int i = 0; i <= 17; i++) {
+            Globals.deadZombieHalf.add(loadImage(new File("resources/Zombies/ZombieLostHead/ZombieLostHead_" + i + ".png").getAbsolutePath()));
+            //
+        }
+
+        for (int i = 0; i <= 28; i++) {
+            Globals.deadPaulHalf.add(loadImage(new File("resources/Zombies/PoleVaultingZombieLostHeadWalk/PoleVaultingZombieLostHeadWalk_" + i + ".png").getAbsolutePath()));
+        }
+
 
 
     }
