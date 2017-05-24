@@ -24,7 +24,7 @@ public class BucketheadZombie extends Zombie {
                     new PVector((Globals.fieldDim.x - 1) * Globals.cellSize.x,
                             p.floor(p.random(5f)) * Globals.cellSize.y));
 
-            timerSpawn = Globals.spawnTime;
+            resetSpawn();
 
             return new BucketheadZombie(p, zombiePos);
 

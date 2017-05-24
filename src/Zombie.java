@@ -82,4 +82,8 @@ class Zombie extends Living {
             attack(plant);
         }
 	}
+
+	public static void resetSpawn() {
+		timerSpawn = Globals.spawnTime / 2;
+	}
 }

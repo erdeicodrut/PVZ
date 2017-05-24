@@ -35,7 +35,6 @@ public class Item extends GameObject
 	    InputManager.focusedObject = draggedItem;
 	    InputManager.isDragged = true;
 
-	    System.out.println("pressed");
     }
 
 	@Override

@@ -199,8 +199,6 @@ public class pvz extends PApplet {
                 CollisionManager.removeObject(removed);
                 String className = removed.getClass().toString();
                 className = className.replace("class ", "");
-                System.out.println(className);
-                System.out.println(poleVaultZombiString);
 
                 if (Objects.equals(className,poleVaultZombiString)) {
                     dead.add(new Dies(this, Globals.deadPaul, removed.pos));

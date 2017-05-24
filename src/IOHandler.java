@@ -46,7 +46,7 @@ class IOHandler {
                         String zombieClass = infoAbEnemies[0];
                         int n = Integer.parseInt(infoAbEnemies[1]);
 
-                        for (int num = 0; num < (n + 1) * Globals.spawnTime; num++) {
+                        for (int num = 0; num < (n + 1) * Globals.spawnTime / 2; num++) {
                             toSpawn.add(zombieClass);
                         }
                     }
