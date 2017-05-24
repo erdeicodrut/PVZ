@@ -54,6 +54,9 @@ public class FlagZombie extends Zombie {
         if (CollisionManager.isCollidingWithClass(this, Plant.class)) {
             p.image(Globals.picsFlagZombieAttack.get(animationFrameAtatck), pos.x, pos.y);
             if (a % 3 == 0) animationFrameAtatck++;
+        }  else if ( this.hp < 6 ) {
+            p.image(Globals.deadZombieHalf.get(animationFrame), pos.x, pos.y);
+            if (a % 2 == 0) animationFrame++;
         } else {
             p.image(Globals.picsFlagZombie.get(animationFrame), pos.x, pos.y);
             if (a % 3 == 0) animationFrame++;

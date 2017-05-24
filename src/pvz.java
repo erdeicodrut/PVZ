@@ -82,7 +82,7 @@ public class pvz extends PApplet {
         shop.addItem(new Item(this, 50, tempSun));
         shop.addItem(new Item(this, 50, tempWall));
         shop.addItem(new Item(this, 175, tempSnow));
-        shop.addItem(new Item(this, 250, tempMello));
+        shop.addItem(new Item(this, 1, tempMello));
 
 
         simpleZombieString = SimpleZombie.class.toString().replace("class ", "");
@@ -368,15 +368,22 @@ public class pvz extends PApplet {
 
 
 
-        // dieded guys
+        // dieded guy
 
         for (int i = 0; i <= 9; i++) {
             Globals.deadZombie.add(loadImage(new File("resources/Zombies/ZombieDie.atlas/ZombieDie_" + i + ".png").getAbsolutePath()));
-            //
         }
 
         for (int i = 0; i <= 8; i++) {
             Globals.deadPaul.add(loadImage(new File("resources/Zombies/PoleVaultingZombieDie.atlas/PoleVaultingZombieDie_" + i + ".png").getAbsolutePath()));
+        }
+
+        for (int i = 0; i <= 17; i++) {
+            Globals.deadZombieHalf.add(loadImage(new File("resources/Zombies/ZombieLostHead/ZombieLostHead_" + i + ".png").getAbsolutePath()));
+        }
+
+        for (int i = 0; i <= 28; i++) {
+            Globals.deadPaulHalf.add(loadImage(new File("resources/Zombies/PoleVaultingZombieLostHeadWalk/PoleVaultingZombieLostHeadWalk_" + i + ".png").getAbsolutePath()));
         }
 
 

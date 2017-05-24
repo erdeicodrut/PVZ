@@ -54,6 +54,9 @@ public class ConeheadZombie extends Zombie {
         if (CollisionManager.isCollidingWithClass(this, Plant.class)) {
             p.image(Globals.picsConheadZombieAttack.get(animationFrameAtatck), pos.x, pos.y);
             if (a % 2 == 0) animationFrameAtatck++;
+        } else if ( this.hp < 13 ) {
+            p.image(Globals.deadZombieHalf.get(animationFrame), pos.x, pos.y);
+            if (a % 2 == 0) animationFrame++;
         } else {
             p.image(Globals.picsConheadZombie.get(animationFrame), pos.x, pos.y);
             if (a % 2 == 0) animationFrame++;

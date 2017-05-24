@@ -115,6 +115,9 @@ public class PoleVaultingZombie extends Zombie {
                 if (hasJumped == true) {
                     p.image(Globals.VaultPicsWalk.get(animationFrameWalk), pos.x, pos.y);
                     if (a % 3 == 0) animationFrameWalk++;
+                }  else if ( this.hp < 8 ) {
+                    p.image(Globals.deadPaulHalf.get(animationFrame), pos.x, pos.y);
+                    if (a % 4 == 0) animationFrame++;
                 } else {
                     p.image(Globals.VaultPics.get(animationFrame), pos.x, pos.y);
                     if (a % 3 == 0) animationFrame++;

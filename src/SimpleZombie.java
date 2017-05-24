@@ -50,6 +50,9 @@ public class SimpleZombie extends Zombie {
 
         if (CollisionManager.isCollidingWithClass(this, Plant.class)) {
             p.image(Globals.picsSimpleZombieAttack.get(animationFrameAtatck++), pos.x, pos.y);
+        }  else if ( this.hp < 5 ) {
+            p.image(Globals.deadZombieHalf.get(animationFrame), pos.x, pos.y);
+            animationFrame++;
         } else {
             p.image(Globals.picsSimpleZombie.get(animationFrame++), pos.x, pos.y);
         }

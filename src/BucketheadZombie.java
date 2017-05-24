@@ -56,6 +56,9 @@ public class BucketheadZombie extends Zombie {
         if (CollisionManager.isCollidingWithClass(this, Plant.class)) {
             p.image(Globals.picsBucketHeadAttack.get(animationFrameAtatck), pos.x, pos.y);
             if (a % 5 == 0) animationFrameAtatck++;
+        }  else if ( this.hp < 27 ) {
+            p.image(Globals.deadZombieHalf.get(animationFrame), pos.x, pos.y);
+            if (a % 2 == 0) animationFrame++;
         } else {
             p.image(Globals.picsBucketHead.get(animationFrame), pos.x, pos.y);
             if (a % 5 == 0) animationFrame++;
