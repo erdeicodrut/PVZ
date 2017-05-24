@@ -5,26 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc2cd2a4-b552-46a0-841a-38aba28b727f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/BucketheadZombie.class" afterPath="$PROJECT_DIR$/out/production/PVZ/BucketheadZombie.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/ConeheadZombie.class" afterPath="$PROJECT_DIR$/out/production/PVZ/ConeheadZombie.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/FlagZombie.class" afterPath="$PROJECT_DIR$/out/production/PVZ/FlagZombie.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/Globals.class" afterPath="$PROJECT_DIR$/out/production/PVZ/Globals.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/IOHandler.class" afterPath="$PROJECT_DIR$/out/production/PVZ/IOHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/Item.class" afterPath="$PROJECT_DIR$/out/production/PVZ/Item.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/PoleVaultingZombie.class" afterPath="$PROJECT_DIR$/out/production/PVZ/PoleVaultingZombie.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/SimpleZombie.class" afterPath="$PROJECT_DIR$/out/production/PVZ/SimpleZombie.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/Zombie.class" afterPath="$PROJECT_DIR$/out/production/PVZ/Zombie.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/pvz.class" afterPath="$PROJECT_DIR$/out/production/PVZ/pvz.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PVZ/enemies.txt" afterPath="$PROJECT_DIR$/out/production/PVZ/enemies.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BucketheadZombie.java" afterPath="$PROJECT_DIR$/src/BucketheadZombie.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ConeheadZombie.java" afterPath="$PROJECT_DIR$/src/ConeheadZombie.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FlagZombie.java" afterPath="$PROJECT_DIR$/src/FlagZombie.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Globals.java" afterPath="$PROJECT_DIR$/src/Globals.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PoleVaultingZombie.java" afterPath="$PROJECT_DIR$/src/PoleVaultingZombie.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SimpleZombie.java" afterPath="$PROJECT_DIR$/src/SimpleZombie.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/enemies.txt" afterPath="$PROJECT_DIR$/src/enemies.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pvz.java" afterPath="$PROJECT_DIR$/src/pvz.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,11 +41,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Globals.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Globals.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="341">
+              <caret line="67" column="54" lean-forward="false" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="BucketheadZombie.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BucketheadZombie.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="239">
-              <caret line="58" column="33" lean-forward="false" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
+              <caret line="58" column="37" lean-forward="false" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -99,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleZombie.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SimpleZombie.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SimpleZombie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="54" column="29" lean-forward="false" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+            <state relative-caret-position="188">
+              <caret line="51" column="77" lean-forward="false" selection-start-line="51" selection-start-column="77" selection-end-line="51" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -206,20 +198,19 @@
         <option value="$PROJECT_DIR$/src/Shovel.java" />
         <option value="$PROJECT_DIR$/src/Zombie.java" />
         <option value="$PROJECT_DIR$/src/IOHandler.java" />
-        <option value="$PROJECT_DIR$/src/Globals.java" />
         <option value="$PROJECT_DIR$/src/ConeheadZombie.java" />
         <option value="$PROJECT_DIR$/src/enemies.txt" />
-        <option value="$PROJECT_DIR$/src/BucketheadZombie.java" />
         <option value="$PROJECT_DIR$/src/FlagZombie.java" />
         <option value="$PROJECT_DIR$/src/PoleVaultingZombie.java" />
         <option value="$PROJECT_DIR$/src/pvz.java" />
         <option value="$PROJECT_DIR$/src/SimpleZombie.java" />
+        <option value="$PROJECT_DIR$/src/BucketheadZombie.java" />
+        <option value="$PROJECT_DIR$/src/Globals.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -715,7 +706,14 @@
       <option name="project" value="LOCAL" />
       <updated>1495480962484</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Half Headed Zombies">
+      <created>1495645403711</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1495645403711</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -728,7 +726,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="0" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -778,7 +776,8 @@
     <MESSAGE value="Well, All done" />
     <MESSAGE value="Added dieded graphics" />
     <MESSAGE value="Optimizations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimizations" />
+    <MESSAGE value="Half Headed Zombies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Half Headed Zombies" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1088,22 +1087,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Globals.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="31" column="36" lean-forward="false" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BucketheadZombie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="58" column="33" lean-forward="false" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ConeheadZombie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1120,16 +1103,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pvz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="84" column="37" lean-forward="false" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PoleVaultingZombie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -1140,8 +1113,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SimpleZombie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="54" column="29" lean-forward="false" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+        <state relative-caret-position="188">
+          <caret line="51" column="77" lean-forward="false" selection-start-line="51" selection-start-column="77" selection-end-line="51" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BucketheadZombie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="58" column="37" lean-forward="false" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pvz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="84" column="37" lean-forward="false" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Globals.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="67" column="54" lean-forward="false" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="54" />
           <folding />
         </state>
       </provider>
