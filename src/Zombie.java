@@ -6,9 +6,14 @@ class Zombie extends Living {
 	protected float damage;
 	protected float totalDamage = 0;
 
+	public boolean head = true;
+	
 	protected int timer = 30;
 	protected static int timerSpawn = Globals.spawnTime;
-
+	
+	public int frame_attack_headless = 0;
+	
+	
 	public Zombie() { super(); }
 
 	public Zombie(PApplet p, PVector pos, PVector size, float hp, float speed, float damage) {

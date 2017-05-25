@@ -77,11 +77,11 @@ public class pvz extends PApplet {
         tempSnow.card = loadImage(new File("resources/Cards/Card_SnowPea.png").getAbsolutePath());
         tempMello.card = loadImage(new File("resources/Cards/Card_Threepeater.png").getAbsolutePath());
 
-        shop.addItem(new Item(this, 175, tempFire));
-        shop.addItem(new Item(this, 100, tempSimpe));
-        shop.addItem(new Item(this, 50, tempSun));
-        shop.addItem(new Item(this, 50, tempWall));
-        shop.addItem(new Item(this, 175, tempSnow));
+        shop.addItem(new Item(this, 1, tempFire));
+        shop.addItem(new Item(this, 1, tempSimpe));
+        shop.addItem(new Item(this, 1, tempSun));
+        shop.addItem(new Item(this, 1, tempWall));
+        shop.addItem(new Item(this, 1, tempSnow));
         shop.addItem(new Item(this, 1, tempMello));
 
 
@@ -232,13 +232,13 @@ public class pvz extends PApplet {
         for (int i = 0; i <= 9; i++) {
             PImage temp;
             temp = loadImage(new File("resources/Zombies/PoleVaultingZombie/PoleVaultingZombie_" + (i++) + ".png").getAbsolutePath());
-            Globals.VaultPics.add(temp);
+            Globals.pole_walk_full.add(temp);
         }
 
         for (int i = 0; i <= 13; i++) {
             PImage temp;
             temp = loadImage(new File("resources/Zombies/PoleVaultingZombieAttack/PoleVaultingZombieAttack_" + (i++) + ".png").getAbsolutePath());
-            Globals.VaultPicsAttack.add(temp);
+            Globals.pole_attack_full.add(temp);
         }
 
         for (int i = 0; i <= 9; i++) {
@@ -250,7 +250,7 @@ public class pvz extends PApplet {
         for (int i = 0; i <= 24; i++) {
             PImage temp;
             temp = loadImage(new File("resources/Zombies/PoleVaultingZombieWalk/PoleVaultingZombieWalk_" + (i++) + ".png").getAbsolutePath());
-            Globals.VaultPicsWalk.add(temp);
+            Globals.pole_walk_full2.add(temp);
         }
 
 
@@ -258,26 +258,26 @@ public class pvz extends PApplet {
         for (int i = 0; i <= 14; i++) {
             PImage temp;
             temp = loadImage(new File("resources/Zombies/BucketheadZombie/BucketheadZombie_" + (i++) + ".png").getAbsolutePath());
-            Globals.picsBucketHead.add(temp);
+            Globals.bucket_head_walk_full.add(temp);
         }
 
         for (int i = 0; i <= 10; i++) {
             PImage temp = new PImage();
             temp = loadImage(new File("resources/Zombies/BucketheadZombieAttack/BucketheadZombieAttack_" + (i++) + ".png").getAbsolutePath());
-            Globals.picsBucketHeadAttack.add(temp);
+            Globals.bucket_head_attack_full.add(temp);
         }
 
 
         for (int i = 0; i <= 21; i++) {
             PImage temp = new PImage();
             temp = loadImage(new File("resources/Zombies/Zombie/Zombie_" + (i++) + ".png").getAbsolutePath());
-            Globals.picsSimpleZombie.add(temp);
+            Globals.simple_zombie_walk_full.add(temp);
         }
 
         for (int i = 0; i <= 20; i++) {
             PImage temp = new PImage();
             temp = loadImage(new File("resources/Zombies/ZombieAttack/ZombieAttack_" + (i++) + ".png").getAbsolutePath());
-            Globals.picsSimpleZombieAttack.add(temp);
+            Globals.simple_zombie_attack_full.add(temp);
         }
 
 
@@ -285,26 +285,26 @@ public class pvz extends PApplet {
         for (int i = 0; i <= 11; i++) {
             PImage temp;
             temp = loadImage(new File("resources/Zombies/FlagZombie/FlagZombie_" + (i++) + ".png").getAbsolutePath());
-            Globals.picsFlagZombie.add(temp);
+            Globals.flag_zombie_walk_full.add(temp);
         }
 
         for (int i = 0; i <= 10; i++) {
             PImage temp;
             temp = loadImage(new File("resources/Zombies/FlagZombieAttack/FlagZombieAttack_" + (i++) + ".png").getAbsolutePath());
-            Globals.picsFlagZombieAttack.add(temp);
+            Globals.flag_zombie_attack_full.add(temp);
         }
 
 
         for (int i = 0; i <= 20; i++) {
             PImage temp;
             temp = loadImage(new File("resources/Zombies/ConeheadZombie/ConeheadZombie_" + (i++) + ".png").getAbsolutePath());
-            Globals.picsConheadZombie.add(temp);
+            Globals.conehead_walk_full.add(temp);
         }
 
         for (int i = 0; i <= 10; i++) {
             PImage temp;
             temp = loadImage(new File("resources/Zombies/ConeheadZombieAttack/ConeheadZombieAttack_" + (i++) + ".png").getAbsolutePath());
-            Globals.picsConheadZombieAttack.add(temp);
+            Globals.cone_head_walk_full.add(temp);
         }
 
 
@@ -371,22 +371,53 @@ public class pvz extends PApplet {
         // dieded guy
 
         for (int i = 0; i <= 9; i++) {
-            Globals.deadZombie.add(loadImage(new File("resources/Zombies/ZombieDie.atlas/ZombieDie_" + i + ".png").getAbsolutePath()));
+            Globals.deadZombie.add(loadImage(new File("resources/Zombies/ZombieDie/ZombieDie_" + i + ".png").getAbsolutePath()));
         }
 
         for (int i = 0; i <= 8; i++) {
-            Globals.deadPaul.add(loadImage(new File("resources/Zombies/PoleVaultingZombieDie.atlas/PoleVaultingZombieDie_" + i + ".png").getAbsolutePath()));
+            Globals.deadPaul.add(loadImage(new File("resources/Zombies/PoleVaultingZombieDie/PoleVaultingZombieDie_" + i + ".png").getAbsolutePath()));
         }
 
         for (int i = 0; i <= 17; i++) {
-            Globals.deadZombieHalf.add(loadImage(new File("resources/Zombies/ZombieLostHead/ZombieLostHead_" + i + ".png").getAbsolutePath()));
+            Globals.simple_zombie_headless.add(loadImage(new File("resources/Zombies/ZombieLostHead/ZombieLostHead_" + i + ".png").getAbsolutePath()));
         }
 
         for (int i = 0; i <= 28; i++) {
-            Globals.deadPaulHalf.add(loadImage(new File("resources/Zombies/PoleVaultingZombieLostHeadWalk/PoleVaultingZombieLostHeadWalk_" + i + ".png").getAbsolutePath()));
+            Globals.pole_walk_headless.add(loadImage(new File("resources/Zombies/PoleVaultingZombieLostHeadWalk/PoleVaultingZombieLostHeadWalk_" + i + ".png").getAbsolutePath()));
         }
-
-
+	
+	    for (int i = 0; i <= 10; i++) {
+		    Globals.simple_zombie_headless_attack.add(loadImage(new File("resources/Zombies/ZombieLostHeadAttack/ZombieLostHeadAttack_" + i + ".png").getAbsolutePath()));
+	    }
+	
+	    for (int i = 0; i <= 11; i++) {
+		    Globals.flag_walk_headless.add(loadImage(new File("resources/Zombies/FlagZombieLostHead/FlagZombieLostHead_" + i + ".png").getAbsolutePath()));
+	    }
+	    
+	    for (int i = 0; i <= 10; i++) {
+		    Globals.flag_attack_headless.add(loadImage(new File("resources/Zombies/FlagZombieLostHeadAttack/FlagZombieLostHeadAttack_" + i + ".png").getAbsolutePath()));
+	    }
+	
+	    for (int i = 0; i <= 28; i++) {
+		    Globals.pole_walk_headless.add(loadImage(new File("resources/Zombies/PoleVaultingZombieLostHeadWalk/PoleVaultingZombieLostHeadWalk_" + i + ".png").getAbsolutePath()));
+	    }
+	
+	    for (int i = 0; i <= 13; i++) {
+		    Globals.pole_attack_headless.add(loadImage(new File("resources/Zombies/PoleVaultingZombieLostHeadAttack/PoleVaultingZombieLostHeadAttack_" + i + ".png").getAbsolutePath()));
+	    }
+	
+	    for (int i = 0; i <= 7; i++) {
+		    Globals.head_pole_vault.add(loadImage(new File("resources/Zombies/PoleVaultingZombieHead/PoleVaultingZombieHead_" + i + ".png").getAbsolutePath()));
+	    }
+	    
+	    for (int i = 0; i <= 11; i++) {
+		    Globals.head_zombie.add(loadImage(new File("resources/Zombies/ZombieHead/ZombieHead_" + i + ".png").getAbsolutePath()));
+	    }
+	    
+	
+	
+	
+	
     }
 
     @Override

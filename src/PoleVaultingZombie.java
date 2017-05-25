@@ -1,18 +1,15 @@
 import processing.core.PApplet;
 import processing.core.PConstants;
-import processing.core.PImage;
 import processing.core.PVector;
 
-import javax.xml.bind.annotation.XmlElementDecl;
-import java.io.File;
-import java.util.ArrayList;
-
 public class PoleVaultingZombie extends Zombie {
-    public int animationFrameJump = 0;
-    public int animationFrame = 0;
-    public int animationFrameWalk = 0;
-    public int animationFrameAtatck = 0;
+    public int frame_jump = 0;
+    public int frame_walk = 0;
+    public int frame_walk2 = 0;
+    public int frame_attack = 0;
     private int jumps = 1;
+
+        public int animationFrameHalf = 0;
 
     int a = 0;
 
@@ -51,8 +48,7 @@ public class PoleVaultingZombie extends Zombie {
             {
                 move();
                 jump();
-            } //TODO well the thing is that shit happens... it worked before and we need to make it work again.
-                // we had the zombie jumping over the first shit but now he's retarded. we might throw him into an orphanage
+            }
         }
     }
 
@@ -60,10 +56,10 @@ public class PoleVaultingZombie extends Zombie {
         doShow = false;
 
         a++;
-        if (animationFrameJump >= Globals.VaultPicsJump.size()) animationFrameJump = Globals.VaultPicsJump.size() - 1;
+        if (frame_jump >= Globals.VaultPicsJump.size()) frame_jump = Globals.VaultPicsJump.size() - 1;
         p.imageMode(PConstants.CENTER);
-        p.image(Globals.VaultPicsJump.get(animationFrameJump), pos.x, pos.y);
-        if (a % 4 == 0) animationFrameJump++;
+        p.image(Globals.VaultPicsJump.get(frame_jump), pos.x, pos.y);
+        if (a % 4 == 0) frame_jump++;
 
     }
 
@@ -101,26 +97,39 @@ public class PoleVaultingZombie extends Zombie {
 
     @Override
     public void show() {
-        if (doShow) {
+	
+	
+	    if (head && hp < 17 / 2) {
+		    head = false;
+		    pvz.dead.add(new Dies(p, Globals.head_pole_vault, pos));
+	    }
+	
+	
+	    if (doShow) {
+        	
             a++;
 
             p.imageMode(PConstants.CENTER);
-            if (animationFrame >= Globals.VaultPics.size()) animationFrame = 0;
-            if (animationFrameAtatck >= Globals.VaultPicsAttack.size()) animationFrameAtatck = 0;
-            if (animationFrameWalk >= Globals.VaultPicsWalk.size()) animationFrameWalk = 0;
+            if (frame_walk >= Globals.pole_walk_full.size()) frame_walk = 0;
+            if (frame_attack >= Globals.pole_attack_full.size()) frame_attack = 0;
+            if (frame_walk2 >= Globals.pole_walk_full2.size()) frame_walk2 = 0;
+            if (animationFrameHalf >= Globals.pole_walk_headless.size()) animationFrameHalf = 0;
+	        if (frame_attack_headless >= Globals.pole_attack_headless.size()) frame_attack_headless = 0;
 
             if (CollisionManager.isCollidingWithClass(this, Plant.class)) {
-                p.image(Globals.VaultPicsAttack.get(animationFrameAtatck++), pos.x, pos.y);
+            	if (!head) {
+		            p.image(Globals.pole_attack_headless.get(frame_attack_headless++), pos.x, pos.y);
+	            } else p.image(Globals.pole_attack_full.get(frame_attack++), pos.x, pos.y);
             } else {
-                if (hasJumped == true) {
-                    p.image(Globals.VaultPicsWalk.get(animationFrameWalk), pos.x, pos.y);
-                    if (a % 3 == 0) animationFrameWalk++;
-                }  else if ( this.hp < 8 ) {
-                    p.image(Globals.deadPaulHalf.get(animationFrame), pos.x, pos.y);
-                    if (a % 4 == 0) animationFrame++;
+                if (hasJumped == true && head) {
+                    p.image(Globals.pole_walk_full2.get(frame_walk2), pos.x, pos.y);
+                    if (a % 3 == 0) frame_walk2++;
+                }  else if (!head) {
+                        p.image(Globals.pole_walk_headless.get(animationFrameHalf), pos.x, pos.y);
+                    if (a % 2 == 0) animationFrameHalf++;
                 } else {
-                    p.image(Globals.VaultPics.get(animationFrame), pos.x, pos.y);
-                    if (a % 3 == 0) animationFrame++;
+                    p.image(Globals.pole_walk_full.get(frame_walk), pos.x, pos.y);
+                    if (a % 3 == 0) frame_walk++;
                 }
             }
         }

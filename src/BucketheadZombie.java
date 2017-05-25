@@ -1,17 +1,16 @@
 import processing.core.PApplet;
 import processing.core.PConstants;
-import processing.core.PImage;
 import processing.core.PVector;
-import java.io.File;
-import java.util.ArrayList;
 
 public class BucketheadZombie extends Zombie {
     int a = 0;
 
-    public int animationFrame = 0;
-    public int animationFrameAtatck = 0;
-
-    public BucketheadZombie() { super(); }
+    public int frame_walk_full = 0;
+    public int frame_attack_full = 0;
+    public int frame_attack_walk = 0;
+    
+    
+	public BucketheadZombie() { super(); }
 
     public BucketheadZombie(PApplet p, PVector zombiePos) {
         super(p, zombiePos, Globals.zombieSize, 55, Globals.speed, 1);
@@ -40,28 +39,44 @@ public class BucketheadZombie extends Zombie {
             }
             timer = 30;
         }
-        if (animationFrameAtatck >= Globals.picsBucketHeadAttack.size()) animationFrameAtatck = 0;
+        if (frame_attack_full >= Globals.bucket_head_attack_full.size()) frame_attack_full = 0;
         p.imageMode(PConstants.CENTER);
-        p.image(Globals.picsBucketHeadAttack.get(animationFrameAtatck), pos.x, pos.y);
-        if (a % 5 == 0) animationFrameAtatck++;
+        p.image(Globals.bucket_head_attack_full.get(frame_attack_full), pos.x, pos.y);
+        if (a % 5 == 0) frame_attack_full++;
     }
 
     @Override
     public void show() {
-        a++;
+	
+	    if (head && hp < 55 / 2) {
+		    head = false;
+		    pvz.dead.add(new Dies(p, Globals.head_zombie, pos));
+	    }
+	
+	
+	    a++;
         p.imageMode(PConstants.CENTER);
-        if (animationFrame >= Globals.picsBucketHead.size()) animationFrame = 0;
-        if (animationFrameAtatck >= Globals.picsBucketHeadAttack.size()) animationFrameAtatck = 0;
+        if (frame_walk_full >= Globals.bucket_head_walk_full.size()) frame_walk_full = 0;
+        if (frame_attack_full >= Globals.bucket_head_attack_full.size()) frame_attack_full = 0;
+        if (frame_attack_walk >= Globals.simple_zombie_headless.size()) frame_attack_walk = 0;
+	    if (frame_attack_headless >= Globals.simple_zombie_headless_attack.size()) frame_attack_headless = 0;
 
         if (CollisionManager.isCollidingWithClass(this, Plant.class)) {
-            p.image(Globals.picsBucketHeadAttack.get(animationFrameAtatck), pos.x, pos.y);
-            if (a % 5 == 0) animationFrameAtatck++;
-        }  else if ( this.hp < 27 ) {
-            p.image(Globals.deadZombieHalf.get(animationFrame), pos.x, pos.y);
-            if (a % 2 == 0) animationFrame++;
+	        if (!head) {
+		        p.image(Globals.simple_zombie_headless_attack.get(frame_attack_headless), pos.x, pos.y);
+		        if (a % 2 == 0) frame_attack_headless++;
+	        } else {
+	        	p.image(Globals.bucket_head_attack_full.get(frame_attack_full), pos.x, pos.y);
+		        if (a % 5 == 0) frame_attack_full++;
+	        }
+        
+            
+        }  else if (!head) {
+            p.image(Globals.simple_zombie_headless.get(frame_attack_walk), pos.x, pos.y);
+            if (a % 2 == 0) frame_attack_walk++;
         } else {
-            p.image(Globals.picsBucketHead.get(animationFrame), pos.x, pos.y);
-            if (a % 5 == 0) animationFrame++;
+            p.image(Globals.bucket_head_walk_full.get(frame_walk_full), pos.x, pos.y);
+            if (a % 5 == 0) frame_walk_full++;
         }
     }
 }
