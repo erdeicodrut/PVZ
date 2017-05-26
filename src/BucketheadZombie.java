@@ -5,9 +5,9 @@ import processing.core.PVector;
 public class BucketheadZombie extends Zombie {
     int a = 0;
 
-    public int frame_walk_full = 0;
-    public int frame_attack_full = 0;
-    public int frame_attack_walk = 0;
+    private int frame_walk_full = 0;
+    private int frame_attack_full = 0;
+    private int frame_attack_walk = 0;
     
     
 	public BucketheadZombie() { super(); }
@@ -40,8 +40,10 @@ public class BucketheadZombie extends Zombie {
             timer = 30;
         }
         if (frame_attack_full >= Globals.bucket_head_attack_full.size()) frame_attack_full = 0;
-        p.imageMode(PConstants.CENTER);
-        p.image(Globals.bucket_head_attack_full.get(frame_attack_full), pos.x, pos.y);
+        
+//        p.imageMode(PConstants.CENTER);
+//        p.image(Globals.bucket_head_attack_full.get(frame_attack_full), pos.x, pos.y);
+        
         if (a % 5 == 0) frame_attack_full++;
     }
 

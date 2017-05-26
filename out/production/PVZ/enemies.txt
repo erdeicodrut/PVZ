@@ -1,1 +1,1 @@
-SimpleZombie:12 FlagZombie:12 BucketheadZombie:12 PoleVaultingZombie:12 ConeheadZombie:12
+SimpleZombie:10 FlagZombie:10 BucketheadZombie:130 PoleVaultingZombie:131 ConeheadZombie:10
