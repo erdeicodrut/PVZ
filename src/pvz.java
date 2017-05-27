@@ -1,4 +1,5 @@
 import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
+import jdk.nashorn.internal.objects.Global;
 import processing.core.PApplet;
 import processing.core.PImage;
 import processing.core.PVector;
@@ -78,20 +79,21 @@ public class pvz extends PApplet {
         WallNut tempWall = new WallNut(this);
         SnowPea tempSnow = new SnowPea(this);
         MellonPea tempMello = new MellonPea(this);
+	    PartyCrasher tempParty = new PartyCrasher(this);
 
         tempFire.card = loadImage(new File("resources/Cards/Card_Cactus.png").getAbsolutePath());
         tempSimpe.card = loadImage(new File("resources/Cards/Card_Peashooter.png").getAbsolutePath());
         tempSun.card = loadImage(new File("resources/Cards/Card_SunFlower.png").getAbsolutePath());
         tempWall.card = loadImage(new File("resources/Cards/Card_Wall-Nut.png").getAbsolutePath());
         tempSnow.card = loadImage(new File("resources/Cards/Card_SnowPea.png").getAbsolutePath());
-        tempMello.card = loadImage(new File("resources/Cards/Card_Threepeater.png").getAbsolutePath());
+        tempParty.card = loadImage(new File("resources/Cards/Card_Threepeater.png").getAbsolutePath());
 
-        shop.addItem(new Item(this, 1, tempFire));
-        shop.addItem(new Item(this, 1, tempSimpe));
-        shop.addItem(new Item(this, 1, tempSun));
-        shop.addItem(new Item(this, 1, tempWall));
-        shop.addItem(new Item(this, 1, tempSnow));
-        shop.addItem(new Item(this, 1, tempMello));
+        shop.addItem(new Item(this, 80, tempSimpe));
+        shop.addItem(new Item(this, 50, tempSun));
+        shop.addItem(new Item(this, 500, tempParty));
+        shop.addItem(new Item(this, 50, tempWall));
+        shop.addItem(new Item(this, 75, tempSnow));
+        shop.addItem(new Item(this, 125, tempFire));
 
 
         simpleZombieString = SimpleZombie.class.toString().replace("class ", "");
@@ -121,7 +123,7 @@ public class pvz extends PApplet {
 
             if (iShow == true) {
                 imageMode(CENTER);
-                image(DraggedItem.draggedItem.plant.firstFrame, mouseX, mouseY);
+                image(DraggedItem.draggedItem.plant.firstFrame, mouseX, mouseY, Globals.cellSize.x, Globals.cellSize.y);
             }
 
 
@@ -131,9 +133,8 @@ public class pvz extends PApplet {
 
             Sun.spawn();
             shovel.show();
-	
-//	        if (timer.get_time_in_minutes() > 0) spawner();
-			spawner();
+		
+		    spawner();
 		    
             show();
         } else {
@@ -156,18 +157,62 @@ public class pvz extends PApplet {
 	private void spawner() {
 		
 		if (timer.get_time_in_seconds() == 60) {
-			for (int i = 0; i < 1500; i++) {
+			
+			for (int i = 0; i < 15 * Globals.spawnTime; i++) {
 				IOHandler.toSpawn.add(simpleZombieString);
 			}
-			for (int i = 0; i < 1000; i++) {
+			for (int i = 0; i < 10 * Globals.spawnTime; i++) {
 				IOHandler.toSpawn.add(trogloditString);
 			}
-			for (int i = 0; i < 1000; i++) {
+			for (int i = 0; i < 10 * Globals.spawnTime; i++) {
 				IOHandler.toSpawn.add(scufundatorString);
 			}
 		}
-        
-        
+		
+		if (timer.get_time_in_seconds() == 180) {
+			
+			for (int i = 0; i < 10 * Globals.spawnTime; i++) {
+				IOHandler.toSpawn.add(simpleZombieString);
+			}
+			for (int i = 0; i < 7 * Globals.spawnTime; i++) {
+				IOHandler.toSpawn.add(trogloditString);
+			}
+			for (int i = 0; i < 4 * Globals.spawnTime; i++) {
+				IOHandler.toSpawn.add(domnumanagerString);
+			}
+			for (int i = 0; i < 3 * Globals.spawnTime; i++) {
+				IOHandler.toSpawn.add(specialistaString);
+			}
+			for (int i = 0; i < 5 * Globals.spawnTime++; i++) {
+				IOHandler.toSpawn.add(doamnaProfesoaraString);
+			}
+			
+		}
+		
+		if (timer.get_time_in_seconds() == 330) {
+			for (int i = 0; i < 5 * Globals.spawnTime; i++) {
+				IOHandler.toSpawn.add(simpleZombieString);
+			}
+			for (int i = 0; i < 5 * Globals.spawnTime; i++) {
+				IOHandler.toSpawn.add(trogloditString);
+			}
+			for (int i = 0; i < 7 * Globals.spawnTime; i++) {
+				IOHandler.toSpawn.add(scufundatorString);
+			}
+			for (int i = 0; i < 6 * Globals.spawnTime; i++) {
+				IOHandler.toSpawn.add(domnumanagerString);
+			}
+			for (int i = 0; i < 9 * Globals.spawnTime; i++) {
+				IOHandler.toSpawn.add(specialistaString);
+			}
+			for (int i = 0; i < 8 * Globals.spawnTime ; i++) {
+				IOHandler.toSpawn.add(doamnaProfesoaraString);
+			}
+			for (int i = 0; i < 1 * Globals.spawnTime; i++) {
+				IOHandler.toSpawn.add(doamnaProfesoaraString);
+			}
+		
+		}
         
         int index = floor(random(IOHandler.toSpawn.size()));
 
@@ -207,7 +252,6 @@ public class pvz extends PApplet {
 
     private void show() {
         
-        field.show();
         timer.show();
 
         for (Plant p : plants) p.show();
@@ -277,7 +321,16 @@ public class pvz extends PApplet {
     }
 
     private void load() {
-        for (int i = 0; i <= 9; i++) {
+	    
+	    Globals.imgDD = loadImage(new File("resources/8_doamnadirectoare.png").getAbsolutePath());
+	    Globals.imgPP = loadImage(new File("resources/cabbage.png").getAbsolutePath());
+	    Globals.imgTR = loadImage(new File("resources/Zombies/Troglo/trogloditul.png").getAbsolutePath());
+	    Globals.imgDS = loadImage(new File("resources/Zombies/Specialista/Specialista.png").getAbsolutePath());
+	    Globals.imgDP = loadImage(new File("resources/6_doamnaprofesoara.png").getAbsolutePath());
+	    Globals.imgSS = loadImage(new File("resources/4_scufundatorul.png").getAbsolutePath());
+	
+	
+	    for (int i = 0; i <= 9; i++) {
             PImage temp;
             temp = loadImage(new File("resources/Zombies/PoleVaultingZombie/PoleVaultingZombie_" + (i++) + ".png").getAbsolutePath());
             Globals.pole_walk_full.add(temp);

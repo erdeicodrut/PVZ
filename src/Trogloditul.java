@@ -10,8 +10,7 @@ public class Trogloditul extends Zombie{
 	
 	public Trogloditul(PApplet p, PVector pos) {
 		super(p, pos, Globals.zombieSize, 95, Globals.speed, 9.6f);
-		img = p.loadImage(new File("resources/Zombies/Troglo/trogloditul.png").getAbsolutePath());
-		
+		img = Globals.imgTR;
 	}
 	
 	public static Trogloditul spawn() {

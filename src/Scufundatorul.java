@@ -10,8 +10,7 @@ public class Scufundatorul extends Zombie{
 	
 	public Scufundatorul(PApplet p, PVector pos) {
 		super(p, pos, Globals.zombieSize, 130, Globals.speed * 2, 24f);
-		img = p.loadImage(new File("resources/Zombies/Scufundatoru/Scufundatorul.png").getAbsolutePath());
-		
+		img = Globals.imgSS;
 	}
 	
 	public static Scufundatorul spawn() {

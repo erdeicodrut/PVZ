@@ -16,7 +16,7 @@ public class WallNut extends Plant {
     }
 
     public WallNut(PApplet p) {
-        super(p, 40, 0, Effect.NONE );
+        super(p, 500, 0, Effect.NONE );
         firstFrame = Globals.picWall.get(0);
     }
 

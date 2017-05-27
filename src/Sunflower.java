@@ -15,7 +15,7 @@ public class Sunflower extends Plant {
     }
 
     public Sunflower(PApplet p) {
-        super(p, 3, 0, Effect.NONE );
+        super(p, 200, 0, Effect.NONE );
         firstFrame = Globals.picSunflower.get(0);
     }
 
@@ -29,7 +29,7 @@ public class Sunflower extends Plant {
     public void spawnSun() {
         if (timer-- < 0) {
             new Sun(p, new PVector(pos.x + p.random(-40,40), pos.y + 50 + + p.random(-40,40)));
-            timer = 180;
+            timer = 150;
         }
     }
 

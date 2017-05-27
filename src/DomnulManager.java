@@ -10,8 +10,7 @@ public class DomnulManager extends Zombie {
 	
 	public DomnulManager(PApplet p, PVector pos) {
 		super(p, pos, Globals.zombieSize, 400, Globals.speed, 37.6f);
-		img = p.loadImage(new File("resources/Zombies/DomnuManager/Domnulmanager.png").getAbsolutePath());
-		
+		img = Globals.imgDM;
 	}
 	
 	public static DomnulManager spawn() {

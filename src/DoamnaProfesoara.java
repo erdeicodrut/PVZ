@@ -13,8 +13,8 @@ public class DoamnaProfesoara extends Zombie{
 	
 	public DoamnaProfesoara(PApplet p, PVector pos) {
 		super(p, pos, Globals.zombieSize, 290, Globals.speed, 45);
-		img = p.loadImage(new File("resources/Zombies/Specialista/Specialista.png").getAbsolutePath());
 		spawnTime = pvz.timer.get_time_in_seconds();
+		img = Globals.imgDP;
 	}
 	
 	public static DoamnaProfesoara spawn() {

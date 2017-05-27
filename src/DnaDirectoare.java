@@ -1,3 +1,4 @@
+import jdk.nashorn.internal.objects.Global;
 import processing.core.PApplet;
 import processing.core.PConstants;
 import processing.core.PImage;
@@ -13,7 +14,7 @@ public class DnaDirectoare extends Zombie {
     public DnaDirectoare (PApplet p, PVector pos) {
 
         super(p, pos, Globals.zombieSize, 550, Globals.speed, 50);
-        img = p.loadImage(new File("resources/Zombies/Directoare/8_doamnadirectoare.png").getAbsolutePath());
+        img = Globals.imgDD;
     }
 
     public static DnaDirectoare spawn() {
@@ -35,20 +36,20 @@ public class DnaDirectoare extends Zombie {
 
         if (attackCounter == 5) {
 
-            float stok = 0;
+            float xTemp = 0;
 
-            for (float i = pos.y; i < 0; i--) {
+            for (float i = pos.x; i > 0; i--) {
                 for (Plant pl : pvz.plants) {
-                    if (i == pl.pos.y) {
-                        stok = i;
+                    if (i == pl.pos.x) {
+                        xTemp = i;
                         break;
                     }
                 }
-                if (stok != 0) break;
+                if (xTemp != 0) break;
             }
 
             for (Plant pl : pvz.plants) {
-                if (stok == pl.pos.y) {
+                if (xTemp == pl.pos.x) {
                     pl.hp -= 50;
                 }
 

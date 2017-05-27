@@ -9,14 +9,15 @@ import java.util.ArrayList;
 public class SnowPea extends Plant {
     int a = 0;
     private int animationFrame = 0;
+    int timer = 35;
 
     public SnowPea(PApplet p, PVector pos) {
-        super(p, 3, 1, Effect.ICE );
+        super(p, 200, 11.7f, Effect.ICE );
         firstFrame = Globals.picsSnowPea.get(0);
     }
 
     public SnowPea(PApplet p) {
-        super(p, 3, 1, Effect.ICE );
+        super(p, 200, 11.7f, Effect.ICE );
         firstFrame = Globals.picsSnowPea.get(0);
     }
 
@@ -32,5 +33,13 @@ public class SnowPea extends Plant {
         p.imageMode(PConstants.CENTER);
         p.image(Globals.picsSnowPea.get(animationFrame), pos.x + size.x, pos.y + size.y);
         if (a % 2 == 0) animationFrame++;
+    }
+
+    @Override
+    public void shoot() {
+        if (timer-- <= 0) {
+            Bullet bullet = new Bullet(p, PVector.add(pos, PVector.div(size, 2)), 15, damage, effect);
+            timer = 35;
+        }
     }
 }

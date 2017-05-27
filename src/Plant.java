@@ -26,8 +26,12 @@ class Plant extends Living {
 	public Plant(Plant plant) {
 		this(plant.p, plant.hp, plant.damage, plant.effect);
 	}
-
-
+	
+	public Plant() {
+	
+	}
+	
+	
 	public void update() {
         for (int i = 0; i < pvz.zombies.size(); i++)
         {

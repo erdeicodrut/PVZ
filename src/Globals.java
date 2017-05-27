@@ -3,12 +3,14 @@ import processing.core.PImage;
 import processing.core.PVector;
 import processing.event.MouseEvent;
 
+import javax.print.attribute.standard.PrinterMoreInfoManufacturer;
 import java.awt.peer.ChoicePeer;
 import java.util.ArrayList;
 
 public class Globals {
-
-    public static float scale = 1;
+	
+	public static float scale = 1;
+ 
 
 	public static PVector fieldPos = new PVector(250, 80).mult(scale);
 	public static PVector fieldDim = new PVector(15, 5).mult(scale);
@@ -74,7 +76,13 @@ public class Globals {
 	
 	public static ArrayList<PImage> head_pole_vault = new ArrayList<>();
 	public static ArrayList<PImage> head_zombie = new ArrayList<>();
-	
+	public static PImage imgPP;
+	public static PImage imgTR;
+	public static PImage imgDP;
+	public static PImage imgDS;
+	public static PImage imgDM;
+    public static PImage imgDD;
+	public static PImage imgSS;
 	
 	
 	public static PVector getMousePos(MouseEvent event)
