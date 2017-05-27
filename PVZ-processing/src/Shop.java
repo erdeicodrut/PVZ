@@ -20,9 +20,4 @@ class Shop extends Drawable {
 		}
 	}
 
-	@Override
-	public void show()
-	{
-		// TODO
-	}
 }

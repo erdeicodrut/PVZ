@@ -14,8 +14,6 @@ class Cell extends Drawable {
 
 	// Retain and set the position of the plant passed in
 	public Plant plantHere(Plant toPlant) {
-		//TODO shop stuff
-
 		if (this.isOccupied() == false) {
 			this.plant = toPlant;
 			this.plant.pos = this.pos;

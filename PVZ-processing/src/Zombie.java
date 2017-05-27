@@ -19,7 +19,7 @@ class Zombie extends Living {
 	}
 
 	// This method is called when it collides with a plant
-	//
+
 	public void attack(Plant other) {
 		if (timer-- < 0) {
 			if (other.hp > 0) {

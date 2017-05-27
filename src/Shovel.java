@@ -8,7 +8,7 @@ import java.io.File;
 
 public class Shovel extends DraggedItem {
     PImage pic;
-    PVector origin = new PVector(p.width - 100, p.height - 100);
+    public static PVector origin = new PVector(p.width - 100, p.height - 100);
 
     public Shovel (PApplet p) {
         super(p, new PVector(p.width - 100, p.height - 100), 0, null, null);
@@ -30,7 +30,6 @@ public class Shovel extends DraggedItem {
         }
 
 
-        setPosition(origin);
     }
 
     @Override

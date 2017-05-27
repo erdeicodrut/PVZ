@@ -11,8 +11,8 @@ public class Globals {
     public static float scale = 1;
 
 	public static PVector fieldPos = new PVector(250, 80).mult(scale);
-	public static PVector fieldDim = new PVector(9, 5).mult(scale);
-	public static PVector cellSize = new PVector(82f, 95f).mult(scale);
+	public static PVector fieldDim = new PVector(15, 5).mult(scale);
+	public static PVector cellSize = new PVector(83f, 96f).mult(scale);
 
 	public static PVector flowerSize = new PVector(100f/2, 100f/2).mult(scale);
 	public static PVector zombieSize = new PVector(100f / 2, 100f / 2).mult(scale);
@@ -23,7 +23,7 @@ public class Globals {
 	public static PVector sunSize = new PVector(50f, 50f).mult(scale);
 
 	public static float speed = 1;
-	public static int spawnTime = 300;
+	public static int spawnTime = 100;
 
     public static ArrayList<PImage> pole_walk_full = new ArrayList<>();
     public static ArrayList<PImage> pole_attack_full = new ArrayList<>();
@@ -67,7 +67,6 @@ public class Globals {
     public static ArrayList<PImage> pole_walk_headless = new ArrayList<>();
 	public static ArrayList<PImage> flag_walk_headless = new ArrayList<>();
 
-    public static ArrayList<PImage> simpe_zombie_attack_headless = new ArrayList<>();
 	public static ArrayList<PImage> simple_zombie_headless_attack = new ArrayList<>();
 	public static ArrayList<PImage> pole_attack_headless = new ArrayList<>();
 	public static ArrayList<PImage> flag_attack_headless = new ArrayList<>();

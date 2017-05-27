@@ -13,7 +13,8 @@ public class pvz extends PApplet {
     String poleVaultZombiString;
     String cornheadZombieString;
     String bucketheadZombieString;
-    String flagZombieString;
+	String flagZombieString;
+	String trogloditString;
 
     // The main grid of the game
     Field field = new Field(this, Globals.fieldPos, Globals.fieldDim);
@@ -23,6 +24,7 @@ public class pvz extends PApplet {
     PImage back;
     boolean gameOn;
     public static boolean iShow;
+    Timer timer;
 
     // Collections of entities
     public static ArrayList<Bullet> bullets;
@@ -38,10 +40,11 @@ public class pvz extends PApplet {
 
     public void settings() {
         back = loadImage(new File("resources/Background/PVZBackground_3.jpg").getAbsolutePath());
-        size((int) (back.width), (int) (back.height));
+        size((int) (back.width * 1.5), (int) (back.height));
     }
 
     public void setup() {
+    	timer = new Timer(this);
         load();
         IOHandler.loadInfo();
         textSize(17);
@@ -89,7 +92,8 @@ public class pvz extends PApplet {
         poleVaultZombiString = PoleVaultingZombie.class.toString().replace("class ", "");
         cornheadZombieString = ConeheadZombie.class.toString().replace("class ", "");
         bucketheadZombieString = BucketheadZombie.class.toString().replace("class ", "");
-        flagZombieString= FlagZombie.class.toString().replace("class ", "");
+	    flagZombieString= FlagZombie.class.toString().replace("class ", "");
+	    trogloditString= Trogloditul.class.toString().replace("class ", "");
     }
 
     public void draw() {
@@ -115,8 +119,9 @@ public class pvz extends PApplet {
 
             Sun.spawn();
             shovel.show();
-
-            if (IOHandler.toSpawn.size() > 0) spawner();
+	
+//	        if (timer.get_time_in_minutes() > 0 && IOHandler.toSpawn.size() > 0) spawner();
+	        if (IOHandler.toSpawn.size() > 0) spawner();
 
             show();
         } else {
@@ -135,12 +140,13 @@ public class pvz extends PApplet {
             }
         }
     }
-
-    private void spawner() {
+	
+	private void spawner() {
+		
         int index = floor(random(IOHandler.toSpawn.size()));
 
         if (IOHandler.toSpawn.get(index).equals(simpleZombieString)) {
-                p = SimpleZombie.spawn();
+	        p = SimpleZombie.spawn();
         } else if (Objects.equals(IOHandler.toSpawn.get(index), poleVaultZombiString)) {
             p = PoleVaultingZombie.spawn();
         } else if (Objects.equals(IOHandler.toSpawn.get(index), cornheadZombieString)) {
@@ -148,7 +154,9 @@ public class pvz extends PApplet {
         } else if (Objects.equals(IOHandler.toSpawn.get(index), bucketheadZombieString)) {
             p = BucketheadZombie.spawn();
         } else if (Objects.equals(IOHandler.toSpawn.get(index), flagZombieString)) {
-            p = FlagZombie.spawn();
+	        p = FlagZombie.spawn();
+        } else if (Objects.equals(IOHandler.toSpawn.get(index), trogloditString)) {
+	        p = Trogloditul.spawn();
         }
 
         IOHandler.toSpawn.remove(index);
@@ -160,7 +168,9 @@ public class pvz extends PApplet {
     }
 
     private void show() {
-//        field.show(); // Cells
+        
+        field.show();
+        timer.show();
 
         for (Plant p : plants) p.show();
         for (Bullet b : bullets) b.show();
@@ -443,6 +453,8 @@ public class pvz extends PApplet {
     @Override
     public void mouseReleased(MouseEvent event) {
         InputManager.mouseReleased(event);
+        shovel.setPosition(Shovel.origin);
+    
     }
 
     @Override

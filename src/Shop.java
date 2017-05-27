@@ -16,7 +16,7 @@ class Shop extends GameObject
 	public Shop(PApplet p, PVector pos, PVector size) {
 		super(p, pos, size);
 		sunPic = p.loadImage(new File("resources/Sun/Sun/Sun_1.png").getAbsolutePath());
-		ballance = 150;
+		ballance = 50;
 	}
 
 	public static void addBallance(int loan) {
@@ -51,7 +51,6 @@ class Shop extends GameObject
 	{
 		p.rectMode(PConstants.CORNER);
 		p.fill(242 , 50 , 100);
-//		p.rect(pos.x, pos.y, size.x , size.y);
 
 		for (Item item : loadout)
 		    item.show();

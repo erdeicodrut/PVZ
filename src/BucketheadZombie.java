@@ -41,9 +41,6 @@ public class BucketheadZombie extends Zombie {
         }
         if (frame_attack_full >= Globals.bucket_head_attack_full.size()) frame_attack_full = 0;
         
-//        p.imageMode(PConstants.CENTER);
-//        p.image(Globals.bucket_head_attack_full.get(frame_attack_full), pos.x, pos.y);
-        
         if (a % 5 == 0) frame_attack_full++;
     }
 

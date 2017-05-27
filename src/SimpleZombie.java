@@ -12,7 +12,7 @@ public class SimpleZombie extends Zombie {
     public SimpleZombie() { super(); };
 
     public SimpleZombie(PApplet p, PVector pos) {
-        super(p, pos, Globals.zombieSize, 10, Globals.speed, 1);
+        super(p, pos, Globals.zombieSize, 85, Globals.speed, 7);
     }
 
 
