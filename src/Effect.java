@@ -1,4 +1,4 @@
 public enum Effect {
-	NONE, ICE, FIRE, MELLON
+	NONE, ICE, FIRE, MELLON, PARTYCRASHER
 }
 

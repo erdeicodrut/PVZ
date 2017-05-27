@@ -37,6 +37,8 @@ class Bullet extends Living
 	public void move() {
 		pos.x += speed;
 	}
+	
+	
 
 
 

@@ -10,7 +10,7 @@ public class Sunflower extends Plant {
     private static int timer = 180;
 
     public Sunflower(PApplet p, PVector pos) {
-        super(p, 3, 0, Effect.NONE );
+        super(p, 200, 0, Effect.NONE );
         firstFrame = Globals.picSunflower.get(0);
     }
 

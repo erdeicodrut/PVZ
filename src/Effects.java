@@ -17,7 +17,10 @@ class Effects
 						zo.receiveDamage(2);
 				}
 				break;
-
+			case PARTYCRASHER:
+				zombie.clonable = true;
+				break;
+			
 			default:
 				break;
 		}

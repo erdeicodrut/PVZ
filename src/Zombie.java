@@ -2,6 +2,8 @@ import processing.core.PApplet;
 import processing.core.PVector;
 
 class Zombie extends Living {
+	public boolean clonable = false;
+	
 	protected float speed;
 	protected float damage;
 	protected float totalDamage = 0;
@@ -46,17 +48,11 @@ class Zombie extends Living {
 	// Receives some damage/effect from a bullet
 	public void receiveDamage(float damage) {
 		if (hp > 0)
-		{
-			totalDamage += damage;
-		}
-		hp -= totalDamage;
-		totalDamage = 0;
+			hp -= damage;
+		
+		if (clonable) hp = 0;
 	}
-
-	public void receiveEffect(Effect effect) {
-		Effects.applyEffect(effect, this);
-	}
-
+	
     public boolean isZombie() { return true; }
 
 	public static Zombie spawn() {
@@ -72,6 +68,10 @@ class Zombie extends Living {
 
 		}
 		return null;
+	}
+	
+	public void receiveEffect(Effect effect) {
+		Effects.applyEffect(effect,this);
 	}
 
     @Override

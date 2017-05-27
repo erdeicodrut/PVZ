@@ -12,7 +12,7 @@ class Plant extends Living {
     public PImage card;
 
 
-    private int timer = 30;
+    public int timer = 30;
 
 	public static int DebugingNum = 0;
 

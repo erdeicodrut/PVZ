@@ -1,15 +1,17 @@
 import processing.core.PApplet;
 import processing.core.PConstants;
+import processing.core.PImage;
 import processing.core.PVector;
 
-/**
- * Created by coddy on 5/27/17.
- */
+import java.io.File;
+
 public class Trogloditul extends Zombie{
-	public Trogloditul() { super(); };
+	PImage img;
 	
 	public Trogloditul(PApplet p, PVector pos) {
 		super(p, pos, Globals.zombieSize, 95, Globals.speed, 9.6f);
+		img = p.loadImage(new File("resources/Zombies/Troglo/trogloditul.png").getAbsolutePath());
+		
 	}
 	
 	public static Trogloditul spawn() {
@@ -37,8 +39,8 @@ public class Trogloditul extends Zombie{
 	}
 	
 	public void show() {
-		p.imageMode(PConstants.CENTER);
-		p.image(Globals.bucket_head_attack_full.get(0), pos.x, pos.y);
+		p.imageMode(PConstants.CORNER);
+		p.image(img, pos.x, pos.y, img.width / 6, img.height / 6);
 	}
 	
 }

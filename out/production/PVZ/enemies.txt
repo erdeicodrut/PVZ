@@ -1,1 +1,1 @@
-SimpleZombie:1 FlagZombie:1 BucketheadZombie:1 PoleVaultingZombie:1 Trogloditul:10
+SimpleZombie:1 FlagZombie:1 BucketheadZombie:1 PoleVaultingZombie:1 DomnulManager:10

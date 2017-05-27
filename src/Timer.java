@@ -21,5 +21,9 @@ public class Timer {
 		p.text( (get_time_in_minutes() < 10 ? "0" + get_time_in_minutes() : get_time_in_minutes()) + ":" + (get_time_in_seconds() < 60 ? get_time_in_seconds() : get_time_in_seconds() - (get_time_in_minutes() * 60)), p.width - 100, 100);
 	}
 	
+	public int get_second() {
+		return 30;
+	}
+	
 
 }

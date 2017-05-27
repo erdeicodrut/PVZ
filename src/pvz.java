@@ -1,3 +1,4 @@
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import processing.core.PApplet;
 import processing.core.PImage;
 import processing.core.PVector;
@@ -15,6 +16,11 @@ public class pvz extends PApplet {
     String bucketheadZombieString;
 	String flagZombieString;
 	String trogloditString;
+	String scufundatorString;
+	String domnumanagerString;
+	String specialistaString;
+	String doamnaProfesoaraString;
+	String doamnaDirectoareString;
 
     // The main grid of the game
     Field field = new Field(this, Globals.fieldPos, Globals.fieldDim);
@@ -24,7 +30,7 @@ public class pvz extends PApplet {
     PImage back;
     boolean gameOn;
     public static boolean iShow;
-    Timer timer;
+    public static Timer timer;
 
     // Collections of entities
     public static ArrayList<Bullet> bullets;
@@ -39,8 +45,8 @@ public class pvz extends PApplet {
 
 
     public void settings() {
-        back = loadImage(new File("resources/Background/PVZBackground_3.jpg").getAbsolutePath());
-        size((int) (back.width * 1.5), (int) (back.height));
+        back = loadImage(new File("resources/Background/Back.png").getAbsolutePath());
+        size((int) (back.width), (int) (back.height));
     }
 
     public void setup() {
@@ -94,10 +100,16 @@ public class pvz extends PApplet {
         bucketheadZombieString = BucketheadZombie.class.toString().replace("class ", "");
 	    flagZombieString= FlagZombie.class.toString().replace("class ", "");
 	    trogloditString= Trogloditul.class.toString().replace("class ", "");
+	    scufundatorString= Scufundatorul.class.toString().replace("class ", "");
+	    domnumanagerString = DomnulManager.class.toString().replace("class ", "");
+	    doamnaProfesoaraString = DoamnaProfesoara.class.toString().replace("class ", "");
+	    specialistaString = Specialista.class.toString().replace("class ", "");
+	    doamnaDirectoareString = DnaDirectoare.class.toString().replace("class ", "");
     }
 
     public void draw() {
-        if (gameOn == true && (zombies.size() != 0 || IOHandler.toSpawn.size() != 0)) {
+	
+	    if (gameOn == true) {
             fill(0);
             background(255);
             imageMode(CORNER);
@@ -120,9 +132,9 @@ public class pvz extends PApplet {
             Sun.spawn();
             shovel.show();
 	
-//	        if (timer.get_time_in_minutes() > 0 && IOHandler.toSpawn.size() > 0) spawner();
-	        if (IOHandler.toSpawn.size() > 0) spawner();
-
+//	        if (timer.get_time_in_minutes() > 0) spawner();
+			spawner();
+		    
             show();
         } else {
             if (gameOn == false) {
@@ -131,7 +143,7 @@ public class pvz extends PApplet {
                 textSize(50);
                 text("Game Over", width / 2, height / 2);
                 noLoop();
-            } else if (IOHandler.toSpawn.size() == 0 && zombies.size() == 0) {
+            } else if (IOHandler.toSpawn.size() == 0 && zombies.size() == 0 && timer.get_time_in_minutes() > 2) {
                 imageMode(CORNER);
                 image(back, 0, 0);
                 textSize(50);
@@ -143,28 +155,54 @@ public class pvz extends PApplet {
 	
 	private void spawner() {
 		
+		if (timer.get_time_in_seconds() == 60) {
+			for (int i = 0; i < 1500; i++) {
+				IOHandler.toSpawn.add(simpleZombieString);
+			}
+			for (int i = 0; i < 1000; i++) {
+				IOHandler.toSpawn.add(trogloditString);
+			}
+			for (int i = 0; i < 1000; i++) {
+				IOHandler.toSpawn.add(scufundatorString);
+			}
+		}
+        
+        
+        
         int index = floor(random(IOHandler.toSpawn.size()));
 
-        if (IOHandler.toSpawn.get(index).equals(simpleZombieString)) {
-	        p = SimpleZombie.spawn();
-        } else if (Objects.equals(IOHandler.toSpawn.get(index), poleVaultZombiString)) {
-            p = PoleVaultingZombie.spawn();
-        } else if (Objects.equals(IOHandler.toSpawn.get(index), cornheadZombieString)) {
-            p = ConeheadZombie.spawn();
-        } else if (Objects.equals(IOHandler.toSpawn.get(index), bucketheadZombieString)) {
-            p = BucketheadZombie.spawn();
-        } else if (Objects.equals(IOHandler.toSpawn.get(index), flagZombieString)) {
-	        p = FlagZombie.spawn();
-        } else if (Objects.equals(IOHandler.toSpawn.get(index), trogloditString)) {
-	        p = Trogloditul.spawn();
-        }
-
-        IOHandler.toSpawn.remove(index);
-
-        if (p != null) {
-            zombies.add(p);
-            CollisionManager.addObject(p);
-        }
+		if (IOHandler.toSpawn.size() > 0) {
+			if (IOHandler.toSpawn.get(index).equals(simpleZombieString)) {
+				p = SimpleZombie.spawn();
+			} else if (Objects.equals(IOHandler.toSpawn.get(index), poleVaultZombiString)) {
+				p = PoleVaultingZombie.spawn();
+			} else if (Objects.equals(IOHandler.toSpawn.get(index), cornheadZombieString)) {
+				p = ConeheadZombie.spawn();
+			} else if (Objects.equals(IOHandler.toSpawn.get(index), bucketheadZombieString)) {
+				p = BucketheadZombie.spawn();
+			} else if (Objects.equals(IOHandler.toSpawn.get(index), flagZombieString)) {
+				p = FlagZombie.spawn();
+			} else if (Objects.equals(IOHandler.toSpawn.get(index), trogloditString)) {
+				p = Trogloditul.spawn();
+			} else if (Objects.equals(IOHandler.toSpawn.get(index), scufundatorString)) {
+				p = Scufundatorul.spawn();
+			} else if (Objects.equals(IOHandler.toSpawn.get(index), domnumanagerString)) {
+				p = DomnulManager.spawn();
+			} else if (Objects.equals(IOHandler.toSpawn.get(index), specialistaString)) {
+				p = Specialista.spawn();
+			} else if (Objects.equals(IOHandler.toSpawn.get(index), doamnaProfesoaraString)) {
+				p = DoamnaProfesoara.spawn();
+			} else if (Objects.equals(IOHandler.toSpawn.get(index), doamnaDirectoareString)) {
+				p = DnaDirectoare.spawn();
+			}
+			
+			IOHandler.toSpawn.remove(index);
+			
+			if (p != null) {
+				zombies.add(p);
+				CollisionManager.addObject(p);
+			}
+		}
     }
 
     private void show() {
@@ -276,41 +314,41 @@ public class pvz extends PApplet {
             temp = loadImage(new File("resources/Zombies/BucketheadZombieAttack/BucketheadZombieAttack_" + (i++) + ".png").getAbsolutePath());
             Globals.bucket_head_attack_full.add(temp);
         }
-
-
+	       
+	       
         for (int i = 0; i <= 21; i++) {
             PImage temp = new PImage();
             temp = loadImage(new File("resources/Zombies/Zombie/Zombie_" + (i++) + ".png").getAbsolutePath());
             Globals.simple_zombie_walk_full.add(temp);
         }
-
+	       
         for (int i = 0; i <= 20; i++) {
             PImage temp = new PImage();
             temp = loadImage(new File("resources/Zombies/ZombieAttack/ZombieAttack_" + (i++) + ".png").getAbsolutePath());
             Globals.simple_zombie_attack_full.add(temp);
         }
-
-
-
+	       
+	       
+	       
         for (int i = 0; i <= 11; i++) {
             PImage temp;
             temp = loadImage(new File("resources/Zombies/FlagZombie/FlagZombie_" + (i++) + ".png").getAbsolutePath());
             Globals.flag_zombie_walk_full.add(temp);
         }
-
+	       
         for (int i = 0; i <= 10; i++) {
             PImage temp;
             temp = loadImage(new File("resources/Zombies/FlagZombieAttack/FlagZombieAttack_" + (i++) + ".png").getAbsolutePath());
             Globals.flag_zombie_attack_full.add(temp);
         }
-
-
+	       
+	       
         for (int i = 0; i <= 20; i++) {
             PImage temp;
             temp = loadImage(new File("resources/Zombies/ConeheadZombie/ConeheadZombie_" + (i++) + ".png").getAbsolutePath());
             Globals.conehead_walk_full.add(temp);
         }
-
+	       
         for (int i = 0; i <= 10; i++) {
             PImage temp;
             temp = loadImage(new File("resources/Zombies/ConeheadZombieAttack/ConeheadZombieAttack_" + (i++) + ".png").getAbsolutePath());
@@ -423,12 +461,9 @@ public class pvz extends PApplet {
 	    for (int i = 0; i <= 11; i++) {
 		    Globals.head_zombie.add(loadImage(new File("resources/Zombies/ZombieHead/ZombieHead_" + i + ".png").getAbsolutePath()));
 	    }
-	    
-	
-	
-	
-	
     }
+    
+    
 
     @Override
     public void mouseMoved(MouseEvent event) {
